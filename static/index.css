@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: #eab101;
+    background: radial-gradient(#eab101, #7c5d03);
+    height: 100px;
+    font-size: 50pt;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+  }
+  
+  .banner img {
+    /* Remove the fixed height and width and use max-height for scalability */
+    max-height: 75px; /* You can adjust this value as per your design */
+    width: auto; /* This will maintain the aspect ratio */
+  }
+  
+  .banner img:first-child {
+    margin-left: 1%; /* Pushes the first image to the right */
+  }
+  
+  @media (max-width: 600px) {
+    .banner img {
+      max-height: 50px; /* Smaller size on small screens */
+    }
+  }
+  
+  body {
+    position: relative; /* Constrain the absolute positioning within the body */
+    background-color: #001d3d;
+    margin: 0;
+    padding: 0;
+  }
+  
+  label {
+    color: white;
+  }
+  .center-form {
+    position: relative; /* Establish a stacking context */
+    z-index: 1; /* Ensure the form is above the image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: relative;
+  }
+  
+  .logo {
+    position: absolute; /* Position the logo absolutely within the body */
+    top: 0; /* Align the top edge of the image with the top of the parent */
+    width: 100vw; /* Stretch the image to the width of the parent */
+    left: 0; /* Align the left edge of the image with the left of the parent */
+    z-index: -1; /* Send it to the back */
+    object-fit: cover; /* Cover the parent completely */
+  }
+  
+  .button {
+    background: #eab101;
+    background: radial-gradient(#eab101, #7c5d03);
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background: #eab101;
+    background: radial-gradient(#eab101, #7c5d03);
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    cursor: pointer;
+  }
+  
+  .name {
+    color: #fff;
+    text-align: center;
+    font-size: 50pt;
+    border: 0;
+    padding:0;
+    margin-top:30;
+  }
+  .name2{
+    color: #fff;
+    text-align: center;
+    font-size: 20pt;
+    border: 0;
+    padding:0;
+    margin-top:-40;
+  }

@@ -1,0 +1,26 @@
+<!-- FILEPATH: /Users/richardolarez/SeniorCapstone/24040FlaskFramework/templates/EDV.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>EDV</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='EDV.css') }}">
+    <script src="https://unpkg.com/htmx.org@latest"></script>
+</head>
+
+<body>
+    <!--<h1>Home / Electrical Diagram View</h1> -->
+    <h2 class="banner">
+        Home / Electrical Diagram View
+    </h2>
+    <h1>Current Electrical Diagram</h1>
+    <div style="width: 50%; margin: auto;">
+        <img src="/images/png_1.png" alt="Electrical Diagram" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="footer">
+        <a href="/menu"><button>Menu</button></a>
+        <a href="/"><button>Logout</button></a>
+    </div>
+</body>
+</html>
