@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: app-image
+    ports:
+      - "8000:8000"
+
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    image: pg-db
+    ports:
+      - "5432:5432"
