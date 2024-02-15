@@ -7,6 +7,24 @@
     <title>EDV</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='EDV.css') }}">
     <script src="https://unpkg.com/htmx.org@latest"></script>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var newRow = table.insertRow(table.rows.length);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            cell1.innerHTML = '<td>...</td>';
+            cell2.innerHTML = '<td>...</td>';
+            cell1.setAttribute("contenteditable", "true");
+            cell2.setAttribute("contenteditable", "true");
+        }
+        function deleteRow() {
+            var table = document.getElementById("myTable");
+            var lastRowIndex = table.rows.length - 1;
+            table.deleteRow(lastRowIndex);
+        }
+    </script>
 </head>
 
 <body>
@@ -18,23 +36,23 @@
     <div>
         <img src="static/images/png_1.png" alt="Electrical Diagram" style="max-width: 100%; height: auto; float: left;">
         <div class="selectComp">Please select <br>a component</div>
-        <button class="button">Add+</button><br><br><br>
-        <table>
+        <button class="button" onclick="addRow()">Add+</button><br><br><br>
+        <table id="myTable">
             <tr>
                 <th>Component</th>
                 <th>Attribute</th>
             </tr>
             <tr>
-                <td>...</td>
-                <td>...</td>
+                <td contenteditable="true">...</td>
+                <td contenteditable="true">...</td>
             </tr>
             <tr>
-                <td>...</td>
-                <td>...</td>
+                <td contenteditable="true">...</td>
+                <td contenteditable="true">...</td>
             </tr>
             <tr>
-                <td>...</td>
-                <td>...</td>
+                <td contenteditable="true">...</td>
+                <td contenteditable="true">...</td>
             </tr>
         </table>
     </div>
@@ -42,6 +60,7 @@
     <div class="footer">
         <a href="/menu"><button class="button">Menu</button></a>
         <a href="/"><button class="button">Logout</button></a>
+        <button class="button" onclick="deleteRow()">Delete Row</button>
     </div>
 </body>
 </html>
