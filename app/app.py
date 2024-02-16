@@ -15,12 +15,12 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM books;')
-    books = cur.fetchall()
-    cur.close()
-    conn.close()
+    # conn = get_db_connection()
+    # cur = conn.cursor()
+    # cur.execute('SELECT * FROM books;')
+    # books = cur.fetcose()
+    # return render_hall()
+    # cur.close()
     return render_template('index.html')
 
 @app.route('/edv')
