@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9.18-slim-bullseye
+FROM python:latest
 
 # Set the working directory to /app
 WORKDIR /app
@@ -18,6 +18,7 @@ EXPOSE  8000
 # Define environment variable
 ENV FLASK_APP=wsgi.py
 ENV FLASK_RUN_HOST=0.0.0.0
+
 
 # Run the command to start Flask
 CMD ["gunicorn", "-b", "0.0.0.0:8000", "--workers", "4", "wsgi:app"]
