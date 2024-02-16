@@ -9,7 +9,10 @@ COPY . .
 
 # Install any needed packages specified in requirements.txt
 COPY requirements.txt /app/requirements.txt
+RUN pip install --upgrade pip
 RUN pip3 install psycopg2-binary
+RUN pip3 install SQLAlchemy
+RUN pip3 install Flask-SQLAlchemy
 RUN pip3 install -r requirements.txt
 
 # Make port  3000 available to the world outside this container
@@ -20,5 +23,4 @@ ENV FLASK_APP=wsgi.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Run the command to start Flask
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "--workers", "4", "wsgi:app"]
-
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "wsgi:application"]
