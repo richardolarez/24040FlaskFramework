@@ -1,16 +1,15 @@
 # app.py
 from flask import Flask, render_template, request, redirect, url_for 
 import psycopg2
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-
-def get_db_connection():
-    conn = psycopg2.connect(host='localhost',
-                            database='flask_db',
-                            user='myuser',
-                            password='mypassword')
-    return conn
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5432/flask_db'
+db = SQLAlchemy(app)
+db.init_app(app)
+migrate = Migrate(app, db)
 
 
 @app.route('/')
