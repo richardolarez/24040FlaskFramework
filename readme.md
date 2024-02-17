@@ -1,5 +1,5 @@
 # JANUS
-# Model-based Electrical Diagram and TID Generation
+Model-based Electrical Diagram and TID Generation
 
 # FRAMEWORK
 templates/index.html
@@ -8,7 +8,6 @@ static/styles.css
 # RUN COMMANDS
 Make sure you are in the parent directory
 Make sure you have docker installed and docker compose
-docker-compose up -d --build (to build images)
 
 
 # Start the db server using the postgresql image from Docker Hub
