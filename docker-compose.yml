@@ -1,18 +1,31 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  app:
+  janus_app:
+    container_name: janus_app
+    image: 24040_app-image
+    ports:
+      - "8000:8000"
     build:
       context: ./app
       dockerfile: Dockerfile
-    image: app-image
-    ports:
-      - "8000:8000"
-
-  db:
-    build:
-      context: ./db
-      dockerfile: Dockerfile
-    image: pg-db
+    environment:
+      - DB_URL=postgresql://postgres:postgres@janus_db_2:5432/postgres
+    depends_on:
+      - janus_db_2
+  
+  janus_db_2:
+    container_name: janus_db_2
+    image: postgres:12
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}
+
