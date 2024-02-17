@@ -1,0 +1,4639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisioDocument>
+	<DocumentProperties>
+		<Title></Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="Page-1" NameU="Page-1">
+			<PageProps>
+				<PageScale Unit="IN">1.000000000000000</PageScale>
+				<DrawingScale Unit="IN_F">1.000000000000000</DrawingScale>
+			</PageProps>
+			<Layer IX="0">
+				<Name>Connector</Name>
+				<NameUniv>Connector</NameUniv>
+				<Visible>1</Visible>
+			</Layer>
+			<Shapes>
+				<Shape ID="1" UniqueID="{B5C084DA-F8C6-4410-A121-9B46E832167A}" Name="DLM60" NameU="DLM60" Master="2">
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874664</PinX>
+						<PinY Unit="IN_F">62.893749872436373</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="2" UniqueID="{6E43722F-2BBE-4F6B-91AC-0A06BDF6F133}" Name="Box.1193" NameU="Box.1193">
+					<Text>POWER SUPPLY 1
+[PS] 
+(DLM60)</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874667</PinX>
+						<PinY Unit="IN_F">62.893749872436373</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="3" UniqueID="{CD35C0D9-E896-4F44-A56A-D4A64E119F6D}" Name="Box.1194" NameU="Box.1194">
+					<Text>OUTPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">63.226136242513391</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="4" UniqueID="{4CAD3580-7D77-4F36-A7F1-A73A52A29636}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">62.428408954328560</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="5" UniqueID="{A0F59799-3A47-4744-886B-E9B23E517331}" Name="Box.1258" NameU="Box.1258">
+					<Text>ETHNT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">62.827272598420976</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="6" UniqueID="{568BF7F2-95DE-4F79-BD65-731E0052B325}" Name="DLM60.6" NameU="DLM60.6" Master="2">
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874664</PinX>
+						<PinY Unit="IN_F">61.056249844097522</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="7" UniqueID="{9BE94C09-4B1D-400D-9A76-374C36FE27C8}" Name="Box.1193" NameU="Box.1193">
+					<Text>POWER SUPPLY 2
+[PS] 
+(DLM60)</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874667</PinX>
+						<PinY Unit="IN_F">61.056249844097522</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="8" UniqueID="{3EC11039-F7FD-49FC-B27D-D858A31066DE}" Name="Box.1194" NameU="Box.1194">
+					<Text>OUTPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">61.388636214174539</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="9" UniqueID="{CB5006C8-A277-4174-97DD-622887A3AE9D}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">60.590908925989709</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="10" UniqueID="{60410843-A786-4D14-9D65-0D4E69976E0D}" Name="Box.1258" NameU="Box.1258">
+					<Text>ETHNT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">60.989772570082124</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="11" UniqueID="{095F5797-C7D7-4AC5-9055-55188105A02F}" Name="DLM60.11" NameU="DLM60.11" Master="2">
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874664</PinX>
+						<PinY Unit="IN_F">59.218749815758663</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="12" UniqueID="{00FB8CB6-2092-4949-9895-68B373631169}" Name="Box.1193" NameU="Box.1193">
+					<Text>POWER SUPPLY 3
+[PS] 
+(DLM40)</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.187499893874667</PinX>
+						<PinY Unit="IN_F">59.218749815758663</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="13" UniqueID="{DA251A30-9D37-45E2-9D4A-2A0012C4FEB9}" Name="Box.1194" NameU="Box.1194">
+					<Text>OUTPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">59.551136185835681</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="14" UniqueID="{041AE548-3C32-4D7D-9448-BF3DFE413C64}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">58.753408897650850</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="15" UniqueID="{0429B8A6-801E-4E83-9318-37C0C0D7A879}" Name="Box.1258" NameU="Box.1258">
+					<Text>ETHNT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.519736748604776</PinX>
+						<PinY Unit="IN_F">59.152272541743265</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="44" UniqueID="{15401221-924B-4280-979B-D60C81103611}" Name="Li-Ion Batt.8" NameU="Li-Ion Batt.8" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">63.037499847091070</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="45" UniqueID="{651DEE39-204C-4B2D-82E5-0247749AA85D}" Name="Rectangle" NameU="Rectangle">
+					<Text>AV Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">63.037499847091070</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="46" UniqueID="{1CBFC009-8FAC-483C-B311-5CBB9CF4EA33}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">62.412499880618682</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="47" UniqueID="{8341F4E4-7401-48AD-A317-49ED14ABDDC4}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">62.412499880618675</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="48" UniqueID="{2B36A2D2-CD0C-4403-81FC-B72A3DF217B9}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">62.724999871305457</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="49" UniqueID="{81AC436B-9754-4513-94F0-23141F968F31}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">62.724999871305457</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="50" UniqueID="{12D8D450-ED7B-48B1-B986-1DA783653D94}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">63.037499847091070</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="51" UniqueID="{5FC9D209-0EEC-41B1-8A8B-93D9B9F91B67}" Name="Li-Ion Batt.51" NameU="Li-Ion Batt.51" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">58.462500130557189</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="52" UniqueID="{14EF8D6D-862A-4336-90F0-FDC5EBC1F20C}" Name="Rectangle" NameU="Rectangle">
+					<Text>TLM Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">58.462500130557189</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="53" UniqueID="{5045B163-F3EF-42F3-8D24-1F00996D9F15}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">57.837500164084801</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="54" UniqueID="{611CA29E-15FF-4937-987D-527FAA32EA3E}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">57.837500164084794</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="55" UniqueID="{AA4DEA4A-CCD2-4E29-8E15-F15710504341}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">58.150000154771575</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="56" UniqueID="{3B87BFDF-3AD3-4171-9685-BDB857D82971}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">58.150000154771575</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="57" UniqueID="{3F2462AB-D4FD-4558-B9F2-123DF50182E4}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">58.462500130557189</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="58" UniqueID="{F598A900-3784-4572-9BC6-0E0900E50A66}" Name="Li-Ion Batt.58" NameU="Li-Ion Batt.58" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">51.600000555756367</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="59" UniqueID="{249869C7-B975-4BBB-BC2C-271CF7038F8E}" Name="Rectangle" NameU="Rectangle">
+					<Text>IMU Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">51.600000555756367</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="60" UniqueID="{EE0458B7-493B-462F-80C3-51550C82298E}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">50.975000589283979</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="61" UniqueID="{19B5E921-13D2-4140-BB6D-8C91AF800F50}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">50.975000589283972</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="62" UniqueID="{F6BFF07B-B795-4B24-ACD0-1560FC319542}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">51.287500579970754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="63" UniqueID="{883E1FBF-B48B-449D-B0BC-8E2E33A2C235}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">51.287500579970754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="64" UniqueID="{B7E19370-17D5-4303-A29C-315DC9DE88DF}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">51.600000555756367</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="65" UniqueID="{8DDC7B9A-D7B3-4053-A8F3-BEE73EB5694E}" Name="Li-Ion Batt.65" NameU="Li-Ion Batt.65" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">60.749999988824129</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="66" UniqueID="{90AF2765-5279-4D59-9F71-A443A94A10A1}" Name="Rectangle" NameU="Rectangle">
+					<Text>S2 Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">60.749999988824129</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="67" UniqueID="{55FD4C45-9BC3-4ECB-B48D-EE1873CE1B4D}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">60.125000022351742</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="68" UniqueID="{ABFB2164-EFE6-4A87-9C15-4B64BC9F8070}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">60.125000022351735</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="69" UniqueID="{FE4AA113-03BA-418C-B46C-169859F90DDD}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">60.437500013038516</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="70" UniqueID="{EE287C55-4593-4A95-A069-D5AE4FE211B2}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">60.437500013038516</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="71" UniqueID="{23A3E87A-3039-48D1-86F7-3105D2A04494}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">60.749999988824129</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="72" UniqueID="{9346D828-DD6D-4E6D-8029-7C82989A0451}" Name="Li-Ion Batt.72" NameU="Li-Ion Batt.72" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">56.175000272290248</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="73" UniqueID="{88D0F7FE-5EDF-4112-A9EC-689353532841}" Name="Rectangle" NameU="Rectangle">
+					<Text>GPS Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">56.175000272290248</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="74" UniqueID="{0D1587C1-5E2D-470D-81B2-90DA2281705A}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">55.550000305817861</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="75" UniqueID="{D1E2F3DE-C469-4D5C-ADFF-09D90A827730}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">55.550000305817854</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="76" UniqueID="{F1271E13-D831-4CF6-8BB6-E7242BE25039}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">55.862500296504635</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="77" UniqueID="{E95ED81C-D4A3-42B9-903C-4748530A17C8}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">55.862500296504635</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="78" UniqueID="{9A8BB81F-8404-45C6-80D3-27282A879E17}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">56.175000272290248</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="79" UniqueID="{7AF39184-7B3D-46DF-96D1-7BA09BD8B1EE}" Name="Li-Ion Batt.79" NameU="Li-Ion Batt.79" Master="8">
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000000</PinX>
+						<PinY Unit="IN_F">53.887500414023307</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="80" UniqueID="{3ABE2374-DD07-48F5-AA47-4934821ED366}" Name="Rectangle" NameU="Rectangle">
+					<Text>ORD Batt
+[Li-Ion Batt]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">13.500000000000007</PinX>
+						<PinY Unit="IN_F">53.887500414023307</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="81" UniqueID="{FCCA3A12-2547-4170-AB6D-444BA2ACADBE}" Name="Rectangle.822" NameU="Rectangle.822">
+					<Text>SERIAL</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940696</PinX>
+						<PinY Unit="IN_F">53.262500447550920</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="82" UniqueID="{5CB500B8-CF71-4127-88B2-39FBAC4B46BF}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>Load +</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059304</PinX>
+						<PinY Unit="IN_F">53.262500447550913</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="83" UniqueID="{E8A61CE2-9BCB-450C-998B-B6BAFE4AD29B}" Name="Rectangle.824" NameU="Rectangle.824">
+					<Text>Load -</Text>
+					<XForm>
+						<PinX Unit="IN_F">14.549999991059305</PinX>
+						<PinY Unit="IN_F">53.575000438237694</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="84" UniqueID="{402B6EA9-646F-4786-A2A7-C70D8262C204}" Name="Rectangle.825" NameU="Rectangle.825">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">53.575000438237694</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="85" UniqueID="{F5A9BCC6-6CE4-43C6-86F6-03C83FF73BB6}" Name="Rectangle.10" NameU="Rectangle.10">
+					<Text>INPUT</Text>
+					<XForm>
+						<PinX Unit="IN_F">12.450000008940709</PinX>
+						<PinY Unit="IN_F">53.887500414023307</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="100" UniqueID="{23F87EB1-AE36-4ADF-86FA-8CE505AC061C}" Name="16-Port Switch" NameU="16-Port Switch" Master="9">
+					<XForm>
+						<PinX Unit="IN_F">7.455208340582464</PinX>
+						<PinY Unit="IN_F">51.600000555756367</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="101" UniqueID="{B5E1261F-B614-415E-AAE5-9E49FBEFD526}" Name="Rectangle" NameU="Rectangle">
+					<Text>GSE Net Switch
+[Network Switch] 
+(CiscoXXX)</Text>
+					<XForm>
+						<PinX Unit="IN_F">7.455208340582464</PinX>
+						<PinY Unit="IN_F">51.600000678690940</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="102" UniqueID="{5DECF481-5BFB-4A25-9AA2-33DE680949A7}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">7.331250114588467</PinX>
+						<PinY Unit="IN_F">51.037500873896157</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="103" UniqueID="{6C8084A7-BE60-4014-AB91-F898F513A3D8}" Name="Box.1258" NameU="Box.1258">
+					<Text>ETHNT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">5.580338579833629</PinX>
+						<PinY Unit="IN_F">52.162500647025972</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="104" UniqueID="{A6A23449-0FE6-4486-B0F3-36F028483E39}" Name="Box.601" NameU="Box.601">
+					<Text>ETHNT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">5.921223951417607</PinX>
+						<PinY Unit="IN_F">52.162500647025972</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="105" UniqueID="{A718DF5F-F93F-4A5F-B978-6FF7CFA8F55C}" Name="Box.602" NameU="Box.602">
+					<Text>ETHNT 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.262109323001589</PinX>
+						<PinY Unit="IN_F">52.162500647025972</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="106" UniqueID="{4EE2FC82-5756-4664-8B8F-227CB89B396B}" Name="Box.605" NameU="Box.605">
+					<Text>ETHNT 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.602994694585572</PinX>
+						<PinY Unit="IN_F">52.162500647025972</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="107" UniqueID="{79DEA55D-4321-4D86-A5B6-B47DE8257B1D}" Name="Box.610" NameU="Box.610">
+					<Text>ETHNT 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">9.330078594513154</PinX>
+						<PinY Unit="IN_F">52.162500401156819</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="108" UniqueID="{857C2E54-3F60-417F-BFEC-6800967B8A8E}" Name="Box.611" NameU="Box.611">
+					<Text>ETHNT 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.989193160126991</PinX>
+						<PinY Unit="IN_F">52.162500401156819</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="109" UniqueID="{7D395D12-4729-4F63-ABD1-3A43D8BFDAD4}" Name="Box.612" NameU="Box.612">
+					<Text>ETHNT 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.648307725740827</PinX>
+						<PinY Unit="IN_F">52.162500401156819</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="110" UniqueID="{0A6501E1-4CDF-47D1-87C4-84D318E87025}" Name="Box.613" NameU="Box.613">
+					<Text>ETHNT 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.307422291354666</PinX>
+						<PinY Unit="IN_F">52.162500401156819</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="111" UniqueID="{47AE7FB4-EAC7-4812-8E20-E5C038AA75D3}" Name="Box.618" NameU="Box.618">
+					<Text>ETHNT 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">5.580338529961307</PinX>
+						<PinY Unit="IN_F">51.037500710355907</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="112" UniqueID="{BF594502-2746-4528-B496-F40489E63577}" Name="Box.619" NameU="Box.619">
+					<Text>ETHNT 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">5.921223901545286</PinX>
+						<PinY Unit="IN_F">51.037500710355907</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="113" UniqueID="{8897A1CD-DAC6-4220-AFD7-F5853314F990}" Name="Box.620" NameU="Box.620">
+					<Text>ETHNT 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.262109273129266</PinX>
+						<PinY Unit="IN_F">51.037500710355907</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="114" UniqueID="{14036C09-9A7C-401C-9555-D6F38EBE440B}" Name="Box.621" NameU="Box.621">
+					<Text>ETHNT 12</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.602994644713250</PinX>
+						<PinY Unit="IN_F">51.037500710355907</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="115" UniqueID="{BE12D0F8-72E8-4E9B-A002-2B98ED2AE615}" Name="Box.630" NameU="Box.630">
+					<Text>ETHNT 13</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.307421916388691</PinX>
+						<PinY Unit="IN_F">51.037500464486754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="116" UniqueID="{35B733A3-F3D4-42D5-ABCD-CF41EEEFBDD7}" Name="Box.631" NameU="Box.631">
+					<Text>ETHNT 14</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.648307570582482</PinX>
+						<PinY Unit="IN_F">51.037500464486754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="117" UniqueID="{842EEA23-9299-4942-A194-1150F9A8DB48}" Name="Box.632" NameU="Box.632">
+					<Text>ETHNT 15</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.989193224776276</PinX>
+						<PinY Unit="IN_F">51.037500464486754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="118" UniqueID="{BB13072E-0784-406C-9494-A55FBB6F0DFD}" Name="Box.633" NameU="Box.633">
+					<Text>ETHNT 16</Text>
+					<XForm>
+						<PinX Unit="IN_F">9.330078878970072</PinX>
+						<PinY Unit="IN_F">51.037500464486754</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="125" UniqueID="{3EC5B7C7-D974-417D-AA88-DCA16D988C26}" Name="Dynamic connector.125" NameU="Dynamic connector.125" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">4.727669244849885</PinX>
+						<PinY Unit="IN_F">57.744886622723470</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="126" UniqueID="{42D7CE19-C360-4412-BADE-C2A71DB5DBEF}" Name="Dynamic connector.126" NameU="Dynamic connector.126" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">4.898111930641875</PinX>
+						<PinY Unit="IN_F">56.826136608554037</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="127" UniqueID="{FDE34B02-5C8C-4B94-AFAA-3D2A50F87058}" Name="Dynamic connector.127" NameU="Dynamic connector.127" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.068554616433865</PinX>
+						<PinY Unit="IN_F">55.907386594384612</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="130" UniqueID="{C7EE0971-6B00-4720-B0F8-7E9D492ED581}" Name="RTCL Server" NameU="RTCL Server" Master="11">
+					<XForm>
+						<PinX Unit="IN_F">6.875000000000000</PinX>
+						<PinY Unit="IN_F">46.749999869614847</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="131" UniqueID="{F7D9FA8C-F747-4CAA-8B1D-917619D75743}" Name="Rectangle" NameU="Rectangle">
+					<Text>Server #
+[PC - Server]
+(Dell XXYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">6.875000000000000</PinX>
+						<PinY Unit="IN_F">46.749999869614847</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="132" UniqueID="{88BB88A5-69C8-4426-AA73-EFBCDA3FA5BB}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">10.312499767169362</PinX>
+						<PinY Unit="IN_F">46.500000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="133" UniqueID="{0ED2D7E4-CC28-4DEE-815F-319F45AD7075}" Name="Box.1258" NameU="Box.1258">
+					<Text>ETHNT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.265624965541067</PinX>
+						<PinY Unit="IN_F">46.500000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="134" UniqueID="{D6428516-CD97-439E-B279-76C704E38984}" Name="Box.815" NameU="Box.815">
+					<Text>ETHNT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.640624954365197</PinX>
+						<PinY Unit="IN_F">46.500000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="135" UniqueID="{1ADEE2B2-A023-4E03-A1FA-E2148CD22407}" Name="Box.817" NameU="Box.817">
+					<Text>Serial 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.515624809078879</PinX>
+						<PinY Unit="IN_F">46.312499882653363</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="137" UniqueID="{40F5AC4E-0C97-4961-B2B7-1F2808C0178D}" Name="Box.819" NameU="Box.819">
+					<Text>Serial 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">8.953124772757310</PinX>
+						<PinY Unit="IN_F">46.312499882653363</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="140" UniqueID="{D8428349-0688-410F-9E60-8F37D59F2FC6}" Name="Dynamic connector.140" NameU="Dynamic connector.140" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">4.422981747751189</PinX>
+						<PinY Unit="IN_F">48.268750355177957</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="207" UniqueID="{70BD42F7-E3B2-40D0-A910-E21A0E4D3F16}" Name="Sheet.207" NameU="Sheet.207">
+					<Text>PDU 1
+[PDU]
+(EPDU)</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.687499922586661</PinX>
+						<PinY Unit="IN_F">51.875000061467290</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="208" UniqueID="{993DC151-D768-4000-99C8-6C0FC5291D43}" Name="Box.1195" NameU="Box.1195">
+					<Text>INPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">0.855263039144544</PinX>
+						<PinY Unit="IN_F">53.000000210478902</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="209" UniqueID="{B7B9D034-D411-4DFF-B570-3E50033020C3}" Name="Box.3" NameU="Box.3">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736806028778</PinX>
+						<PinY Unit="IN_F">53.000000210478902</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="210" UniqueID="{A020F543-1553-4294-8CE0-41C833407DAB}" Name="Box.4" NameU="Box.4">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736806028778</PinX>
+						<PinY Unit="IN_F">52.617045662448099</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="211" UniqueID="{C5FD0C2E-2AB4-4BA4-8982-A7E0972B29EB}" Name="Box.5" NameU="Box.5">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736806028778</PinX>
+						<PinY Unit="IN_F">52.234091114417289</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="212" UniqueID="{8F421193-B055-41CC-BC9B-DB7A2ACB57B1}" Name="Box.6" NameU="Box.6">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736806028778</PinX>
+						<PinY Unit="IN_F">51.851136566386486</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="213" UniqueID="{098C9D7B-19F0-429A-B82A-B690B26C4E93}" Name="Box.8" NameU="Box.8">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736743287047</PinX>
+						<PinY Unit="IN_F">51.449432032525110</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="214" UniqueID="{2C25B31F-331A-4C30-B4BF-0835C14335AB}" Name="Box.9" NameU="Box.9">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736743287047</PinX>
+						<PinY Unit="IN_F">51.066477484494300</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="215" UniqueID="{844CBD38-3A37-4BE7-AC78-F2E16C9BD8F4}" Name="Box.10" NameU="Box.10">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736743287047</PinX>
+						<PinY Unit="IN_F">50.683522936463497</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="216" UniqueID="{D56DE127-2E34-4B2D-B5D7-CF3E0AF205D2}" Name="Box.11" NameU="Box.11">
+					<Text>OUTPUT 110V</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.519736743287047</PinX>
+						<PinY Unit="IN_F">50.300568388432701</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="217" UniqueID="{E3CD7096-88B0-4DF1-888F-8EFAB93F9285}" Name="Dynamic connector.217" NameU="Dynamic connector.217" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.103125009568440</PinX>
+						<PinY Unit="IN_F">50.419034631164429</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="218" UniqueID="{F1308207-A8D3-4163-A7BA-317E434DBC6B}" Name="Dynamic connector.218" NameU="Dynamic connector.218" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">3.374999938578143</PinX>
+						<PinY Unit="IN_F">57.714204582403717</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="219" UniqueID="{65108BBB-75D5-4A93-B9DF-3DF2FD18B949}" Name="Dynamic connector.219" NameU="Dynamic connector.219" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">3.374999938578143</PinX>
+						<PinY Unit="IN_F">56.603977294218900</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="220" UniqueID="{D4DBDBFE-EC03-480A-B9A9-E90BDFB0AA8F}" Name="Dynamic connector.220" NameU="Dynamic connector.220" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">3.374999938578143</PinX>
+						<PinY Unit="IN_F">55.493750006034062</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="223" UniqueID="{6C149FE2-D2D3-4CB8-8093-9D863C1A35DC}" Name="Dynamic connector.223" NameU="Dynamic connector.223" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">6.593749835858887</PinX>
+						<PinY Unit="IN_F">48.341761468231752</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="224" UniqueID="{3A8D0216-5979-41F0-8075-AAE9CB9CFB31}" Name="Box.224" NameU="Box.224">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">0.855263039144544</PinX>
+						<PinY Unit="IN_F">52.382954548030803</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="225" UniqueID="{7E5FB60C-7076-4EDF-93C9-BCC5B119DE93}" Name="Dynamic connector.225" NameU="Dynamic connector.225" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">10.570312394760551</PinX>
+						<PinY Unit="IN_F">48.487500294641990</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="226" UniqueID="{7C81C8C7-3153-4701-B515-0330A1441A8B}" Name="Dynamic connector.226" NameU="Dynamic connector.226" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.093750008381900</PinX>
+						<PinY Unit="IN_F">52.118750518417457</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="227" UniqueID="{42C89876-C28D-4F1D-971B-1BE11E6B9D65}" Name="Dynamic connector.227" NameU="Dynamic connector.227" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.093750008381900</PinX>
+						<PinY Unit="IN_F">54.406250376684397</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="228" UniqueID="{B2A0F98E-D1C5-4747-8B3B-B98F8C325E99}" Name="Dynamic connector.228" NameU="Dynamic connector.228" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.093750008381900</PinX>
+						<PinY Unit="IN_F">56.668750082042408</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="229" UniqueID="{32C8D2BC-FABC-418B-BE11-FCB6971BAA4D}" Name="Dynamic connector.229" NameU="Dynamic connector.229" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.093750008381900</PinX>
+						<PinY Unit="IN_F">58.981250093218279</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="230" UniqueID="{EB309BA0-3227-49C8-BE45-38A23AEEED9E}" Name="Dynamic connector.230" NameU="Dynamic connector.230" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.093750008381900</PinX>
+						<PinY Unit="IN_F">61.268749940309348</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="236" UniqueID="{DF1539A3-3FAB-4927-90E7-C5C01ED51FD2}" Name="Dynamic connector.236" NameU="Dynamic connector.236" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">11.593750008381910</PinX>
+						<PinY Unit="IN_F">52.743750484889837</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="237" UniqueID="{10EE2AB7-2C46-4E48-B033-B9DA57BA2B40}" Name="Rectangle" NameU="Rectangle" Master="18">
+					<Text>Avionics FC
+[Flight Computer]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.562500048746770</PinX>
+						<PinY Unit="IN_F">63.206249917957599</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="239" UniqueID="{0ECC3FF1-53D3-4188-A6E3-E63AE8EA5178}" Name="Dynamic connector.239" NameU="Dynamic connector.239" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">11.500000000000000</PinX>
+						<PinY Unit="IN_F">32.562500000000000</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="240" UniqueID="{968EF3F9-EEBC-400D-B7A3-D25DEBBB65ED}" Name="Sheet.240" NameU="Sheet.240">
+					<Text>GROUND</Text>
+					<XForm>
+						<PinX Unit="IN_F">7.454861111111113</PinX>
+						<PinY Unit="IN_F">0.500555555555557</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="241" UniqueID="{BEB0496A-0D4B-4F69-B7A2-FC10F939D816}" Name="Sheet.241" NameU="Sheet.241">
+					<Text>VEHICLE</Text>
+					<XForm>
+						<PinX Unit="IN_F">20.999999309408270</PinX>
+						<PinY Unit="IN_F">0.725694444444439</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="242" UniqueID="{FAB5C596-AE44-4708-B62E-3F944402927E}" Name="Rectangle.823" NameU="Rectangle.823">
+					<Text>PWR +</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">62.750000003725290</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="243" UniqueID="{0921FF5D-DC37-4B57-8260-0B5BBFAD6544}" Name="Rectangle.243" NameU="Rectangle.243">
+					<Text>PWR -</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">63.037499847091070</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="244" UniqueID="{C920A6E1-E6F1-451D-995E-8A80E1E18565}" Name="Rectangle.244" NameU="Rectangle.244">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">63.499999988824143</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="245" UniqueID="{30C24DA1-8C9E-4668-9E9F-EFD763086AFC}" Name="Rectangle.245" NameU="Rectangle.245" Master="18">
+					<Text>PCD0
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.562500048746770</PinX>
+						<PinY Unit="IN_F">62.187500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="246" UniqueID="{83BDD475-E04F-492B-82CF-E9E31F3A8D2D}" Name="Rectangle.246" NameU="Rectangle.246" Master="18">
+					<Text>PCD1
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.562500048746770</PinX>
+						<PinY Unit="IN_F">61.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="247" UniqueID="{EF6E50B9-3899-4E37-80CD-69CE8D0A73BE}" Name="Rectangle.247" NameU="Rectangle.247" Master="18">
+					<Text>IMU
+[IMU]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.312500000000000</PinX>
+						<PinY Unit="IN_F">63.043750082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="248" UniqueID="{606D8BD6-60BD-4655-8332-AD89970D36B8}" Name="Rectangle.248" NameU="Rectangle.248" Master="18">
+					<Text>Stage 2 Controller
+[Controller]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">59.375000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="249" UniqueID="{F5B4C36A-7A22-47CB-95B0-8C83C9BEF214}" Name="Rectangle.249" NameU="Rectangle.249">
+					<Text>PWR +</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">58.918750085767691</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="250" UniqueID="{0E79D813-E6BC-4CDA-9EC2-46536F3A1F1D}" Name="Rectangle.250" NameU="Rectangle.250">
+					<Text>PWR -</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">59.206249929133470</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="251" UniqueID="{23C30FE4-B240-4D74-86FD-B53410049AE6}" Name="Rectangle.251" NameU="Rectangle.251">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">59.668750070866537</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="252" UniqueID="{204FAA43-C2AE-40E6-9C26-ECA382C743D7}" Name="Rectangle.252" NameU="Rectangle.252" Master="18">
+					<Text>PCD0
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">58.356250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="253" UniqueID="{A0329DE6-3212-4E9A-AA86-B65D97A26290}" Name="Rectangle.253" NameU="Rectangle.253" Master="18">
+					<Text>PCD1
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">57.731250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="254" UniqueID="{4DCEF81F-C72D-4CEF-AA0E-599DC1B4E0F3}" Name="Rectangle.254" NameU="Rectangle.254" Master="18">
+					<Text>PCD2
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">57.106250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="255" UniqueID="{02E59073-34D0-4CB5-B05F-D3424EF1D83F}" Name="Rectangle.255" NameU="Rectangle.255" Master="18">
+					<Text>PCD3
+[Power Control Device]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">56.481250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="256" UniqueID="{7EB32405-D6B6-43CD-AD37-BDB2927988DF}" Name="Rectangle.256" NameU="Rectangle.256" Master="18">
+					<Text>S2 TVC Controller
+[TVC Controller]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.312500000000000</PinX>
+						<PinY Unit="IN_F">59.918750082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="257" UniqueID="{9420FA6C-CCB4-4907-9A72-ADF803A29C26}" Name="Rectangle.257" NameU="Rectangle.257" Master="18">
+					<Text>GPS
+[GPS]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.312500000000000</PinX>
+						<PinY Unit="IN_F">57.956249917957599</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="258" UniqueID="{B60D620E-6D45-44AF-992D-7FE0AD84A8C1}" Name="Rectangle.258" NameU="Rectangle.258" Master="18">
+					<Text>Telemetry Controller
+[Controller]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">54.456249917957599</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="259" UniqueID="{49C770C4-991A-448B-BB08-FABA482C089E}" Name="Rectangle.259" NameU="Rectangle.259">
+					<Text>PWR +</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">54.000000003725290</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="260" UniqueID="{E58C12A2-C200-4B77-AC6D-B572DEC5E1E6}" Name="Rectangle.260" NameU="Rectangle.260">
+					<Text>PWR -</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">54.287499847091070</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="261" UniqueID="{3CDB7C65-8D54-45D2-B6E5-3ED9047CB85A}" Name="Rectangle.261" NameU="Rectangle.261">
+					<Text>ETH</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">54.749999988824143</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="262" UniqueID="{0E84AC46-B567-4756-BA90-D89CB1FBD66B}" Name="Rectangle.262" NameU="Rectangle.262" Master="18">
+					<Text>RF Antenna
+</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.687500000000000</PinX>
+						<PinY Unit="IN_F">54.368749774361888</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="263" UniqueID="{631FAF95-A381-4A10-AA2B-74DEA24813DF}" Name="Rectangle.263" NameU="Rectangle.263">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.612500039806068</PinX>
+						<PinY Unit="IN_F">62.187500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="265" UniqueID="{41628ED3-C9C2-4DED-AC5C-14CDBF028FAE}" Name="Rectangle.265" NameU="Rectangle.265">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.612500039806068</PinX>
+						<PinY Unit="IN_F">61.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="266" UniqueID="{569F591A-1CA4-4E13-B672-C1EB262F86F4}" Name="Rectangle.266" NameU="Rectangle.266">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.674999991059298</PinX>
+						<PinY Unit="IN_F">58.356250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="267" UniqueID="{29C69F5A-81F5-4682-99A7-736282062C2D}" Name="Rectangle.267" NameU="Rectangle.267">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.674999991059298</PinX>
+						<PinY Unit="IN_F">57.731250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="268" UniqueID="{D08D92DC-9EB8-40FD-9B7B-E09F1DF8DCA7}" Name="Rectangle.268" NameU="Rectangle.268">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.674999991059298</PinX>
+						<PinY Unit="IN_F">57.106250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="269" UniqueID="{B6DE4535-1D6A-454C-8FC1-8A0E71E32152}" Name="Rectangle.269" NameU="Rectangle.269">
+					<Text>Output</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.674999991059298</PinX>
+						<PinY Unit="IN_F">56.481250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="270" UniqueID="{08CDDA80-9E59-4449-80AE-5F3E10D181DA}" Name="Dynamic connector.270" NameU="Dynamic connector.270" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">20.625000015991478</PinX>
+						<PinY Unit="IN_F">62.615625041021197</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="271" UniqueID="{93FE944C-9FD6-4BF8-8150-2A3BBBD07DB3}" Name="Rectangle.271" NameU="Rectangle.271">
+					<Text>PWR IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">21.687500000000000</PinX>
+						<PinY Unit="IN_F">63.043750082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="272" UniqueID="{1E810BB2-B04D-43CF-9F38-F25968B7A070}" Name="Rectangle.272" NameU="Rectangle.272">
+					<Text>PWR IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">21.687500000000000</PinX>
+						<PinY Unit="IN_F">59.668750070866537</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="273" UniqueID="{DC323555-C65B-4166-A910-261020B9428E}" Name="Rectangle.273" NameU="Rectangle.273">
+					<Text>PWR IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">21.687500000000000</PinX>
+						<PinY Unit="IN_F">57.731250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="274" UniqueID="{B1B91EF4-C8D3-4E8D-B6A6-EEBA5BB4D0DC}" Name="Rectangle.274" NameU="Rectangle.274" Master="18">
+					<Text>S1 TVC Controller
+[TVC Controller]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.312500000000000</PinX>
+						<PinY Unit="IN_F">61.456249917957599</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="275" UniqueID="{EF90F374-DDAA-40AF-A4F0-5B7D24BEA2E3}" Name="Rectangle.275" NameU="Rectangle.275">
+					<Text>PWR IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">21.687500000000000</PinX>
+						<PinY Unit="IN_F">61.206249906781743</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="276" UniqueID="{852EF28E-7BA7-4F7B-98BE-047D3083ACEF}" Name="Dynamic connector.276" NameU="Dynamic connector.276" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">20.625000015991478</PinX>
+						<PinY Unit="IN_F">61.384374953390868</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="279" UniqueID="{A963ABD1-F872-447D-921B-43F0A10021D1}" Name="Dynamic connector.279" NameU="Dynamic connector.279" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">20.656249991618100</PinX>
+						<PinY Unit="IN_F">58.700000076454472</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="280" UniqueID="{B00603CF-DC66-4BBE-8A47-7CE0AB34FB16}" Name="Dynamic connector.280" NameU="Dynamic connector.280" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">20.656249991618100</PinX>
+						<PinY Unit="IN_F">57.418750082042401</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="281" UniqueID="{91AF10F0-6420-4CAE-9CBE-169BC7B47FA0}" Name="Dynamic connector.281" NameU="Dynamic connector.281" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">20.812500015991478</PinX>
+						<PinY Unit="IN_F">57.731249886249621</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="301" UniqueID="{F1DDA75A-7FFC-4AC6-87E0-187646026A6F}" Name="Rectangle.301" NameU="Rectangle.301" Master="18">
+					<Text>AV Eth Switch
+[AV Network Switch]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">18.562500048746770</PinX>
+						<PinY Unit="IN_F">60.937500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="302" UniqueID="{7EBA2A94-70CF-4257-8028-D222232CF00D}" Name="Rectangle.302" NameU="Rectangle.302">
+					<Text>ETH 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">61.093749998137362</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="303" UniqueID="{FCEF12CD-B1D5-4C13-8C88-03BD4F1698C3}" Name="Rectangle.303" NameU="Rectangle.303">
+					<Text>ETH 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">60.781250001862652</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="304" UniqueID="{59E3E5F8-730A-4CBD-B14E-453C0440541D}" Name="Rectangle.304" NameU="Rectangle.304">
+					<Text>ETH 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.612500039806068</PinX>
+						<PinY Unit="IN_F">61.093749998137362</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="305" UniqueID="{16C8C9ED-D783-4D80-9B65-B09B3E91A65A}" Name="Rectangle.305" NameU="Rectangle.305">
+					<Text>ETH 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">19.612500039806068</PinX>
+						<PinY Unit="IN_F">60.781250001862652</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="306" UniqueID="{17AA1F8A-4526-4696-A01F-98563894F7AE}" Name="Dynamic connector.306" NameU="Dynamic connector.306" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">17.281250041137191</PinX>
+						<PinY Unit="IN_F">60.381250034501953</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="307" UniqueID="{B7AF29D7-5EC9-4AFD-8675-CFDEB8324F15}" Name="Dynamic connector.307" NameU="Dynamic connector.307" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">17.281250041137191</PinX>
+						<PinY Unit="IN_F">57.765624995343387</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="309" UniqueID="{3ABC60EB-1644-4E89-B6E0-3F5200260B0B}" Name="Dynamic connector.309" NameU="Dynamic connector.309" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">10.445312509937891</PinX>
+						<PinY Unit="IN_F">54.749999994412079</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="310" UniqueID="{20E25838-68BA-4D32-8CDC-0B397122C57D}" Name="Dynamic connector.310" NameU="Dynamic connector.310" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.031250024373389</PinX>
+						<PinY Unit="IN_F">62.881249859198263</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="311" UniqueID="{80D411ED-7D86-4480-AAB6-50268B8BFDB9}" Name="Dynamic connector.311" NameU="Dynamic connector.311" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.031250024373389</PinX>
+						<PinY Unit="IN_F">62.581249942171993</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="316" UniqueID="{298B7A92-E6F2-4AF0-8DA1-4827274BCEEF}" Name="Rectangle.316" NameU="Rectangle.316">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">62.187500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="317" UniqueID="{3CF39D5A-AE85-4FE3-B3D1-F8B64A57BBAD}" Name="Rectangle.317" NameU="Rectangle.317">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.512500057687468</PinX>
+						<PinY Unit="IN_F">61.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="318" UniqueID="{096D4F9E-22FD-4FE4-800C-1F4AC285A5A2}" Name="Rectangle.318" NameU="Rectangle.318">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">58.356250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="319" UniqueID="{07409E58-4EA3-4ADA-AE52-EB928162465D}" Name="Rectangle.319" NameU="Rectangle.319">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">57.712500138007769</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="320" UniqueID="{0E55E65C-4B69-4EA7-8451-1180F4C5F0E9}" Name="Rectangle.320" NameU="Rectangle.320">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">57.106250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="321" UniqueID="{E1A51D29-C710-419A-B84E-47F24A94EDCC}" Name="Rectangle.321" NameU="Rectangle.321">
+					<Text>Input</Text>
+					<XForm>
+						<PinX Unit="IN_F">17.575000008940702</PinX>
+						<PinY Unit="IN_F">56.481250082042401</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="323" UniqueID="{CEED4190-D6F9-45CD-A367-5252CB25ED95}" Name="Dynamic connector.323" NameU="Dynamic connector.323" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.062500000000000</PinX>
+						<PinY Unit="IN_F">59.821874971085997</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="324" UniqueID="{C005BE65-E0A5-4C98-9B3F-6622F3C30E45}" Name="Dynamic connector.324" NameU="Dynamic connector.324" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.062500000000000</PinX>
+						<PinY Unit="IN_F">59.521875054059720</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="325" UniqueID="{54B2A4CE-C842-42BB-8B9A-E489282D932F}" Name="Dynamic connector.325" NameU="Dynamic connector.325" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.062500000000000</PinX>
+						<PinY Unit="IN_F">58.253125118406992</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="326" UniqueID="{281DBAF5-976A-48E1-90A3-EC28D71CB44A}" Name="Dynamic connector.326" NameU="Dynamic connector.326" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">14.906249983236201</PinX>
+						<PinY Unit="IN_F">58.033333415375729</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="327" UniqueID="{95F49AF1-6A8C-4028-B4F7-074738E5DB60}" Name="Dynamic connector.327" NameU="Dynamic connector.327" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">18.625000000000000</PinX>
+						<PinY Unit="IN_F">56.321874964566732</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="328" UniqueID="{E6455280-E9F7-4551-A3DF-FD175F16FE16}" Name="Dynamic connector.328" NameU="Dynamic connector.328" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">17.218750016763810</PinX>
+						<PinY Unit="IN_F">54.000000001862652</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="329" UniqueID="{A60B3C57-BD11-47B3-A29A-87D8CB02C3B9}" Name="Dynamic connector.329" NameU="Dynamic connector.329" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.062500000000000</PinX>
+						<PinY Unit="IN_F">56.484375189273521</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="330" UniqueID="{69D41570-FAD1-4296-B3F6-DB88FC581CE7}" Name="Dynamic connector.330" NameU="Dynamic connector.330" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">14.906249983236201</PinX>
+						<PinY Unit="IN_F">55.706250301161248</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="331" UniqueID="{3226965B-890C-47B0-8AFD-F41E6DE4D0CB}" Name="Dynamic connector.331" NameU="Dynamic connector.331" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">16.031250024373389</PinX>
+						<PinY Unit="IN_F">56.737500289985377</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="332" UniqueID="{5CDEE229-7F88-4FE3-A2D4-8437B4C447EF}" Name="Dynamic connector.332" NameU="Dynamic connector.332" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">15.406249991618100</PinX>
+						<PinY Unit="IN_F">51.131250584627367</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="333" UniqueID="{24D877B8-68AB-403B-8A78-391BCA2DDE65}" Name="Rectangle.333" NameU="Rectangle.333" Master="18">
+					<Text>Ordnance
+[Ordnance]
+(XXXX-YYYY)</Text>
+					<XForm>
+						<PinX Unit="IN_F">22.312500000000000</PinX>
+						<PinY Unit="IN_F">55.900000160359511</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="334" UniqueID="{C7888C55-3C31-4C10-95A5-A1E7E6D500DA}" Name="Rectangle.334" NameU="Rectangle.334">
+					<Text>PWR IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">21.687500000000000</PinX>
+						<PinY Unit="IN_F">55.625000011175871</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="335" UniqueID="{64E050E3-C509-466A-B615-0F8D06761E73}" Name="Dynamic connector.335" NameU="Dynamic connector.335" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">18.093749991618100</PinX>
+						<PinY Unit="IN_F">54.600000224706790</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="336" UniqueID="{126D904C-005A-4515-8DEB-E35A06A50EF9}" Name="Dynamic connector.336" NameU="Dynamic connector.336" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">15.218749758787469</PinX>
+						<PinY Unit="IN_F">53.418750442894307</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="337" UniqueID="{ED5F8CCF-D54C-45E1-92F0-1D8A06DAB818}" Name="DNA-PPC8" NameU="DNA-PPC8" Master="21">
+					<XForm>
+						<PinX Unit="IN_F">3.250000000000000</PinX>
+						<PinY Unit="IN_F">42.411250006705522</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="338" UniqueID="{4001897E-DF0B-4033-8C12-4AAFD96FD8BF}" Name="Box.989" NameU="Box.989">
+					<Text>DAQ 1
+[DAQ-PPC]
+(DNA-PPC8)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.250625000000000</PinX>
+						<PinY Unit="IN_F">42.411250006705522</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="339" UniqueID="{1EFCC97C-8C64-4A19-8E75-3462C828FC59}" Name="Box.994" NameU="Box.994">
+					<Text>POWER IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.625000000000000</PinX>
+						<PinY Unit="IN_F">43.375000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="340" UniqueID="{B851B1ED-7004-4886-9411-4AEDA5661D6C}" Name="Box.2205" NameU="Box.2205">
+					<Text>NET IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.437500000000000</PinX>
+						<PinY Unit="IN_F">40.625000013411089</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="341" UniqueID="{9D52EDE3-CC6C-440F-BA71-17B1C4A1A72E}" Name="Box.293" NameU="Box.293">
+					<Text>+VIN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">43.000000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="342" UniqueID="{1D918058-B6E8-447B-98A1-2516265FBC28}" Name="Box.294" NameU="Box.294">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">42.500000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="343" UniqueID="{658E2B8B-31E1-487B-9236-991FDEE34F49}" Name="Box.156" NameU="Box.156">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">42.250000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="344" UniqueID="{585B67F6-86F0-478F-A00D-C9990B8881B9}" Name="Box.157" NameU="Box.157">
+					<Text>+VIN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">42.750000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="345" UniqueID="{9C58AB3A-45A9-4277-963C-EC88C6372922}" Name="Box.158" NameU="Box.158">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">43.000000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="346" UniqueID="{40D7CA08-DDB5-4FBB-806F-63A951086E37}" Name="Box.298" NameU="Box.298">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">42.500000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="347" UniqueID="{0C0530D8-2308-4A3E-BBE3-39C81B1C8F6C}" Name="Box.299" NameU="Box.299">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">42.250000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="348" UniqueID="{1CE7F3C8-00B6-43D6-9344-BA150AA725B5}" Name="Box.300" NameU="Box.300">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">42.750000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="349" UniqueID="{DF62BFC5-2E3C-4184-93B5-BE93369B43B3}" Name="Box.301" NameU="Box.301">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">43.000000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="350" UniqueID="{8F42A838-8659-416C-B233-7DE92ACBE069}" Name="Box.163" NameU="Box.163">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">42.500000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="351" UniqueID="{E326993C-16A4-4516-9E1E-1B04CF1967CF}" Name="Box.164" NameU="Box.164">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">42.250000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="352" UniqueID="{56D279CD-A044-4DCE-BC71-FCDD0EC69B53}" Name="Box.165" NameU="Box.165">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">42.750000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="357" UniqueID="{678339EC-DC89-403B-B429-61F7C8CBCD3E}" Name="Box.2957" NameU="Box.2957">
+					<Text>RS232</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.000000000000000</PinX>
+						<PinY Unit="IN_F">42.500000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="358" UniqueID="{E9BED0DC-9681-4F9C-B610-5C38C86AE857}" Name="Box.2959" NameU="Box.2959">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">41.875000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="359" UniqueID="{807EC336-37F6-4AAC-9846-F7DF4CA5D90A}" Name="Box.2960" NameU="Box.2960">
+					<Text>5</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">41.625000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="360" UniqueID="{8C67E70F-AB5C-4E1B-9424-6818AAD1A906}" Name="Box.2961" NameU="Box.2961">
+					<Text>7</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">41.375000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="361" UniqueID="{5EE863F6-C3B2-4EAE-8C3A-749676E55B98}" Name="Box.2962" NameU="Box.2962">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">41.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="362" UniqueID="{D3D33F62-389F-4BD4-A641-1FBBD591EED7}" Name="Box.2963" NameU="Box.2963">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">42.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="363" UniqueID="{47736EC7-6A2F-4869-B320-CDFA7C39354C}" Name="Box.2964" NameU="Box.2964">
+					<Text>TXD</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">42.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="364" UniqueID="{FE80034A-1C6A-40EE-96EB-0D190E794037}" Name="Box.2965" NameU="Box.2965">
+					<Text>RXD</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">41.875000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="365" UniqueID="{2088C291-ED54-4377-9176-4E8387217E56}" Name="Box.2966" NameU="Box.2966">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">41.625000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="366" UniqueID="{805C1AB3-B1A8-4C62-8EFF-0E78C6AF66A3}" Name="Box.2967" NameU="Box.2967">
+					<Text>CTS</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">41.375000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="367" UniqueID="{4B3FA33E-1C86-4A3B-B27D-CEC0999C0B4D}" Name="Box.2968" NameU="Box.2968">
+					<Text>RTS</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">41.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="368" UniqueID="{F773C9ED-7EEE-4E7A-A09C-EE4495950D11}" Name="Box.2969" NameU="Box.2969">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">41.875000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="369" UniqueID="{9C84F271-2136-4DDE-953E-13B0032EC251}" Name="Box.2970" NameU="Box.2970">
+					<Text>5</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">41.625000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="370" UniqueID="{E797CA45-2E27-4E34-AD37-F8F7DCF1C999}" Name="Box.2971" NameU="Box.2971">
+					<Text>7</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">41.375000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="371" UniqueID="{A0AC1CF8-161D-48A7-AAF0-A323F80E7164}" Name="Box.2972" NameU="Box.2972">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">41.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="372" UniqueID="{D61F3A3B-FF89-4E7D-8321-4F479F1A9217}" Name="Box.2973" NameU="Box.2973">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">42.125000013411082</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="374" UniqueID="{B42ED767-33B5-414A-8FED-F36AE77682D2}" Name="DNA-DIO-404" NameU="DNA-DIO-404" Master="22">
+					<XForm>
+						<PinX Unit="IN_F">3.250000000000000</PinX>
+						<PinY Unit="IN_F">36.059999985098841</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="375" UniqueID="{7DE96129-8B9A-4431-B29F-D4960568AD23}" Name="Box.1254" NameU="Box.1254">
+					<Text>DAQ 1 Layer 1
+[DAQ-Digital]
+(DNA-DIO-404)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.002500000000000</PinX>
+						<PinY Unit="IN_F">36.059999985098841</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="376" UniqueID="{DCDF5062-F666-4D7F-A96C-A2858E24E45C}" Name="Box.1257" NameU="Box.1257">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">39.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="377" UniqueID="{C332BE48-E326-4C5B-897C-B86D73B68CE7}" Name="Box.1258" NameU="Box.1258">
+					<Text>DOUT 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">39.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="378" UniqueID="{15019739-B653-4F80-B6CD-ABEF3EB3D32F}" Name="Box.1259" NameU="Box.1259">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">39.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="379" UniqueID="{B9A2F687-893B-481C-9FE4-DB97C96A4051}" Name="Box.1260" NameU="Box.1260">
+					<Text>DOUT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">39.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="380" UniqueID="{9DCC8FBA-6514-47B1-8736-28B8A6A16FC7}" Name="Box.1261" NameU="Box.1261">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">38.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="381" UniqueID="{7D2C622C-34F8-4DC7-802B-E9DB7CE53EAD}" Name="Box.1262" NameU="Box.1262">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">38.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="382" UniqueID="{AB99D130-43E7-443D-8686-97030B272FD0}" Name="Box.1263" NameU="Box.1263">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">38.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="383" UniqueID="{DD7B3936-2A5D-4813-8643-4A864DBF49B7}" Name="Box.1264" NameU="Box.1264">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">38.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="384" UniqueID="{3A112285-4AE2-4B6F-A02A-2E24309A59D8}" Name="Box.1265" NameU="Box.1265">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">37.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="385" UniqueID="{18AE1D42-104F-4730-91B6-9AAB52D5CB38}" Name="Box.1266" NameU="Box.1266">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">37.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="386" UniqueID="{874BE29D-A154-4201-8E02-1531FB9A0908}" Name="Box.1267" NameU="Box.1267">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">37.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="387" UniqueID="{D750211A-DD91-4587-A82C-B801EFE6047B}" Name="Box.1268" NameU="Box.1268">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">37.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="388" UniqueID="{9681B1CF-9034-4920-9815-DF97C640A535}" Name="Box.1269" NameU="Box.1269">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">36.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="389" UniqueID="{7CB0C5A9-4ED6-4A46-BE3F-1247A0931C4D}" Name="Box.1270" NameU="Box.1270">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">36.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="390" UniqueID="{5D0D6936-E019-40A1-8CE0-74129C68E505}" Name="Box.1271" NameU="Box.1271">
+					<Text>DOUT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">38.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="391" UniqueID="{D8FE6032-C364-4DEB-8400-01CDD0262481}" Name="Box.1272" NameU="Box.1272">
+					<Text>DOUT 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">38.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="392" UniqueID="{DDAAA431-9F7B-4A0A-A21B-F99DE79435AF}" Name="Box.1273" NameU="Box.1273">
+					<Text>DOUT 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">38.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="393" UniqueID="{13B1C63B-2BE2-44FA-880C-29577B51F3EC}" Name="Box.1274" NameU="Box.1274">
+					<Text>DOUT 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">38.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="394" UniqueID="{2AEF7637-FD47-428E-B844-67B58B126304}" Name="Box.1275" NameU="Box.1275">
+					<Text>DOUT 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">37.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="395" UniqueID="{88BB98C3-B72F-4569-9CFF-8C7C5D1CD723}" Name="Box.1276" NameU="Box.1276">
+					<Text>DOUT 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">37.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="396" UniqueID="{76041CED-59ED-4D1B-9B18-8072E2719737}" Name="Box.1277" NameU="Box.1277">
+					<Text>DOUT 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">37.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="397" UniqueID="{49B27838-DD17-4C40-8990-09438C3FC00C}" Name="Box.1278" NameU="Box.1278">
+					<Text>DOUT 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">37.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="398" UniqueID="{8726872A-32CE-4C9F-9DDC-B1929DA8E144}" Name="Box.1279" NameU="Box.1279">
+					<Text>DOUT 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">36.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="399" UniqueID="{2A46FFAF-FF4B-4C9F-B061-8DA537D36DDD}" Name="Box.1280" NameU="Box.1280">
+					<Text>DOUT 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">36.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="400" UniqueID="{B447E440-F027-4F4B-B782-8359D7DE7E5B}" Name="Box.1281" NameU="Box.1281">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">36.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="401" UniqueID="{4BEAEA1D-DC97-4AA0-9A66-35CB558CFF69}" Name="Box.1282" NameU="Box.1282">
+					<Text>DIN 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">36.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="402" UniqueID="{E2D68065-0852-4DCD-95BD-178218E2C91A}" Name="Box.1283" NameU="Box.1283">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">36.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="403" UniqueID="{79E27425-2EC4-4E8D-97C2-94CC93A6D0DB}" Name="Box.1284" NameU="Box.1284">
+					<Text>DIN 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">36.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="404" UniqueID="{77C6177E-D935-44F2-A25F-15BFB4C8AACF}" Name="Box.1285" NameU="Box.1285">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">35.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="405" UniqueID="{A1B81A83-30D0-45B6-B1B5-616A382494C9}" Name="Box.1286" NameU="Box.1286">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">35.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="406" UniqueID="{505AEB2E-CAE0-432A-BF8D-74F5EF69048F}" Name="Box.1287" NameU="Box.1287">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">35.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="407" UniqueID="{7923AA93-2930-4CB0-A8C7-57ECFD107859}" Name="Box.1288" NameU="Box.1288">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">35.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="408" UniqueID="{39B359E9-3701-4A0C-A20F-AE2811C258DF}" Name="Box.1289" NameU="Box.1289">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">34.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="409" UniqueID="{828FD111-1585-442C-95ED-501E4EB75191}" Name="Box.1290" NameU="Box.1290">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">34.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="410" UniqueID="{76A8E9DA-15D1-4A26-829C-DB95D6304A49}" Name="Box.1291" NameU="Box.1291">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">34.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="411" UniqueID="{A5CA29F6-AE18-43C8-A998-4E6AD404B096}" Name="Box.1292" NameU="Box.1292">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">34.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="412" UniqueID="{DA46D970-8A41-4CC5-88D6-A8C78924C97C}" Name="Box.1293" NameU="Box.1293">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">33.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="413" UniqueID="{3FA96E2F-B5AA-4947-9979-0C83C19D9274}" Name="Box.1294" NameU="Box.1294">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">33.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="414" UniqueID="{746F9C7A-53C3-480A-B799-DC4AB7C35F98}" Name="Box.1295" NameU="Box.1295">
+					<Text>DIN 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">35.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="415" UniqueID="{A5FBDAB4-34BB-49EB-B799-27694DD38D77}" Name="Box.1296" NameU="Box.1296">
+					<Text>DIN 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">35.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="416" UniqueID="{2A72D193-8C9E-409D-B455-C1E956B37B36}" Name="Box.1297" NameU="Box.1297">
+					<Text>DIN 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">35.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="417" UniqueID="{47804078-D5FB-4A53-9FC5-8E35A4577291}" Name="Box.1298" NameU="Box.1298">
+					<Text>DIN 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">35.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="418" UniqueID="{D61C674D-C23E-422E-8AF6-ED22D5E73E59}" Name="Box.1299" NameU="Box.1299">
+					<Text>DIN 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">34.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="419" UniqueID="{74E51142-60C3-4952-8263-EC462C470BCC}" Name="Box.1300" NameU="Box.1300">
+					<Text>DIN 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">34.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="420" UniqueID="{0369C554-6113-409A-BC34-46F7926DA2DF}" Name="Box.1301" NameU="Box.1301">
+					<Text>DIN 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">34.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="421" UniqueID="{EFB62C5F-7751-45B5-BC31-657A4D169BD6}" Name="Box.1302" NameU="Box.1302">
+					<Text>DIN 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">34.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="422" UniqueID="{1F0FE25B-2D8E-4461-918D-B4755B21E4A5}" Name="Box.1303" NameU="Box.1303">
+					<Text>DIN 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">33.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="423" UniqueID="{D9753959-3B15-4EC0-A6E5-668E637A9D2A}" Name="Box.1304" NameU="Box.1304">
+					<Text>DIN 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">33.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="424" UniqueID="{9E656441-115F-4C4F-A5FD-D34709D93606}" Name="Box.1511" NameU="Box.1511">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">39.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="425" UniqueID="{0BD61C45-805D-4E34-B4C9-9B2935C116C2}" Name="Box.1512" NameU="Box.1512">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">39.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="426" UniqueID="{EDCF553D-D3B6-40F7-B299-D8FB6D9D46D7}" Name="Box.1513" NameU="Box.1513">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">38.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="427" UniqueID="{4D6679F1-CEB1-43C3-986B-CD3C8415116F}" Name="Box.1514" NameU="Box.1514">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">38.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="428" UniqueID="{B10BD960-5B23-406F-94CA-74917F1A3FA3}" Name="Box.1515" NameU="Box.1515">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">38.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="429" UniqueID="{AC022928-5CB7-432E-BC95-8DEB26A30493}" Name="Box.1516" NameU="Box.1516">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">38.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="430" UniqueID="{5A017484-298C-41C9-98C3-2904BEE18FE9}" Name="Box.1517" NameU="Box.1517">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">37.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="431" UniqueID="{B15BAF40-A2FF-47FB-A7FC-DDAF58C9CCBA}" Name="Box.1518" NameU="Box.1518">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">37.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="432" UniqueID="{0D14E5D2-2CEF-4ED2-9570-C6A2BB533183}" Name="Box.1519" NameU="Box.1519">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">37.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="433" UniqueID="{CD2C3539-6C31-4802-96F5-4543C5243687}" Name="Box.1520" NameU="Box.1520">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">37.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="434" UniqueID="{34168F2A-BB52-4EFD-B2D2-3187931D40E5}" Name="Box.1521" NameU="Box.1521">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">36.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="435" UniqueID="{D3486DB5-E9E3-495F-B8C4-53157B599312}" Name="Box.1522" NameU="Box.1522">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">36.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="436" UniqueID="{04BEF075-06EF-444E-97EE-F9523A39F545}" Name="Box.1523" NameU="Box.1523">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">36.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="437" UniqueID="{0C675C37-38F2-4D39-9B19-11DE09108694}" Name="Box.1524" NameU="Box.1524">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">36.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="438" UniqueID="{EDE02914-82F4-45ED-B21E-38A956C067CD}" Name="Box.1525" NameU="Box.1525">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">35.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="439" UniqueID="{95B3C0A3-02BF-4F1C-A492-357AF364F622}" Name="Box.1526" NameU="Box.1526">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">35.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="440" UniqueID="{1543A9B0-AB6D-4A66-B2FD-119E12545BA9}" Name="Box.1527" NameU="Box.1527">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">35.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="441" UniqueID="{B02DF461-E284-4A12-B356-2E05BF095A73}" Name="Box.1528" NameU="Box.1528">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">35.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="442" UniqueID="{9FDC78E2-974A-422B-9D0A-7B8F2ACCD282}" Name="Box.1529" NameU="Box.1529">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">34.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="443" UniqueID="{59455563-13C0-460E-902F-83A4760D45B4}" Name="Box.1530" NameU="Box.1530">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">34.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="444" UniqueID="{6E28A5C1-2ED7-4F36-AF49-35CABC4F67BD}" Name="Box.1531" NameU="Box.1531">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">34.370000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="445" UniqueID="{9466A99C-875E-485F-AE63-AD5132BE49EC}" Name="Box.1532" NameU="Box.1532">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">34.120000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="446" UniqueID="{A9382F5F-1419-4192-A50D-ABE50F7CF8A4}" Name="Box.1533" NameU="Box.1533">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">33.870000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="447" UniqueID="{82B52965-9687-4557-87A0-15670756909A}" Name="Box.1534" NameU="Box.1534">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">33.620000000000026</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="448" UniqueID="{8EC87930-74B4-47B1-937D-42BD8B723744}" Name="Box.91" NameU="Box.91">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">33.370000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="449" UniqueID="{A30BDC07-ECCB-4347-AB41-026E81434E79}" Name="Box.92" NameU="Box.92">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">33.120000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="450" UniqueID="{E122122A-2E25-4A26-9E15-A1B249678B40}" Name="Box.93" NameU="Box.93">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">32.870000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="451" UniqueID="{4DB33EC1-B579-4F8D-9350-AAE38E2565D9}" Name="Box.94" NameU="Box.94">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">32.620000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="452" UniqueID="{71148766-154C-4161-AF61-17E0BD6B98CF}" Name="Box.95" NameU="Box.95">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">32.370000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="453" UniqueID="{7D8A82A2-7172-4E38-9C9D-8598B12DF49D}" Name="Box.96" NameU="Box.96">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">32.120000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="454" UniqueID="{C6F6E5C0-C8E6-48F4-A607-B77A56A7454F}" Name="Box.97" NameU="Box.97">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">33.370000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="455" UniqueID="{6303E60A-80BB-4EF6-AF89-21CD9281F438}" Name="Box.98" NameU="Box.98">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">33.120000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="456" UniqueID="{9444CE94-9051-4E6B-8653-5019E08ECDA9}" Name="Box.99" NameU="Box.99">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">32.870000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="457" UniqueID="{2B9A8773-10C3-4E02-AD7D-E91F6FD3E568}" Name="Box.100" NameU="Box.100">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">32.620000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="458" UniqueID="{584E61F5-B220-4BE6-8AC3-6E5D7AE24879}" Name="Box.101" NameU="Box.101">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">32.370000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="459" UniqueID="{43A2882F-E38A-49C8-8CA0-ED949728D8F2}" Name="Box.102" NameU="Box.102">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">32.120000008940700</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="462" UniqueID="{7C3F08F5-CAD3-418C-A631-8BB8B9E08DD2}" Name="Box.105" NameU="Box.105">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">33.370000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="463" UniqueID="{ECD6989A-5B69-4E65-8240-8BB65BDB1679}" Name="Box.106" NameU="Box.106">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">33.120000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="464" UniqueID="{9A91F297-DD4D-46FB-A5BE-F9E547C7C5C8}" Name="Box.107" NameU="Box.107">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">32.870000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="465" UniqueID="{BE7B736F-4C5F-4BEF-A769-61A17A839151}" Name="Box.108" NameU="Box.108">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">32.620000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="466" UniqueID="{C0B70783-15A6-4FE5-A650-C0B51CD93CB0}" Name="Box.109" NameU="Box.109">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">32.370000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="467" UniqueID="{B7F9FBD9-8483-4CB7-9183-BDE43132E6F9}" Name="Box.110" NameU="Box.110">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">32.120000000000005</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="468" UniqueID="{F3C65385-3D1A-46B6-847B-758CEE4D8947}" Name="DNA-DIO-404.468" NameU="DNA-DIO-404.468" Master="22">
+					<XForm>
+						<PinX Unit="IN_F">3.250000000000000</PinX>
+						<PinY Unit="IN_F">27.690000014901159</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="469" UniqueID="{D6188D00-1BD5-4E97-A98E-B28D06816B67}" Name="Box.1254" NameU="Box.1254">
+					<Text>DAQ 1 Layer 2
+[DAQ-Digital]
+(DNA-DIO-404)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.002500000000000</PinX>
+						<PinY Unit="IN_F">27.690000014901159</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="470" UniqueID="{ED72CEC1-4831-4F9A-8AC1-8BF6F6753648}" Name="Box.1257" NameU="Box.1257">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">31.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="471" UniqueID="{DD6B46E5-940C-4787-A1B6-F29CA803D372}" Name="Box.1258" NameU="Box.1258">
+					<Text>DOUT 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">31.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="472" UniqueID="{DB054D6E-0D6F-4C6A-B36E-51B5C9816C47}" Name="Box.1259" NameU="Box.1259">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">30.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="473" UniqueID="{4AFC22D9-9020-49B6-8CED-5E80DD6DA2F4}" Name="Box.1260" NameU="Box.1260">
+					<Text>DOUT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">30.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="474" UniqueID="{D090180A-B1CF-4935-8B43-C58186D4D3E8}" Name="Box.1261" NameU="Box.1261">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">30.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="475" UniqueID="{7B59BB74-1372-499C-98FB-6A9930A3C7CA}" Name="Box.1262" NameU="Box.1262">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">30.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="476" UniqueID="{01C01E38-62A2-4E2D-9B0C-D65626784A78}" Name="Box.1263" NameU="Box.1263">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">30.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="477" UniqueID="{9EBF1431-A151-40E4-8884-60A840A42A4E}" Name="Box.1264" NameU="Box.1264">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">29.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="478" UniqueID="{9B8C6634-0793-4C3C-8478-FF1328C6A4FB}" Name="Box.1265" NameU="Box.1265">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">29.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="479" UniqueID="{A132F34C-016F-417F-8A47-0E115A8A977A}" Name="Box.1266" NameU="Box.1266">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">29.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="480" UniqueID="{AA688A2F-D334-40DB-9182-CF21D65E2C01}" Name="Box.1267" NameU="Box.1267">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">29.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="481" UniqueID="{A99B7704-06C0-4C03-992B-8644B5F3FEC3}" Name="Box.1268" NameU="Box.1268">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">28.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="482" UniqueID="{436C4778-3600-4554-9981-06B067020AEB}" Name="Box.1269" NameU="Box.1269">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">28.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="483" UniqueID="{C75F1B3E-A3BA-4BF0-8D1F-A2C9DA4A3504}" Name="Box.1270" NameU="Box.1270">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">28.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="484" UniqueID="{70F4FD43-4B5F-4871-BCEC-0018B4F5FA93}" Name="Box.1271" NameU="Box.1271">
+					<Text>DOUT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">30.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="485" UniqueID="{26145AF0-E4BD-433F-9C0A-3492E4480205}" Name="Box.1272" NameU="Box.1272">
+					<Text>DOUT 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">30.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="486" UniqueID="{E09867F2-0E1C-4A49-BE2B-A21E7229A107}" Name="Box.1273" NameU="Box.1273">
+					<Text>DOUT 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">30.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="487" UniqueID="{F6D2585A-EDF2-4690-8592-42413C55E3AA}" Name="Box.1274" NameU="Box.1274">
+					<Text>DOUT 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">29.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="488" UniqueID="{166C69A2-5E44-41F5-ACDD-DF4591697D34}" Name="Box.1275" NameU="Box.1275">
+					<Text>DOUT 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">29.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="489" UniqueID="{C9195D56-4AEC-4BA1-B9A3-2F16163454FD}" Name="Box.1276" NameU="Box.1276">
+					<Text>DOUT 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">29.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="490" UniqueID="{C6E5AF19-3829-4441-98EC-D01817BF5F5E}" Name="Box.1277" NameU="Box.1277">
+					<Text>DOUT 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">29.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="491" UniqueID="{88927A5C-3C3E-468B-8D29-F00BEA0AB13C}" Name="Box.1278" NameU="Box.1278">
+					<Text>DOUT 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">28.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="492" UniqueID="{F518FD87-A4E6-42CB-A1ED-0C9568EA36E6}" Name="Box.1279" NameU="Box.1279">
+					<Text>DOUT 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">28.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="493" UniqueID="{58152910-3226-4F6E-8F23-48EA3DD4216E}" Name="Box.1280" NameU="Box.1280">
+					<Text>DOUT 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">28.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="494" UniqueID="{57F4C379-37FF-48A0-9478-0E740261B698}" Name="Box.1281" NameU="Box.1281">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">28.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="495" UniqueID="{FF38F589-B6A2-4979-9553-91FB9877F431}" Name="Box.1282" NameU="Box.1282">
+					<Text>DIN 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">28.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="496" UniqueID="{5050D0AC-33E6-49FD-9912-2EBBB1B1E359}" Name="Box.1283" NameU="Box.1283">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">27.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="497" UniqueID="{618AAFE5-212F-47E5-8DCD-590D1A8A822B}" Name="Box.1284" NameU="Box.1284">
+					<Text>DIN 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">27.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="498" UniqueID="{149F63DC-2EEF-440E-85D4-7AD39175A46F}" Name="Box.1285" NameU="Box.1285">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">27.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="499" UniqueID="{FF549913-0559-4690-80F2-D31DEC28C7D0}" Name="Box.1286" NameU="Box.1286">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">27.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="500" UniqueID="{6F410AD8-EC1D-4FE8-B1BF-64A449F6EB40}" Name="Box.1287" NameU="Box.1287">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">27.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="501" UniqueID="{4857479B-CF7E-4BB1-AE41-F118838058D4}" Name="Box.1288" NameU="Box.1288">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">26.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="502" UniqueID="{CE7F98B3-B998-4368-B5E1-A1EA27648A38}" Name="Box.1289" NameU="Box.1289">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">26.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="503" UniqueID="{9D1F3145-A6CD-4BDB-B5B3-77CA640D9864}" Name="Box.1290" NameU="Box.1290">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">26.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="504" UniqueID="{C2F1C0C2-1F9F-4432-A0F2-5E3CBAF0AB8F}" Name="Box.1291" NameU="Box.1291">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">26.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="505" UniqueID="{B1786CA0-9195-4397-9AE1-51CD979E1619}" Name="Box.1292" NameU="Box.1292">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">25.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="506" UniqueID="{0F864982-37AC-431A-A6FD-100806F9C76B}" Name="Box.1293" NameU="Box.1293">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">25.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="507" UniqueID="{51A00EEA-61ED-4FDC-8E87-B312A037CA6F}" Name="Box.1294" NameU="Box.1294">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">25.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="508" UniqueID="{FCDFA0CD-2C6D-47F2-BA3F-9E3FBE97FE9C}" Name="Box.1295" NameU="Box.1295">
+					<Text>DIN 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">27.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="509" UniqueID="{38AF769D-DFF9-4C65-83EB-D09D5069BABE}" Name="Box.1296" NameU="Box.1296">
+					<Text>DIN 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">27.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="510" UniqueID="{3FA36142-21E6-405E-8150-50827550B80C}" Name="Box.1297" NameU="Box.1297">
+					<Text>DIN 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">27.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="511" UniqueID="{FFD3E2FD-65AF-45D8-9B15-D78DF294C184}" Name="Box.1298" NameU="Box.1298">
+					<Text>DIN 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">26.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="512" UniqueID="{1344FAD4-7676-41B9-925A-99D4BF7E8694}" Name="Box.1299" NameU="Box.1299">
+					<Text>DIN 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">26.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="513" UniqueID="{9D716B25-E022-42E2-8EAE-F0C9CAEE1FF1}" Name="Box.1300" NameU="Box.1300">
+					<Text>DIN 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">26.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="514" UniqueID="{BD591016-5F47-4293-9288-0A25C9BC13FD}" Name="Box.1301" NameU="Box.1301">
+					<Text>DIN 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">26.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="515" UniqueID="{FF1A5EFA-262C-4295-82B1-1E2EB68B83EB}" Name="Box.1302" NameU="Box.1302">
+					<Text>DIN 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">25.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="516" UniqueID="{E9CA8967-E963-41B1-974F-FA7DD8978F0F}" Name="Box.1303" NameU="Box.1303">
+					<Text>DIN 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">25.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="517" UniqueID="{928FF44F-BD36-4B05-87C0-9DF2F2C22A4F}" Name="Box.1304" NameU="Box.1304">
+					<Text>DIN 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">25.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="518" UniqueID="{455756F1-2E20-4573-B5F7-C0D40E751ABF}" Name="Box.1511" NameU="Box.1511">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">31.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="519" UniqueID="{D2BA0EB1-5EE7-47C5-AEF1-370BE5F3B8DA}" Name="Box.1512" NameU="Box.1512">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">30.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="520" UniqueID="{E9BC9ADA-F905-424C-92EB-BC912A5DFDA9}" Name="Box.1513" NameU="Box.1513">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">30.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="521" UniqueID="{50BBFC19-1B59-4869-B58A-0BDD01F74153}" Name="Box.1514" NameU="Box.1514">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">30.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="522" UniqueID="{2376C3E8-C638-490E-8BE1-BE628990BE16}" Name="Box.1515" NameU="Box.1515">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">30.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="523" UniqueID="{9B2D10B5-A9D8-4C73-8CD3-8D3B0BB84820}" Name="Box.1516" NameU="Box.1516">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">29.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="524" UniqueID="{7751933D-40E8-449F-8FCC-4243BE0FBEF6}" Name="Box.1517" NameU="Box.1517">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">29.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="525" UniqueID="{CA94BCD0-4D54-42E8-9626-CE87CA3D79D4}" Name="Box.1518" NameU="Box.1518">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">29.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="526" UniqueID="{C652CEAF-EBF1-4D60-8FA9-B090A27517A8}" Name="Box.1519" NameU="Box.1519">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">29.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="527" UniqueID="{168AE7BC-EB6C-4E73-9395-802A0B24BE45}" Name="Box.1520" NameU="Box.1520">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">28.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="528" UniqueID="{9EBD5BA8-95C1-4E6F-97AA-935FD040496E}" Name="Box.1521" NameU="Box.1521">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">28.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="529" UniqueID="{9A5B49F0-9051-4637-A192-D74862B040DF}" Name="Box.1522" NameU="Box.1522">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">28.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="530" UniqueID="{C51B6ECC-58A2-4AC4-8429-A90452B6E5BC}" Name="Box.1523" NameU="Box.1523">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">28.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="531" UniqueID="{1F2E40B5-99AC-4A40-80F0-BF970EBEA69D}" Name="Box.1524" NameU="Box.1524">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">27.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="532" UniqueID="{08C1E28E-9069-4212-8671-DE17DF501BF0}" Name="Box.1525" NameU="Box.1525">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">27.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="533" UniqueID="{55148336-225C-47F3-8B53-0127017ADA79}" Name="Box.1526" NameU="Box.1526">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">27.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="534" UniqueID="{C1F8CBA6-A67E-4A9D-A24B-3028F5686F20}" Name="Box.1527" NameU="Box.1527">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">27.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="535" UniqueID="{2F0CEE0B-D670-48E1-BC31-FAB0B337FF21}" Name="Box.1528" NameU="Box.1528">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">26.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="536" UniqueID="{5462565C-15FD-45D3-81BD-4EA03317F65C}" Name="Box.1529" NameU="Box.1529">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">26.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="537" UniqueID="{680541C0-5063-4461-9610-B8641DC2AC00}" Name="Box.1530" NameU="Box.1530">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">26.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="538" UniqueID="{90E0B7FF-631C-4F36-BD2F-1EDCDB690D7B}" Name="Box.1531" NameU="Box.1531">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">26.000000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="539" UniqueID="{B0E39459-6C9D-4EA0-A8F0-CA32722F4DBC}" Name="Box.1532" NameU="Box.1532">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">25.750000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="540" UniqueID="{1AAAFEC3-3FEB-44EC-BBFA-DBDB78E98634}" Name="Box.1533" NameU="Box.1533">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">25.500000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="541" UniqueID="{CA4BBE77-C3A5-4FA4-A6E0-34AD5E2CA30A}" Name="Box.1534" NameU="Box.1534">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250000000085</PinX>
+						<PinY Unit="IN_F">25.250000029802344</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="542" UniqueID="{1818BEB4-0FBF-4A1B-82F2-99CB9275D98B}" Name="Box.91" NameU="Box.91">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">25.000000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="543" UniqueID="{8E5F9919-00F9-44BE-B8B9-3661C93190FD}" Name="Box.92" NameU="Box.92">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">24.750000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="544" UniqueID="{4EB2B024-3B48-45F0-8C00-882292E28912}" Name="Box.93" NameU="Box.93">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">24.500000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="545" UniqueID="{96B7EBA1-5622-4AAB-A265-5B9DC101AF7B}" Name="Box.94" NameU="Box.94">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">24.250000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="546" UniqueID="{4F98AE55-0F67-40FF-99EA-FA83FF19196D}" Name="Box.95" NameU="Box.95">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">24.000000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="547" UniqueID="{AA6041E4-773A-48C1-BA1F-ABCB09CFF931}" Name="Box.96" NameU="Box.96">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.841250000000000</PinX>
+						<PinY Unit="IN_F">23.750000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="548" UniqueID="{FD086AE2-3BEC-4078-B753-B3F2000B59A4}" Name="Box.97" NameU="Box.97">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">25.000000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="549" UniqueID="{68FFEAED-8EEB-496D-AE77-F714C9F31710}" Name="Box.98" NameU="Box.98">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">24.750000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="550" UniqueID="{96555C8A-BDF8-42F4-991A-6581968AF1BB}" Name="Box.99" NameU="Box.99">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">24.500000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="551" UniqueID="{C0CA6FBB-343C-4D72-B162-8EF5E9223CC7}" Name="Box.100" NameU="Box.100">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">24.250000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="552" UniqueID="{6E5EAFC9-65C0-4128-B49D-AEB8F1589F72}" Name="Box.101" NameU="Box.101">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">24.000000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="553" UniqueID="{15997641-EAE3-496C-9C25-5F434A4B1734}" Name="Box.102" NameU="Box.102">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.341250065565111</PinX>
+						<PinY Unit="IN_F">23.750000038743018</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="556" UniqueID="{3E2097D5-D8DB-4871-B140-6EB9C3979ADF}" Name="Box.105" NameU="Box.105">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">25.000000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="557" UniqueID="{69E10804-2F03-41BE-A003-6331CEB397AE}" Name="Box.106" NameU="Box.106">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">24.750000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="558" UniqueID="{E4F9F74D-7F03-454D-AEBE-0045457D2371}" Name="Box.107" NameU="Box.107">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">24.500000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="559" UniqueID="{473A3E4C-2D7E-47E9-B5F4-FFBCB199B9E6}" Name="Box.108" NameU="Box.108">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">24.250000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="560" UniqueID="{378F9E2B-B0DB-4F54-AB96-BEA4C3E0FF09}" Name="Box.109" NameU="Box.109">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">24.000000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="561" UniqueID="{2806DFF1-AFFD-4A6B-9330-4C522502F7DF}" Name="Box.110" NameU="Box.110">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.091250000000000</PinX>
+						<PinY Unit="IN_F">23.750000029802319</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="562" UniqueID="{307C6C62-3676-4E96-8738-6315F727F746}" Name="Dynamic connector.562" NameU="Dynamic connector.562" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">3.710611950772615</PinX>
+						<PinY Unit="IN_F">45.581250361883491</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="563" UniqueID="{EF71835E-9B5B-4AFB-820E-41264C85787B}" Name="Dynamic connector.563" NameU="Dynamic connector.563" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">2.687499954933071</PinX>
+						<PinY Unit="IN_F">53.113068127962237</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="564" UniqueID="{9B9F0072-67D2-4B57-8277-714395FDA79B}" Name="Dynamic connector" NameU="Dynamic connector" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">1.406250000000000</PinX>
+						<PinY Unit="IN_F">42.750000006705541</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="565" UniqueID="{40CB345C-912E-4DDF-9E8A-BFDC6C446F5C}" Name="Dynamic connector.565" NameU="Dynamic connector.565" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">2.687499954933071</PinX>
+						<PinY Unit="IN_F">52.069318113792797</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="566" UniqueID="{3DC63963-80C7-43DC-B25D-D1BB37DA6214}" Name="Dynamic connector.566" NameU="Dynamic connector.566" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">1.125000000000000</PinX>
+						<PinY Unit="IN_F">42.500000006705541</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="567" UniqueID="{541B61B9-EFDA-4CD7-92F0-AFE9E8AF82B5}" Name="Dynamic connector.567" NameU="Dynamic connector.567" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">10.170624999999999</PinX>
+						<PinY Unit="IN_F">51.060000001862662</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="568" UniqueID="{42CF79FB-8009-4A4C-9A94-8A036DE7F747}" Name="Dynamic connector.568" NameU="Dynamic connector.568" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">10.420624999999999</PinX>
+						<PinY Unit="IN_F">48.144375042883851</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="569" UniqueID="{2D64D366-95F2-4690-9AF6-91337DAD86B3}" Name="Dynamic connector.569" NameU="Dynamic connector.569" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">10.858124999999999</PinX>
+						<PinY Unit="IN_F">45.247500000000002</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="570" UniqueID="{1A22FADC-C1D1-4E41-8711-59A89F808982}" Name="Dynamic connector.570" NameU="Dynamic connector.570" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.983125000000042</PinX>
+						<PinY Unit="IN_F">37.869999999999997</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="571" UniqueID="{9AEE12DB-A259-498C-AED6-D0D2206AEB55}" Name="Dynamic connector.571" NameU="Dynamic connector.571" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">6.420625000000042</PinX>
+						<PinY Unit="IN_F">35.869999999999997</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="572" UniqueID="{9E9E12ED-3306-403D-BC4A-0BD462A015CC}" Name="Dynamic connector.572" NameU="Dynamic connector.572" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">6.670625000000042</PinX>
+						<PinY Unit="IN_F">35.619999999999997</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="573" UniqueID="{564AE1BF-9C20-4E68-A4F3-46EDD1140E83}" Name="Dynamic connector.573" NameU="Dynamic connector.573" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">12.545624999999999</PinX>
+						<PinY Unit="IN_F">43.875000014901183</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="574" UniqueID="{3FB24859-4291-4427-BE7D-834408DE3A75}" Name="Dynamic connector.574" NameU="Dynamic connector.574" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">8.389375008381947</PinX>
+						<PinY Unit="IN_F">46.518749938446703</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="575" UniqueID="{9C2F3FF0-C296-4F49-BAC1-465A10B55D9B}" Name="Dynamic connector.575" NameU="Dynamic connector.575" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">8.389375008381947</PinX>
+						<PinY Unit="IN_F">45.250000009313240</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="576" UniqueID="{D6775E26-4720-44CF-8098-80F75C34858C}" Name="Dynamic connector.576" NameU="Dynamic connector.576" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">8.389375008381947</PinX>
+						<PinY Unit="IN_F">43.981250080179763</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="577" UniqueID="{1E5C74FC-2294-4C47-A92F-89D556583EF3}" Name="Dynamic connector.577" NameU="Dynamic connector.577" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">8.389375008381947</PinX>
+						<PinY Unit="IN_F">42.712500151046299</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="578" UniqueID="{EEA656FA-1739-4BA9-A412-423CF6418206}" Name="Dynamic connector.578" NameU="Dynamic connector.578" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.045625000000042</PinX>
+						<PinY Unit="IN_F">28.625000029802351</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="579" UniqueID="{DE0CC809-2EF1-4422-B523-B949B9AEB3DA}" Name="Dynamic connector.579" NameU="Dynamic connector.579" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.170625000000042</PinX>
+						<PinY Unit="IN_F">28.375000029802351</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="580" UniqueID="{B8521F7F-98B2-4629-89E5-2716AC4DFB00}" Name="Dynamic connector.580" NameU="Dynamic connector.580" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.295625000000042</PinX>
+						<PinY Unit="IN_F">28.125000029802351</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="581" UniqueID="{E8EE4FE3-7B31-4B8D-A400-6D4B778F90DF}" Name="Dynamic connector.581" NameU="Dynamic connector.581" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.420625000000042</PinX>
+						<PinY Unit="IN_F">27.875000029802351</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="582" UniqueID="{073D0D2B-1633-49D6-850D-6C259B63325D}" Name="Dynamic connector.582" NameU="Dynamic connector.582" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">5.545625000000042</PinX>
+						<PinY Unit="IN_F">27.625000029802351</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="583" UniqueID="{2A3E6D51-7D43-4B36-94E7-FB30DF4858C5}" Name="Dynamic connector.583" NameU="Dynamic connector.583" Master="10">
+					<XForm>
+						<PinX Unit="IN_F">8.031249963314977</PinX>
+						<PinY Unit="IN_F">56.719318299929483</PinY>
+					</XForm>
+					<LayerMem>
+						<LayerMember>0</LayerMember>
+					</LayerMem>
+				</Shape>
+				<Shape ID="584" UniqueID="{21A8D5A9-C48F-473A-A15E-3E14AAD6F355}" Name="DNA-PPC8.584" NameU="DNA-PPC8.584" Master="21">
+					<XForm>
+						<PinX Unit="IN_F">3.250000000000000</PinX>
+						<PinY Unit="IN_F">20.338749993294481</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="585" UniqueID="{10CAAC59-FBE0-4030-9636-7FB29FC95915}" Name="Box.989" NameU="Box.989">
+					<Text>DAQ 2
+[DAQ-PPC]
+(DNA-PPC8)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.250625000000000</PinX>
+						<PinY Unit="IN_F">20.338749993294481</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="586" UniqueID="{26F5FA9B-6663-45B0-ABD0-E1D57ACFF56B}" Name="Box.994" NameU="Box.994">
+					<Text>POWER IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.625000000000000</PinX>
+						<PinY Unit="IN_F">21.302500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="587" UniqueID="{B40A5D13-F732-404B-BB63-26D1FCA7C0FA}" Name="Box.2205" NameU="Box.2205">
+					<Text>NET IN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.437500000000000</PinX>
+						<PinY Unit="IN_F">18.552500000000052</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="588" UniqueID="{78327EB4-F15B-4E2A-99D2-EFE10983FF43}" Name="Box.293" NameU="Box.293">
+					<Text>+VIN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">20.927500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="589" UniqueID="{A0050D82-F4A9-4985-966C-9AA96125CDFE}" Name="Box.294" NameU="Box.294">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">20.427500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="590" UniqueID="{538A7E27-40A4-40A0-9FA9-590BDC059EC6}" Name="Box.156" NameU="Box.156">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">20.177500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="591" UniqueID="{49D62187-A73D-4AF4-97E7-2E36D27F9BBF}" Name="Box.157" NameU="Box.157">
+					<Text>+VIN</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.875000000000000</PinX>
+						<PinY Unit="IN_F">20.677500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="592" UniqueID="{E60608AB-7563-496E-9070-E5F5CEB4F870}" Name="Box.158" NameU="Box.158">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">20.927500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="593" UniqueID="{71435BB0-94A0-43E0-9E67-A143A2DC5AC4}" Name="Box.298" NameU="Box.298">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">20.427500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="594" UniqueID="{0170B64F-9ED6-4275-BFCD-646B1F718100}" Name="Box.299" NameU="Box.299">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">20.177500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="595" UniqueID="{8F7BBF1B-764B-451E-97B7-5495AA5208C0}" Name="Box.300" NameU="Box.300">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">1.750000000000000</PinX>
+						<PinY Unit="IN_F">20.677500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="596" UniqueID="{5E3D6F97-D5BC-4932-A64E-4F7C5A8352B4}" Name="Box.301" NameU="Box.301">
+					<Text>1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">20.927500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="597" UniqueID="{6C19F5F7-8A05-4633-8E85-99636E44188C}" Name="Box.163" NameU="Box.163">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">20.427500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="598" UniqueID="{EBD92750-3FDD-4E64-8C63-C26F6E5AAE5C}" Name="Box.164" NameU="Box.164">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">20.177500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="599" UniqueID="{9AB08469-DD99-4C81-9D42-5A1E66323A7D}" Name="Box.165" NameU="Box.165">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.250000000000000</PinX>
+						<PinY Unit="IN_F">20.677500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="604" UniqueID="{AABAD75B-B583-4F67-A91A-A6141F8385C9}" Name="Box.2957" NameU="Box.2957">
+					<Text>RS232</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.000000000000000</PinX>
+						<PinY Unit="IN_F">20.427500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="605" UniqueID="{C4828620-9C46-46F8-B880-DDA74026F48C}" Name="Box.2959" NameU="Box.2959">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">19.802500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="606" UniqueID="{2818AF2F-CFAF-442D-8745-657E978AA03C}" Name="Box.2960" NameU="Box.2960">
+					<Text>5</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">19.552500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="607" UniqueID="{710AC980-B21C-474F-8648-EAFD8C51D532}" Name="Box.2961" NameU="Box.2961">
+					<Text>7</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">19.302500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="608" UniqueID="{B7B27E50-2167-4318-896B-746964E86DFB}" Name="Box.2962" NameU="Box.2962">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">19.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="609" UniqueID="{43675E2C-CD53-4E36-9557-A8CED229D6C6}" Name="Box.2963" NameU="Box.2963">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">20.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="610" UniqueID="{D1E0AB97-F089-4E6E-B37E-2E2F9F346AB0}" Name="Box.2964" NameU="Box.2964">
+					<Text>TXD</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">20.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="611" UniqueID="{E432EE3D-87FF-4EC0-AE7C-72C3B9A9DB03}" Name="Box.2965" NameU="Box.2965">
+					<Text>RXD</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">19.802500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="612" UniqueID="{C2E892A5-2408-4F47-9497-E7B4541628FD}" Name="Box.2966" NameU="Box.2966">
+					<Text>GND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">19.552500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="613" UniqueID="{C485439E-D8B4-4F7A-B8CD-764F5F65C01F}" Name="Box.2967" NameU="Box.2967">
+					<Text>CTS</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">19.302500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="614" UniqueID="{EA48D1AB-EDC0-4B49-9314-3D2E770861DE}" Name="Box.2968" NameU="Box.2968">
+					<Text>RTS</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">19.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="615" UniqueID="{19AC4C2E-BB27-45C0-8E10-9E4AA9F6F0FB}" Name="Box.2969" NameU="Box.2969">
+					<Text>3</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">19.802500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="616" UniqueID="{A7C172DB-7E64-47B6-8633-081B86DB83B9}" Name="Box.2970" NameU="Box.2970">
+					<Text>5</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">19.552500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="617" UniqueID="{0EF072E0-E7D7-418D-B995-B83019B22F58}" Name="Box.2971" NameU="Box.2971">
+					<Text>7</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">19.302500000000045</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="618" UniqueID="{00102220-2442-4EBA-8999-041920BE22E5}" Name="Box.2972" NameU="Box.2972">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">19.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="619" UniqueID="{3F2FCE47-91E7-4DD3-BF6F-1015DA7FAA7E}" Name="Box.2973" NameU="Box.2973">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.750000000000000</PinX>
+						<PinY Unit="IN_F">20.052500000000041</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="621" UniqueID="{1C59D42C-CBB5-4EDE-9E74-63DAD7DBEE5B}" Name="DNA-DIO-406" NameU="DNA-DIO-406" Master="23">
+					<XForm>
+						<PinX Unit="IN_F">3.252500000000000</PinX>
+						<PinY Unit="IN_F">13.875000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="622" UniqueID="{AA48013B-089A-493A-9B2A-0E088BEECF12}" Name="Box.879" NameU="Box.879">
+					<Text>DAQ 2 Layer 1
+[DAQ-Digital]
+(DNA-DIO-406)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">13.875000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="623" UniqueID="{57BD02B3-E77E-40B6-B186-465355A20873}" Name="Box.932" NameU="Box.932">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">17.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="624" UniqueID="{2D32A5E7-907F-4F48-AAC5-7440EDADCF00}" Name="Box.933" NameU="Box.933">
+					<Text>DOUT 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">17.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="625" UniqueID="{C41A49FB-718C-41A7-AA3E-8D36BE1248DC}" Name="Box.934" NameU="Box.934">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">16.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="626" UniqueID="{CEA5D3A5-FF33-4E45-AD05-BAF43BB83EE7}" Name="Box.935" NameU="Box.935">
+					<Text>DOUT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">16.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="627" UniqueID="{E3977292-3BD1-4C82-B42F-C271246456F2}" Name="Box.936" NameU="Box.936">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">16.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="628" UniqueID="{B331FA92-8D0A-4A72-AB44-7EF6281153F8}" Name="Box.937" NameU="Box.937">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">16.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="629" UniqueID="{3924B065-0170-416E-BDE9-B56C3D1352EC}" Name="Box.938" NameU="Box.938">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">16.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="630" UniqueID="{4C63C1CE-521C-47DA-83E9-94D695B9D945}" Name="Box.939" NameU="Box.939">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">15.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="631" UniqueID="{99F31B02-5DA2-4A15-A8C7-A13F72CEBC19}" Name="Box.940" NameU="Box.940">
+					<Text>DOUT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">16.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="632" UniqueID="{A189047A-60D7-482B-8FE8-4FCB689BBECC}" Name="Box.941" NameU="Box.941">
+					<Text>DOUT 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">16.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="633" UniqueID="{108A6502-74E4-48A2-8C17-9EF920800FFA}" Name="Box.942" NameU="Box.942">
+					<Text>DOUT 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">16.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="634" UniqueID="{252D4AF5-E131-4A0D-9A49-723352B43FDF}" Name="Box.943" NameU="Box.943">
+					<Text>DOUT 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">15.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="635" UniqueID="{CDD10663-3B23-4ABC-9B84-8578333B4BEE}" Name="Box.945" NameU="Box.945">
+					<Text>DOUT 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">15.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="636" UniqueID="{6C6311F4-AB0C-443D-A9A6-2D47A1B803A8}" Name="Box.946" NameU="Box.946">
+					<Text>DOUT 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">15.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="637" UniqueID="{83335180-5F85-4E08-940B-87918F7AE7B7}" Name="Box.947" NameU="Box.947">
+					<Text>DOUT 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">15.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="638" UniqueID="{6DAA2674-97E9-49EC-9B84-E33688E20E4C}" Name="Box.948" NameU="Box.948">
+					<Text>DOUT 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">14.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="639" UniqueID="{ADEDCBB6-3384-4BEB-AB11-3776A7CE15C0}" Name="Box.949" NameU="Box.949">
+					<Text>DOUT 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">14.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="640" UniqueID="{6E0794CF-2A87-4A55-A91F-AF03F59389E3}" Name="Box.950" NameU="Box.950">
+					<Text>DOUT 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">14.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="641" UniqueID="{031865ED-CCE3-4ACD-ACC3-854ED8A5683C}" Name="Box.951" NameU="Box.951">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">15.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="642" UniqueID="{5955B17D-6277-4D9E-8C9B-25A8859BC35D}" Name="Box.952" NameU="Box.952">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">15.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="643" UniqueID="{F88578A9-9204-4FEA-93C2-946FB4F65891}" Name="Box.953" NameU="Box.953">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">15.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="644" UniqueID="{7E2D9865-F175-4F06-AF8F-6AF2346226D7}" Name="Box.954" NameU="Box.954">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">14.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="645" UniqueID="{1976107C-3FC9-4A15-8EFA-10EF2B0A3E74}" Name="Box.955" NameU="Box.955">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">14.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="646" UniqueID="{99A155AE-FD3F-405A-9ABE-ECBE2CDF672D}" Name="Box.956" NameU="Box.956">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">14.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="647" UniqueID="{B8CCDFAB-84E8-40B8-85A2-433FD326234E}" Name="Box.1072" NameU="Box.1072">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">17.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="648" UniqueID="{148AE0D0-1EC1-4A41-8E27-176F279CE759}" Name="Box.1073" NameU="Box.1073">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">16.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="649" UniqueID="{1846E4D8-71E7-4524-A450-803C45171991}" Name="Box.1074" NameU="Box.1074">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">16.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="650" UniqueID="{AB1E7450-4EFB-4E80-B8A4-71F04A778162}" Name="Box.1075" NameU="Box.1075">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">16.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="651" UniqueID="{E8264D48-DE33-419C-8AE6-5C529A0211F3}" Name="Box.1076" NameU="Box.1076">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">16.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="652" UniqueID="{1611E68A-7A9C-4F92-A12A-15CA9DC51592}" Name="Box.1077" NameU="Box.1077">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">15.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="653" UniqueID="{3F6030FC-CE3F-47AA-96AD-53FF3F5404E3}" Name="Box.1078" NameU="Box.1078">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">15.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="654" UniqueID="{B7A36604-52DF-489C-B9CD-8864C5A2038A}" Name="Box.1079" NameU="Box.1079">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">15.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="655" UniqueID="{51D0F7B4-3EFB-45E4-8606-E95A144AE91A}" Name="Box.1080" NameU="Box.1080">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">15.153749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="656" UniqueID="{7408355E-52F3-45EE-ADA3-D122E3126891}" Name="Box.1081" NameU="Box.1081">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">14.903749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="657" UniqueID="{EE4F09A0-88DA-4D78-B8D9-E97DAEE68B16}" Name="Box.1226" NameU="Box.1226">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">14.653749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="658" UniqueID="{929614BD-B3BB-42B7-B0A5-C9CF813A4D07}" Name="Box.1227" NameU="Box.1227">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">14.403749990830047</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="659" UniqueID="{607F6676-01CA-4D54-B98F-E23A4EB25FE3}" Name="Box.1150" NameU="Box.1150">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">11.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="660" UniqueID="{8933CB44-A716-48EE-B089-621B0A846D9E}" Name="Box.1151" NameU="Box.1151">
+					<Text>DIN 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">11.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="661" UniqueID="{3131A1C3-459C-45B3-A666-F03E5EA36F9E}" Name="Box.1152" NameU="Box.1152">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">11.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="662" UniqueID="{BD564F2B-18FF-4375-833E-54DF2FAF831A}" Name="Box.1153" NameU="Box.1153">
+					<Text>DIN 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">11.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="663" UniqueID="{7A2A088E-6600-4FF9-B766-F74A58DA7B79}" Name="Box.1154" NameU="Box.1154">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">11.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="664" UniqueID="{6DA3DF64-952F-4227-B859-B8F73DF5F420}" Name="Box.1155" NameU="Box.1155">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">12.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="665" UniqueID="{22BC059C-086A-446E-B1D5-ECD438D17CA9}" Name="Box.1156" NameU="Box.1156">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">12.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="666" UniqueID="{321B17BA-C481-40CD-B156-5C2749DEEBF2}" Name="Box.1157" NameU="Box.1157">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">12.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="667" UniqueID="{C60CFFAB-45A1-4A76-ADE0-EF277C41DA4B}" Name="Box.1306" NameU="Box.1306">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">12.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="668" UniqueID="{7EC197DB-A2CC-41D0-9FBE-C15711522693}" Name="Box.1307" NameU="Box.1307">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">13.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="669" UniqueID="{3434887C-0964-4BC3-AAF5-A3352F75F799}" Name="Box.1160" NameU="Box.1160">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">13.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="670" UniqueID="{A0F5D0BA-5E29-489E-AAA6-C68C3876D90E}" Name="Box.1161" NameU="Box.1161">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">13.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="671" UniqueID="{B25823F5-8DE3-49E6-94BB-A3EDDFBD2C77}" Name="Box.1162" NameU="Box.1162">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">13.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="672" UniqueID="{993EC9E5-461E-4768-9F90-DFD84C5CA756}" Name="Box.1163" NameU="Box.1163">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">14.153749990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="673" UniqueID="{957EDE0A-2C8B-4C76-B444-62BAE0E92F9E}" Name="Box.1164" NameU="Box.1164">
+					<Text>DIN 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">11.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="674" UniqueID="{AF5DCC7F-C2EF-4B3C-989C-3C5F15D71F27}" Name="Box.1165" NameU="Box.1165">
+					<Text>DIN 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">12.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="675" UniqueID="{D74267E7-367D-4EDC-B24E-EDFCAFB0D700}" Name="Box.1166" NameU="Box.1166">
+					<Text>DIN 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">12.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="676" UniqueID="{C2CAE40D-BA0E-40B0-86D3-1C96C851EF94}" Name="Box.1167" NameU="Box.1167">
+					<Text>DIN 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">12.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="677" UniqueID="{9DDDDC4B-E7BD-4AB1-8883-317F40FFBB4D}" Name="Box.1168" NameU="Box.1168">
+					<Text>DIN 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">12.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="678" UniqueID="{A123A82F-B4AA-4C07-9602-403EF6D594D4}" Name="Box.1169" NameU="Box.1169">
+					<Text>DIN 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">13.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="679" UniqueID="{69F27123-5ED0-4122-ABAB-2F0EA5ECB2DB}" Name="Box.1170" NameU="Box.1170">
+					<Text>DIN 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">13.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="680" UniqueID="{49E466CC-B78A-4338-ADD2-2509D444D054}" Name="Box.1171" NameU="Box.1171">
+					<Text>DIN 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">13.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="681" UniqueID="{71DF6742-E813-45D5-99C5-87CD7288BC5B}" Name="Box.1172" NameU="Box.1172">
+					<Text>DIN 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">13.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="682" UniqueID="{AD974B0A-F9B6-44D3-8250-6AB5B1D95CF3}" Name="Box.1173" NameU="Box.1173">
+					<Text>DIN 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">14.153749990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="683" UniqueID="{B92F12BD-E696-4890-ABD5-52C19F7C6BC1}" Name="Box.1174" NameU="Box.1174">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">11.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="684" UniqueID="{59EADD7A-0902-418D-A0D7-DCA44583CC98}" Name="Box.1175" NameU="Box.1175">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">11.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="685" UniqueID="{098DBE7F-BA78-4774-B2F9-AAA68ADCA768}" Name="Box.1176" NameU="Box.1176">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">11.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="686" UniqueID="{3EFD6C13-A43C-4D21-B5BD-34B5F134B511}" Name="Box.1177" NameU="Box.1177">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">12.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="687" UniqueID="{207D878E-6B7E-4716-A8D6-9ECF0CA4533B}" Name="Box.1178" NameU="Box.1178">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">12.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="688" UniqueID="{C5980BDB-91CD-4416-8C09-B1DEA33ECE74}" Name="Box.1179" NameU="Box.1179">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">12.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="689" UniqueID="{B2389E85-ACAC-40A2-A767-9B9BF611730A}" Name="Box.1180" NameU="Box.1180">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">12.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="690" UniqueID="{0AAEE017-6D91-450F-9168-7689C8F78B22}" Name="Box.1181" NameU="Box.1181">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">13.153749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="691" UniqueID="{7AF1441C-A043-4367-AC7A-473AD138F661}" Name="Box.1182" NameU="Box.1182">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">13.403749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="692" UniqueID="{8A886347-11DC-4F07-9830-11A7213C38DC}" Name="Box.1183" NameU="Box.1183">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">13.653749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="693" UniqueID="{83569B86-83F1-49CC-80C1-A6B6C3B7C090}" Name="Box.1184" NameU="Box.1184">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">13.903749990830054</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="694" UniqueID="{5D88FDDD-93DB-472D-B4B9-DE235ADE6138}" Name="Box.1185" NameU="Box.1185">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">14.153749990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="696" UniqueID="{8CD15A38-7AC2-4F2D-96E7-7D5558AF984C}" Name="Box.93" NameU="Box.93">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999949806617</PinX>
+						<PinY Unit="IN_F">11.153749993725826</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="697" UniqueID="{46910771-F67F-4012-BE17-92EF23BB6501}" Name="Box.94" NameU="Box.94">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">10.903749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="698" UniqueID="{04EA0A1A-4D9B-4AC9-88E2-6F6E0F7D45F0}" Name="Box.95" NameU="Box.95">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">10.653749993725826</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="699" UniqueID="{771A8FE5-B7FD-4D80-81D6-D05840840FC6}" Name="Box.96" NameU="Box.96">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">10.403749987451654</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="700" UniqueID="{81C46054-55EE-47D5-AEB9-C6E3B06F2F3B}" Name="Box.97" NameU="Box.97">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">10.153749981177480</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="701" UniqueID="{220F4152-8224-4857-B71C-0CD3800E3D0D}" Name="Box.98" NameU="Box.98">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">9.903749974903308</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="702" UniqueID="{69EC6CED-96BD-47A1-B95D-DF880C5117A3}" Name="Box.99" NameU="Box.99">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999949806616</PinX>
+						<PinY Unit="IN_F">11.153749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="703" UniqueID="{AE4281B7-848D-4C26-894F-358113EFAF5B}" Name="Box.100" NameU="Box.100">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">10.903750006274171</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="704" UniqueID="{EFD6C10A-EA13-4361-BB9E-8CC6B2E48206}" Name="Box.101" NameU="Box.101">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">10.653749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="705" UniqueID="{96031C73-E6D0-422F-9767-CBB88C1D1247}" Name="Box.102" NameU="Box.102">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">10.403749993725826</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="706" UniqueID="{E8DDDDC9-0EF2-4605-AB86-EE5365CE75A2}" Name="Box.103" NameU="Box.103">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">10.153749987451654</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="707" UniqueID="{450495AF-8FE5-4F5A-ABB8-E0B74FACF5E3}" Name="Box.104" NameU="Box.104">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">9.903749981177480</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="710" UniqueID="{D6877AAC-01FD-43BA-9D94-8E4809419DCF}" Name="Box.107" NameU="Box.107">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">11.153749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="711" UniqueID="{1A15FB9E-BB0E-4354-B220-0B41CFC4CD78}" Name="Box.108" NameU="Box.108">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">10.903749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="712" UniqueID="{FA9E4181-A7B4-421D-841E-4DF909567C4B}" Name="Box.109" NameU="Box.109">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">10.653749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="713" UniqueID="{0BF6C59B-8F2E-42B0-BEBE-AE08EA032862}" Name="Box.110" NameU="Box.110">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">10.403749987451654</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="714" UniqueID="{E1C64C47-97D0-49F5-AA34-4F5A4E251D0C}" Name="Box.111" NameU="Box.111">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">10.153749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="715" UniqueID="{62A52BCD-A759-4823-B8EE-4F3090F1CDF6}" Name="Box.112" NameU="Box.112">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">9.903749999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="716" UniqueID="{4CCADB38-76FF-4CD1-A846-084053F59FA6}" Name="DNA-DIO-406.716" NameU="DNA-DIO-406.716" Master="23">
+					<XForm>
+						<PinX Unit="IN_F">3.252500000000000</PinX>
+						<PinY Unit="IN_F">5.283750000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="717" UniqueID="{D8C24643-1D83-4278-BEAD-7A26076A80BF}" Name="Box.879" NameU="Box.879">
+					<Text>DAQ 2 Layer 3
+[DAQ-Digital]
+(DNA-DIO-406)</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">5.283750000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="718" UniqueID="{6ACAD07B-B68D-4651-86D8-2FE1806CA5F5}" Name="Box.932" NameU="Box.932">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">8.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="719" UniqueID="{6BE8505E-628A-4F48-8F46-D6AFF77ACBDC}" Name="Box.933" NameU="Box.933">
+					<Text>DOUT 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">8.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="720" UniqueID="{3E4C50B8-9776-4E93-A609-91EC8EF98050}" Name="Box.934" NameU="Box.934">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">8.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="721" UniqueID="{8D2DDCFB-7240-46C9-8D9A-C826A7AB6899}" Name="Box.935" NameU="Box.935">
+					<Text>DOUT 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">8.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="722" UniqueID="{EF0D7268-D452-46B7-93CA-47CACA3CD1B4}" Name="Box.936" NameU="Box.936">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">8.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="723" UniqueID="{20E93608-F063-4DB2-9B53-F8A805B3EECD}" Name="Box.937" NameU="Box.937">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">7.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="724" UniqueID="{A0815DC0-2DE9-4750-9D55-7D8426ABE8DD}" Name="Box.938" NameU="Box.938">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">7.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="725" UniqueID="{F9179DD0-4FCD-464D-B138-B41B33617E5F}" Name="Box.939" NameU="Box.939">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">7.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="726" UniqueID="{DA587F45-70CF-41B0-AEA2-180467E6D673}" Name="Box.940" NameU="Box.940">
+					<Text>DOUT 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">8.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="727" UniqueID="{A18C6951-1582-4D8D-AF66-F7A5C295A07C}" Name="Box.941" NameU="Box.941">
+					<Text>DOUT 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">7.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="728" UniqueID="{4DD3AE87-2BAD-4693-AA0E-0B3ACC2A39D7}" Name="Box.942" NameU="Box.942">
+					<Text>DOUT 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">7.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="729" UniqueID="{FCB16E26-58C5-418A-9C96-F43710EB35AD}" Name="Box.943" NameU="Box.943">
+					<Text>DOUT 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">7.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="730" UniqueID="{69198EE0-E5D9-49AC-8EDA-EA46F19A3930}" Name="Box.945" NameU="Box.945">
+					<Text>DOUT 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">7.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="731" UniqueID="{12D1ACF2-019C-4F38-962A-EC57936028ED}" Name="Box.946" NameU="Box.946">
+					<Text>DOUT 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">6.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="732" UniqueID="{E510EC1D-4544-458A-83DD-3D075CFF03D3}" Name="Box.947" NameU="Box.947">
+					<Text>DOUT 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">6.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="733" UniqueID="{1D9B7351-8C01-473D-9688-3506254E06BA}" Name="Box.948" NameU="Box.948">
+					<Text>DOUT 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">6.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="734" UniqueID="{5C5A1302-B5CD-4763-93CB-11327F9635D2}" Name="Box.949" NameU="Box.949">
+					<Text>DOUT 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">6.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="735" UniqueID="{47438780-7F1F-4456-9274-5FE61AD500AB}" Name="Box.950" NameU="Box.950">
+					<Text>DOUT 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660138</PinX>
+						<PinY Unit="IN_F">5.812499990830049</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="736" UniqueID="{789E02A2-9F52-4322-8431-C01E14C57C32}" Name="Box.951" NameU="Box.951">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">7.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="737" UniqueID="{D0B37E38-A717-42DB-9AFA-6D6911C450E2}" Name="Box.952" NameU="Box.952">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">6.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="738" UniqueID="{F992CCD7-9688-4027-AEA8-7FFF90BE0E98}" Name="Box.953" NameU="Box.953">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">6.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="739" UniqueID="{98C90923-AF15-4EFF-B81F-DC463B7EC76F}" Name="Box.954" NameU="Box.954">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">6.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="740" UniqueID="{D10D4075-E0A8-45F1-9F5F-405602C906E2}" Name="Box.955" NameU="Box.955">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">6.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="741" UniqueID="{E5470BB3-15DA-4F24-99AC-AEE5BBE06838}" Name="Box.956" NameU="Box.956">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660166</PinX>
+						<PinY Unit="IN_F">5.812499990830049</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="742" UniqueID="{9FEDE174-3766-4B8F-8A9F-2588D4125BF8}" Name="Box.1072" NameU="Box.1072">
+					<Text>28</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">8.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="743" UniqueID="{7FEEC9D7-F119-4F09-8D66-F897B3AB2FC8}" Name="Box.1073" NameU="Box.1073">
+					<Text>10</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">8.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="744" UniqueID="{1E6C4F08-7E4F-4B0D-8BDA-9E4071A9004E}" Name="Box.1074" NameU="Box.1074">
+					<Text>29</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">8.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="745" UniqueID="{44BD0429-D0BD-4D05-99EA-FFDFDD4EE55B}" Name="Box.1075" NameU="Box.1075">
+					<Text>30</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">7.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="746" UniqueID="{9109501A-FFEE-4CE2-8AE3-22D0399AD2BA}" Name="Box.1076" NameU="Box.1076">
+					<Text>12</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">7.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="747" UniqueID="{5D2ABAE5-8236-4ADE-ABBD-612FA2BF2255}" Name="Box.1077" NameU="Box.1077">
+					<Text>31</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">7.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="748" UniqueID="{53750706-C6DC-4107-A512-21B668471EE2}" Name="Box.1078" NameU="Box.1078">
+					<Text>32</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">7.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="749" UniqueID="{A233EE53-DADB-42C4-AEE9-8377743E387B}" Name="Box.1079" NameU="Box.1079">
+					<Text>14</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">6.812499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="750" UniqueID="{69F2ED90-1DB8-4B3D-8405-BAD125EAFE27}" Name="Box.1080" NameU="Box.1080">
+					<Text>33</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">6.562499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="751" UniqueID="{647EE5CC-A954-421A-9ED7-5315E1FEF1EB}" Name="Box.1081" NameU="Box.1081">
+					<Text>34</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">6.312499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="752" UniqueID="{58BA21CC-7466-4797-9F81-5D7B90C4D84D}" Name="Box.1226" NameU="Box.1226">
+					<Text>16</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">6.062499990830048</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="753" UniqueID="{CC67A5AA-8AE0-4961-A958-F94B09166473}" Name="Box.1227" NameU="Box.1227">
+					<Text>35</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660194</PinX>
+						<PinY Unit="IN_F">5.812499990830049</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="754" UniqueID="{3401AC26-7AFB-464F-BE35-8119120B5AB3}" Name="Box.1150" NameU="Box.1150">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">2.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="755" UniqueID="{939DE9BC-E96C-4D7F-B579-B17CFDDA0D37}" Name="Box.1151" NameU="Box.1151">
+					<Text>DIN 0</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">2.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="756" UniqueID="{CD763CC0-6322-4829-95E2-B27AACF26343}" Name="Box.1152" NameU="Box.1152">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">3.062499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="757" UniqueID="{32043C76-1696-4276-8636-088441EB88E2}" Name="Box.1153" NameU="Box.1153">
+					<Text>DIN 1</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">3.062499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="758" UniqueID="{1EF5B0C0-0442-4AAF-8798-9E902618AAB3}" Name="Box.1154" NameU="Box.1154">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">3.312499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="759" UniqueID="{42B9FF78-D682-432A-B0D1-AE57EA7F2465}" Name="Box.1155" NameU="Box.1155">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">3.562499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="760" UniqueID="{5EFEFBBC-3F03-47DE-B116-18C957EB2CB8}" Name="Box.1156" NameU="Box.1156">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">3.812499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="761" UniqueID="{FDE2D83F-0D66-4874-9DC8-CC31F4D5BE80}" Name="Box.1157" NameU="Box.1157">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">4.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="762" UniqueID="{47801AE1-CB20-43BA-95DE-32D062273FE5}" Name="Box.1306" NameU="Box.1306">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">4.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="763" UniqueID="{E1E47688-D3E5-40E0-AD27-2D6316A87903}" Name="Box.1307" NameU="Box.1307">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">4.562499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="764" UniqueID="{52A843A4-CE0E-4CD3-93FA-C1535A0A6A21}" Name="Box.1160" NameU="Box.1160">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">4.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="765" UniqueID="{2ED1C0E1-6A64-4F77-884C-15B1B0263AE3}" Name="Box.1161" NameU="Box.1161">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">5.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="766" UniqueID="{920255FC-A93B-4FED-9BE6-BB7A5E6B1904}" Name="Box.1162" NameU="Box.1162">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">5.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="767" UniqueID="{9F6C85AD-AC71-496A-BFDE-07F744C1C1A8}" Name="Box.1163" NameU="Box.1163">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999981660138</PinX>
+						<PinY Unit="IN_F">5.562499990830057</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="768" UniqueID="{5A8CD104-14C7-4E56-A70D-16B0C6C2819E}" Name="Box.1164" NameU="Box.1164">
+					<Text>DIN 2</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">3.312499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="769" UniqueID="{73218254-3EA5-4D35-B39E-D20D76D6F176}" Name="Box.1165" NameU="Box.1165">
+					<Text>DIN 3</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">3.562499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="770" UniqueID="{F0A67E47-4C9D-43D6-832D-BA265DCA416A}" Name="Box.1166" NameU="Box.1166">
+					<Text>DIN 4</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">3.812499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="771" UniqueID="{B213F601-0F94-4E08-9E58-A0F3054E0FA2}" Name="Box.1167" NameU="Box.1167">
+					<Text>DIN 5</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">4.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="772" UniqueID="{10AE26F2-9EC9-4D9B-9EEB-A779C5934DD0}" Name="Box.1168" NameU="Box.1168">
+					<Text>DIN 6</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">4.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="773" UniqueID="{325E2662-81E0-498C-B539-8C7E04D0EF5B}" Name="Box.1169" NameU="Box.1169">
+					<Text>DIN 7</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">4.562499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="774" UniqueID="{A8BE8368-CDE4-4923-A02B-366820B6B5B3}" Name="Box.1170" NameU="Box.1170">
+					<Text>DIN 8</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">4.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="775" UniqueID="{3471917D-BD92-4278-848C-57991C2A458A}" Name="Box.1171" NameU="Box.1171">
+					<Text>DIN 9</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">5.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="776" UniqueID="{FEDDD0E2-E789-4675-9931-2FC74AD0117D}" Name="Box.1172" NameU="Box.1172">
+					<Text>DIN 10</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">5.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="777" UniqueID="{49B277D2-AFD0-4163-B2AE-1E58D1B9582C}" Name="Box.1173" NameU="Box.1173">
+					<Text>DIN 11</Text>
+					<XForm>
+						<PinX Unit="IN_F">2.999999981660110</PinX>
+						<PinY Unit="IN_F">5.562499990830057</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="778" UniqueID="{43287FD9-0000-48A1-BA93-E51F5873DED0}" Name="Box.1174" NameU="Box.1174">
+					<Text>20</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">2.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="779" UniqueID="{C9C6F78A-1788-4C55-90CA-4DD645FABFA7}" Name="Box.1175" NameU="Box.1175">
+					<Text>2</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">3.062499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="780" UniqueID="{23512730-481B-4FAB-B23B-3C8A562AF600}" Name="Box.1176" NameU="Box.1176">
+					<Text>21</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">3.312499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="781" UniqueID="{0FFBE422-5DB8-4BAC-942F-C26BE22FC4EA}" Name="Box.1177" NameU="Box.1177">
+					<Text>22</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">3.562499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="782" UniqueID="{61A6D55D-5522-4371-A00B-3CE94F9FB5CB}" Name="Box.1178" NameU="Box.1178">
+					<Text>4</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">3.812499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="783" UniqueID="{5CD70C67-7436-4B92-965D-8F134361702F}" Name="Box.1179" NameU="Box.1179">
+					<Text>23</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">4.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="784" UniqueID="{02130A1D-24A3-437E-8F1F-91257A540B49}" Name="Box.1180" NameU="Box.1180">
+					<Text>24</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">4.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="785" UniqueID="{E7AE2F02-D0C6-4ED9-A869-ABC3720C3B12}" Name="Box.1181" NameU="Box.1181">
+					<Text>6</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">4.562499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="786" UniqueID="{24B5CB2F-6A5A-436D-9AFE-755A7A60EC05}" Name="Box.1182" NameU="Box.1182">
+					<Text>25</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">4.812499990830056</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="787" UniqueID="{BC31B519-74D9-4483-B50A-61585C8F14DC}" Name="Box.1183" NameU="Box.1183">
+					<Text>26</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">5.062499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="788" UniqueID="{9A1EA2D3-99AF-4BD5-B13C-2754C86BD498}" Name="Box.1184" NameU="Box.1184">
+					<Text>8</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">5.312499990830055</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="789" UniqueID="{9ED496FA-F4B9-471A-9752-239F8B673991}" Name="Box.1185" NameU="Box.1185">
+					<Text>27</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999981660165</PinX>
+						<PinY Unit="IN_F">5.562499990830057</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="791" UniqueID="{BE92759E-AB6B-4679-AF7C-A32006060612}" Name="Box.93" NameU="Box.93">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.749999949806617</PinX>
+						<PinY Unit="IN_F">2.562499993725828</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="792" UniqueID="{9D7F5B3F-5732-4DA5-A3F1-7FDEDCABEE0F}" Name="Box.94" NameU="Box.94">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">2.312500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="793" UniqueID="{D7EBEBDE-9D07-4DFE-AAA7-6B15CB77CCB7}" Name="Box.95" NameU="Box.95">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">2.062499993725828</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="794" UniqueID="{1BB09114-42FA-4761-AA00-AE2606585831}" Name="Box.96" NameU="Box.96">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">1.812499987451655</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="795" UniqueID="{BC193627-1EE8-4DEC-8E5A-42F54E6945D5}" Name="Box.97" NameU="Box.97">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">1.562499981177482</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="796" UniqueID="{2BD463CF-168B-41C2-9583-0DCD041C9DFD}" Name="Box.98" NameU="Box.98">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.750000000000000</PinX>
+						<PinY Unit="IN_F">1.312499974903308</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="797" UniqueID="{50832925-228C-4137-9D58-83EBC9E72FA6}" Name="Box.99" NameU="Box.99">
+					<Text>18</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.249999949806616</PinX>
+						<PinY Unit="IN_F">2.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="798" UniqueID="{387B76A2-76D8-48DF-9BD1-EF28DB7F3664}" Name="Box.100" NameU="Box.100">
+					<Text>19</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">2.312500006274173</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="799" UniqueID="{C662F9CC-DDA4-425F-98D4-54B2CEA55626}" Name="Box.101" NameU="Box.101">
+					<Text>37</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">2.062500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="800" UniqueID="{1C4E44DC-73C8-40A2-93B9-12D01D7F9A7E}" Name="Box.102" NameU="Box.102">
+					<Text>15</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">1.812499993725827</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="801" UniqueID="{2C4410FC-24FA-4123-ADDF-75094561E746}" Name="Box.103" NameU="Box.103">
+					<Text>17</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">1.562499987451655</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="802" UniqueID="{5E994C2B-7365-4AE1-9F8E-C24A53F96B36}" Name="Box.104" NameU="Box.104">
+					<Text>36</Text>
+					<XForm>
+						<PinX Unit="IN_F">4.250000000000000</PinX>
+						<PinY Unit="IN_F">1.312499981177481</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="805" UniqueID="{1F72A6CE-D1B4-4FC7-A18C-F9E9CE1C29CF}" Name="Box.107" NameU="Box.107">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">2.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="806" UniqueID="{61FA32FF-27A0-4B08-8721-D703534018C6}" Name="Box.108" NameU="Box.108">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">2.312500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="807" UniqueID="{0571E12D-5BA7-4B1D-9037-DFEB40EA2D46}" Name="Box.109" NameU="Box.109">
+					<Text>VCC</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">2.062500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="808" UniqueID="{F3938FE2-90CB-45C8-BBF6-CF1CFEF425E3}" Name="Box.110" NameU="Box.110">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">1.812499987451655</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="809" UniqueID="{DC03C14F-56C4-47AA-8B87-31CA7CC76548}" Name="Box.111" NameU="Box.111">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">1.562500000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="810" UniqueID="{1D3FF71F-0444-46DF-B536-200CAB201518}" Name="Box.112" NameU="Box.112">
+					<Text>DGND</Text>
+					<XForm>
+						<PinX Unit="IN_F">3.005000000000000</PinX>
+						<PinY Unit="IN_F">1.312500000000000</PinY>
+					</XForm>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>
