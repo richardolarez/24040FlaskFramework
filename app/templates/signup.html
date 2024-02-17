@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Sign Up</h1>
-    <form id="signupForm" hx-post="/signup" hx-headers='{"Content-Type": "application/json"}'>
+    <form id="signupForm" hx-post="/signup" hx-headers='{"Content-Type": "application/json"}' onsubmit="redirectToRoot(event)">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -25,5 +25,12 @@
         <input type="hidden" name="csrf_token" value="{{ form.csrf_token._value() }}">
         <button type="submit">Sign Up</button>
     </form>
+
+    <script>
+        function redirectToRoot(event) {
+            event.preventDefault();
+            window.location.href = "/";
+        }
+    </script>
 </body>
 </html>
