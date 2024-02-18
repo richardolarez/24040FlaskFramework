@@ -20,17 +20,17 @@
   <div>
     <h3 class="name">J.A.N.U.S.</h3>
     <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
-      <form class="center-form" onsubmit="login(); return false;">
+      <form class="center-form" hx-post="/login" hx-headers='{"Content-Type": "application/json"}' method="POST">
         <label for="username"></label>
         <input type="text" id="username" name="username" placeholder="Username" required><br><br>
         <label for="password"></label>
         <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-        <input class="button" type="submit" value="Login">
+        {{ form.csrf_token }}
+        <button type="submit" class="button">Login</button>
       </form>
     </form>
   </div>
   <a href="/signup"><button class="button">Sign Up</button></a>
-  <script src="script.js"></script>
 </body>
 
 </html>

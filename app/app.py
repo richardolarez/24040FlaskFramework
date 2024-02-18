@@ -46,6 +46,7 @@ def create_user():
 # login endpoint
 @app.route('/login', methods=['POST'])
 def login():
+    form = UserForm()
     try:
         data = request.json
         username = data['username']
@@ -62,7 +63,7 @@ def login():
 ####################### VIEWS / PAGE ROUTES ########################
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', form=UserForm())
 
 @app.route('/edv')
 def edv():
