@@ -4,19 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Main Menu</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='menu.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
 </head>
 
 <body>
   <!--<h1>Home / Electrical Diagram View</h1> -->
   <h2 class="banner">
-    Home / Main Menu
+    <img src=static/images/Engineering.png alt="Engineering">
+    <img src=static/images/NGC.png alt="NGC logo">
   </h2>
   <div>
+    <img src=static/images/Janusimage.png alt="Janus Logo" class="logo">
   </div>
-  <div class="button-container">
+
+  <h3 class="name">J.A.N.U.S.</h3>
+  <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+  <h3 class="name2">Main Menu</h3>
+
+  <div class="center-form">
     <a href="/edv"><button class="button">EDV</button></a><br><br>
-    <input class="button" for="inputFile" type="file" id="inputFile" accept=".html" style="text-align: center;"><br><br>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".zip" required>
+      <button type="submit">Upload</button>
+    </form>
+
+
     <a href="/"><button class="button">Logout</button></a><br><br>
   </div>
 </body>

@@ -12,7 +12,7 @@ docker-compose up -d --build (to build images)
 
 
 # Start the db server using the postgresql image from Docker Hub
-docker-compose up -d janus_db
+docker-compose up -d janus_db_2
 
 
 # Build the application using the docker compose
