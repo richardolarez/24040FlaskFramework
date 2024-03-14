@@ -29,3 +29,10 @@ This will start all services (Janus, Postgres)
 http://localhost:8000
 
 
+# Perform static analysis using SonarQube
+$ sonar-scanner \
+    -Dsonar.projectKey=24040_ \
+    -Dsonar.sources=. \
+    -Dsonar.host.url=http://test.def.engr.arizona.edu:9000 \
+    -Dsonar.token=sqp_e16713399f15e98ca27dce7e4e87e98c4dde43f3
+
