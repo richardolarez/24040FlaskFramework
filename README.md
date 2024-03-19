@@ -2,8 +2,11 @@
 Model-based Electrical Diagram and TID Generation
 
 # FRAMEWORK
-templates/index.html
-static/styles.css
+Backend
+- Python Flask Microframework for backend logic and routes/apis
+
+Frontend
+- HTML/CSS/JS
 
 # RUN COMMANDS
 Make sure you are in the parent directory
@@ -41,6 +44,7 @@ Build
 - There is a GitHub action that checks if the project builds.
 
 Testing
+- The unit tests are also automatically run during this stage of the pipeline.
 - Composition Analysis using Snyk that automatically generates a report based on dependencies used in the code.
 - Static Code Analysis  using SonarQube. 
 
