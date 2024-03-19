@@ -1,5 +1,5 @@
 # JANUS
-# Model-based Electrical Diagram and TID Generation
+Model-based Electrical Diagram and TID Generation
 
 # FRAMEWORK
 templates/index.html
@@ -8,7 +8,6 @@ static/styles.css
 # RUN COMMANDS
 Make sure you are in the parent directory
 Make sure you have docker installed and docker compose
-docker-compose up -d --build (to build images)
 
 
 # Start the db server using the postgresql image from Docker Hub
@@ -29,4 +28,11 @@ This will start all services (Janus, Postgres)
 #  Accessing the Application
 http://localhost:8000
 
+
+# Perform static analysis using SonarQube
+$ sonar-scanner \
+    -Dsonar.projectKey=24040_ \
+    -Dsonar.sources=. \
+    -Dsonar.host.url=http://test.def.engr.arizona.edu:9000 \
+    -Dsonar.token=sqp_e16713399f15e98ca27dce7e4e87e98c4dde43f3
 
