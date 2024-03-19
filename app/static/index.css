@@ -43,6 +43,7 @@ html {
   
   label {
     color: white;
+    font-size: large;
   }
   .center-form {
     position: relative; /* Establish a stacking context */
@@ -73,6 +74,7 @@ html {
     min-height:30px; 
     min-width: 120px;
     cursor: pointer;
+    font-size: large;
   }
   .button:hover {
     background: #eab101;
@@ -101,4 +103,10 @@ html {
     border: 0;
     padding:0;
     margin-top:-40;
+  }
+
+  a {
+    color: white;
+    padding-left: 10px;
+    font-size: large;
   }
