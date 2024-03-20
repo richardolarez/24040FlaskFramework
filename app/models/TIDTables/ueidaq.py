@@ -3,6 +3,7 @@ from app import db
 class UEIDaq(db.Model):
     __tablename__ = "UEIDaq"
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     power_daq_layer = db.Column(db.String(255))
     bit = db.Column(db.String(255))
     pin = db.Column(db.String(255))

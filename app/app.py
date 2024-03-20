@@ -21,8 +21,7 @@ db = SQLAlchemy(app)
 
 
 ###################### Import the TID Models ########################
-from models.TIDTables import ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses
-from models import User
+from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses
 
 
 ####################### CREATE TABLES ########################

@@ -4,6 +4,7 @@ class PowerSupply(db.Model):
     __tablename__ = "PowerSupply"
 
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     battery_system = db.Column(db.String(255))
     voltage_setting = db.Column(db.Float)
     ovp = db.Column(db.Float)

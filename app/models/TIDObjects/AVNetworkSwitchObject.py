@@ -1,11 +1,14 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:45:31 2024
+from app import db
+class AVNetworkSwitchObject(db.Model):
+    __tablename__ = "AVNetworkSwitchObject"
+    id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    PN = db.Column(db.String(255))
 
-@author: julia
-"""
+    def json(self):
+        return {'id': self.id, 'name': self.name, 'PN': self.PN}
 
-class AVNetworkSwitchObject:
     def __init__(self, name, ID, PN):
         self.name = name
         self.ID = ID 

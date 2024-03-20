@@ -4,6 +4,7 @@ from app import db
 class BatteryAddresses(db.Model):
     __tablename__ = "BatteryAddresses"
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     battery = db.Column(db.String(255))
     rs485_address = db.Column(db.String(255))
 

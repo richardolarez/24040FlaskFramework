@@ -3,6 +3,7 @@ from app import db
 class VehicleBattery(db.Model):
     __tablename__ = "VehicleBattery"
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     description = db.Column(db.String(255))
     capacity = db.Column(db.Float)
     pn = db.Column(db.String(255))
