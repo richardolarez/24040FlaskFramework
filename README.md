@@ -34,10 +34,10 @@ http://localhost:8000
 
 # Perform static analysis using SonarQube
 $ sonar-scanner \
-    -Dsonar.projectKey=24040_ \
-    -Dsonar.sources=. \
-    -Dsonar.host.url=http://test.def.engr.arizona.edu:9000 \
-    -Dsonar.token=sqp_e16713399f15e98ca27dce7e4e87e98c4dde43f3
+  -Dsonar.projectKey=24040_App \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://sonar.def.engr.arizona.edu:9000 \
+  -Dsonar.token=sqp_8a9aab1f48db50c828beeee3a2a16c93d43b9a76
 
 # DEVSECOPS Pipeline
 Build 
