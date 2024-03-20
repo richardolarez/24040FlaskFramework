@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+</head>
+<body>
+	<h2 class="banner">
+		<img src=static/images/Engineering.png alt="Engineering">
+		<img src=static/images/NGC.png alt="NGC logo">
+	  </h2>
+	
+	  <div>
+		<img src=static/images/Janusimage.png alt="Janus Logo" class="logo">
+	  </div>
+	<nav>
+		<ul>
+			<li><a href="/login">Login</a></li>
+			<li><a href="/register">Create account</a></li>
+		</ul>
+	</nav>
+	<h3 class="name">J.A.N.U.S.</h3>
+	<h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+	{% if current_user.is_authenticated %}
+	<h1 class="name2">You are logged in</h1>
+	<a class="center-form" href="/logout">Logout</a>
+	{% else %}
+	<h1 class="name2">You are not logged in</h1>
+	{% endif %}
+</body>
+</html>

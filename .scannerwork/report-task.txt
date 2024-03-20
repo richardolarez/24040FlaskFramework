@@ -1,0 +1,6 @@
+projectKey=24040_
+serverUrl=http://test.def.engr.arizona.edu:9000
+serverVersion=10.4.0.87286
+dashboardUrl=http://test.def.engr.arizona.edu:9000/dashboard?id=24040_
+ceTaskId=03a51b04-8af2-4ada-ad7d-54d45859ea79
+ceTaskUrl=http://test.def.engr.arizona.edu:9000/api/ce/task?id=03a51b04-8af2-4ada-ad7d-54d45859ea79
