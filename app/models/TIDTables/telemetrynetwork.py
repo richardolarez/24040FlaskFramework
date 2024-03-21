@@ -4,6 +4,7 @@ from app import db
 class TelemetryNetwork(db.Model):
     __tablename__ = "TelemetryNetwork"
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     tlm_net_device = db.Column(db.String(255))
     ip_address = db.Column(db.String(255))
     sub_net_mask = db.Column(db.String(255))

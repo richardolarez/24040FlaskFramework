@@ -3,6 +3,7 @@ from app import db
 class PathsLoads(db.Model):
     __tablename__ = "PathsLoads"
     id = db.Column(db.Integer, primary_key=True)
+    projectID = db.Column(db.Integer)
     battery = db.Column(db.String(255))
     ptm_channel = db.Column(db.String(255))
     components = db.Column(db.String(255))
