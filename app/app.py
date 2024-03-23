@@ -100,18 +100,32 @@ def upload_file():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         decompress_file(filename)
         save_zip_to_db(filename)
-        return 'File uploaded successfully'
+        #The next few lines were added by JRima. They will generate the txt file if the data.xml file is found.
+        xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+        if xml_file_path:
+            output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects3.txt')
+            parseXML(xml_file_path, output_file_path)
+            #This return statement was used so that I could download the generated txt file to see if it actually worked.
+            return '''
+        <!doctype html>
+        <title>File uploaded</title>
+        <h1>File uploaded successfully</h1>
+        <a href="/download/visioObjects3.txt">Download visioObjects3.txt</a>
+        '''
+        else:
+            return 'No data.xml file found for parsing'
 
+#This was also added to allow for downloading the txt file so that it was possible to see if it was generated correctly. 
+@app.route('/download/<filename>')
+def download_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 import zipfile
-
 
 def decompress_file(filename):
     zip_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(app.config['UPLOAD_FOLDER'])
     return f'{filename} decompressed and uploaded successfully'
-
-
 
 def save_zip_to_db(filename):
     zip_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -122,6 +136,21 @@ def save_zip_to_db(filename):
 
     return 'Zip file saved to database successfully'
 
+####################### FUNCTIONS TO PARSE FILE AFTER UPLOAD ####################
+import Parser.XML_Parser as XMLParse
+
+#This function will find the xml file within the uploaded zip file folders
+def find_xml_file(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == 'data.xml':
+                return os.path.join(root, file)
+    return None
+
+#This function will call the xmlParser and generate the txt file
+def parseXML(input_file, output_file):
+     XMLParse.run_XMLParser(input_file, output_file) 
+     
 ####################### APIs ########################
 # Test Route
 @app.route('/test', methods=['GET'])

@@ -6,13 +6,14 @@ Created on Tue Feb 13 16:35:00 2024
 """
 
 import Parse_Txt as pParse 
-
+import XML_Parser as xParse
 
 file_path = "visioObjects.txt"
 class parseTXT():
-    def __init__(self, file_path):
+    def __init__(self):
         pass 
-    
+        xParse.run_XMLParser()
+        file_path = "visioObjects2.txt"
         self.powerDict = pParse.parsePower(file_path, "[PS]")
         self.bt = pParse.parsePower(file_path, "[Li-Ion Batt]")
         self.network = pParse.parsePower(file_path, "[Network Switch]")
@@ -30,7 +31,7 @@ class parseTXT():
         self.DAQD = pParse.parsePower(file_path, "[DAQ-Digital]")
     
 def runParsingTest(): 
-    parse = parseTXT(file_path)
+    parse = parseTXT()
     key = list(parse.powerDict.keys()) 
     if (key[0] == "POWER SUPPLY 1" and key[1] == "POWER SUPPLY 2" and key[2] == "POWER SUPPLY 3"):
         if parse.powerDict.get(key[0]).name == "POWER SUPPLY 1" and parse.powerDict.get(key[0]).PN == "(DLM60)":

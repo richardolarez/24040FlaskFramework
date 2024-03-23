@@ -1,18 +1,18 @@
-import powerSupplyObject as PSO 
-import batteryObject as BTO
-import networkSwitchObject as NSO
-import pcServerObject as PCO
-import pduObject as PDU 
-import flightCompObject as FCO
-import powerControlObject as PWRCO
-import IMUObject as IMO
-import controllerObject as CO
-import tvcController as TVC
-import GPSObject as GPS
-import AVNetworkSwitchObject as AV
-import OrdnanceObject as ORD
-import DAQPPCObject as DAQPPC
-import DAQDigitalObject as DAQD
+from models import PowerSupply as PSO 
+from models import Battery as BTO
+from models import NetworkSwitch as NSO
+from models import PCServer as PCO
+from models import PDUObject as PDU 
+from models import flightCompObject as FCO
+from models import powerControlObject as PWRCO
+from models import IMUObject as IMO
+from models import Controller as CO
+from models import TVCCtrl as TVC
+from models import GPSObject as GPS
+from models import AVNetworkSwitchObject as AV
+from models import OrdnanceObject as ORD
+from models import DAQPPCObject as DAQPPC
+from models import DAQDIGITALObject as DAQD
 def parsePower(file_path, checkName):
     if checkName == "[PS]":
         obj = PSO.PowerSupply
