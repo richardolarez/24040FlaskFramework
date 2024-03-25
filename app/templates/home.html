@@ -23,6 +23,8 @@
 			<li><a href="/register">Create account</a></li>
 		</ul>
 	</nav>
+
+
 	<h3 class="name">J.A.N.U.S.</h3>
 	<h3 class="name2">Electrical & Technical Diagram Assistant</h3>
 	{% if current_user.is_authenticated %}
@@ -31,5 +33,43 @@
 	{% else %}
 	<h1 class="name2">You are not logged in</h1>
 	{% endif %}
+
+	<button class="button" onclick="toggleTable('table1')">Show Table 1</button>
+<button class="button" onclick="toggleTable('table2')">Show Table 2</button>
+
+<table id="table1" class="hidden">
+  <tr>
+    <th>Column 1</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+  </tr>
+  <tr>
+    <td>Data 2</td>
+  </tr>
+</table>
+
+<table id="table2" class="hidden">
+  <tr>
+    <th>Column 1</th>
+  </tr>
+  <tr>
+    <td>Data A</td>
+  </tr>
+  <tr>
+    <td>Data B</td>
+  </tr>
+</table>
+
+<script>
+	function toggleTable(tableId) {
+	  var table = document.getElementById(tableId);
+	  if (table.classList.contains('hidden')) {
+		table.classList.remove('hidden');
+	  } else {
+		table.classList.add('hidden');
+	  }
+	}
+</script>
 </body>
 </html>

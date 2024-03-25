@@ -110,3 +110,7 @@ html {
     padding-left: 10px;
     font-size: large;
   }
+
+  .hidden {
+    display: none;
+  }
