@@ -13,6 +13,9 @@ import models.AVNetworkSwitchObject as AV
 import models.OrdnanceObject as ORD
 import models.DAQPPCObject as DAQPPC
 import models.DAQDigitalObject as DAQD
+
+
+
 def parsePower(file_path, checkName):
     if checkName == "[PS]":
         obj = PSO.PowerSupply
@@ -46,6 +49,8 @@ def parsePower(file_path, checkName):
         obj = DAQD.DAQDIGITALObject
     else: 
         pass
+
+    
     Dict = {}
     with open(file_path, 'r') as file:
         lines = file.readlines()

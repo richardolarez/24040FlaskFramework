@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:35:00 2024
-
-@author: julia
-"""
-
 import Parse_Txt as pParse 
 import XML_Parser as xParse
 
