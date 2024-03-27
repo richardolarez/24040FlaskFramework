@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width">
   <title>Main Menu</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -30,6 +35,43 @@
     </form>
   </div><br><br>
 
+  <button class="button" onclick="toggleTable('table1')">Show Table 1</button>
+<button class="button" onclick="toggleTable('table2')">Show Table 2</button>
+
+<table id="table1" class="hidden" style="color:white">
+  <tr>
+    <th>Column 1</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+  </tr>
+  <tr>
+    <td>Data 2</td>
+  </tr>
+</table>
+
+<table id="table2" class="hidden">
+  <tr>
+    <th>Column 1</th>
+  </tr>
+  <tr>
+    <td>Data A</td>
+  </tr>
+  <tr>
+    <td>Data B</td>
+  </tr>
+</table>
+
+<script>
+  function toggleTable(tableId) {
+    var table = document.getElementById(tableId);
+    if (table.classList.contains('hidden')) {
+      table.classList.remove('hidden');
+    } else {
+      table.classList.add('hidden');
+    }
+  }
+</script>
 
     <a href="/"><button class="button">Logout</button></a><br><br>
   </div>
