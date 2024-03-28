@@ -28,27 +28,25 @@
 
   <div class="center-form">
     <a href="/edv"><button class="button">EDV</button></a><br><br>
-  </div><br><br>
+  </div>
 
-<button class="button" onclick="toggleTable('table1')">Create New Project</button>
+<div class="center-form">
+  <button class="button" onclick="toggleTable('table1')">Create New Project</button>
 
 <table id="table1" class="hidden" style="color:white">
   <tr>
-    <th></th>
+    <th>Please Upload the Electrical Diagram Zip File</th>
   </tr>
   <tr>
-    <td><form action="/upload" method="post" enctype="multipart/form-data">
+    <td class="button"><form action="/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="file" accept=".zip" required>
       <button type="submit">Upload</button>
     </form></td>
   </tr>
-  <tr>
-    <td>Data 2</td>
-  </tr>
 </table>
-
+<br><br>
 <button class="button" onclick="toggleTable('table2')">Select Existing Project</button>
-<table id="table2" class="hidden">
+<table id="table2" class="hidden" style="color: white;">
   <tr>
     <th>Column 1</th>
   </tr>
@@ -59,6 +57,12 @@
     <td>Data B</td>
   </tr>
 </table>
+</div>
+
+<br><br>
+<div class="center-form">
+  <a href="/"><button class="button">Logout</button></a><br><br>
+</div>
 
 <script>
   function toggleTable(tableId) {
@@ -71,7 +75,5 @@
   }
 </script>
 
-    <a href="/"><button class="button">Logout</button></a><br><br>
-  </div>
 </body>
 </html>
