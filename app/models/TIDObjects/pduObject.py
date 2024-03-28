@@ -1,12 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:42:07 2024
+from app import db 
 
-@author: julia
-"""
+class PDUObject(db.Model):
+    __tablename__ = "PDU"
+    pduId = db.Column(db.String(255), primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class PDUObject:
-    def __init__(self, name, ID, PN):
+    def json(self):
+        return {'id': self.pduId, 'name': self.name, 'PN': self.partNumber}
+
+    def __init__(self, name, ID, partNumber):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.pduId = ID 
+        self.partNumber = partNumber

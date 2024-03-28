@@ -22,7 +22,7 @@ db = SQLAlchemy(app)
 
 ###################### Import the TID Models ########################
 from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses
-
+from models import AVNetworkSwitchObject, Battery, Controller, DAQDIGITALObject, DAQPPCObject, flightCompObject, GPSObject, IMUObject, NetworkSwitch, OrdnanceObject, PCServer, PDUObject, powerControlObject, PowerSupply, TVCCtrl
 
 ####################### CREATE TABLES ########################
 class Data(db.Model):
@@ -87,6 +87,8 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+ 
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
@@ -99,7 +101,27 @@ def upload_file():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         decompress_file(filename)
         save_zip_to_db(filename)
-        return 'File uploaded successfully'
+        xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+        if xml_file_path:
+            output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects3.txt')
+            parsedObjectList = parseXML(xml_file_path, output_file_path)
+            for i in parsedObjectList:
+                 db.session.add(i)
+                 db.session.commit()
+            #This return statement was used so that I could download the generated txt file to see if it actually worked.
+            return '''
+        <!doctype html>
+        <title>File uploaded</title>
+        <h1>File uploaded successfully</h1>
+        <a href="/download/visioObjects3.txt">Download visioObjects3.txt</a>
+        '''
+        else:
+            return 'No data.xml file found for parsing'
+
+#This was also added to allow for downloading the txt file so that it was possible to see if it was generated correctly. 
+@app.route('/download/<filename>')
+def download_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 
 import zipfile
 
@@ -118,9 +140,48 @@ def save_zip_to_db(filename):
         data = Data(file_name=filename, file_content=file.read())
         db.session.add(data)
         db.session.commit()
-
     return 'Zip file saved to database successfully'
 
+####################### FUNCTIONS TO PARSE FILE AFTER UPLOAD ####################
+import Parser.XML_Parser as XMLParse
+
+
+#This function will find the xml file within the uploaded zip file folders
+def find_xml_file(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == 'data.xml':
+                return os.path.join(root, file)
+    return None
+
+def parseTXT(file_path):
+    objList = [AVNetworkSwitchObject, Battery, Controller, DAQDIGITALObject, DAQPPCObject, flightCompObject, GPSObject, IMUObject, NetworkSwitch, OrdnanceObject, PCServer, PDUObject, powerControlObject, PowerSupply, TVCCtrl]
+    checkNameList = ["[AV Network Switch]", "[Li-Ion Batt]", "[Controller]", "[DAQ-Digital]", "[DAQ-PPC]", "[Flight Computer]", "[GPS]", "[IMU]", "[Network Switch]", "[Ordnance]", "[PC - Server]", "[PDU]", "[Power Control Device]", "[PS]", "[TVC Controller]"]
+    list1 = []
+    for i in range(len(objList)): 
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+        parsed_data = []
+        for j, line in enumerate(lines):
+            if checkNameList[i] in line:
+                start_index = max(0, j - 2)
+                end_index = min(len(lines), j + 3)
+                parsed_data.append(lines[start_index:end_index])
+        for data in parsed_data:
+            name_line = data[1].strip()  
+            pn_line = data[3].strip()  
+            unique_id_line = data[4].strip()
+            obj_type = objList[i](name_line, unique_id_line, pn_line)
+            list1.append(obj_type)
+    return list1
+
+#This function will call the xmlParser and generate the txt file
+def parseXML(input_file, output_file):
+     XMLParse.run_XMLParser(input_file, output_file) 
+     parsedObjectList = parseTXT(output_file)
+     return parsedObjectList
+
+    
 ####################### APIs ########################
 # Test Route
 @app.route('/test', methods=['GET'])

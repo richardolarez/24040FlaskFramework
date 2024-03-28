@@ -1,12 +1,15 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:42:33 2024
+from app import db
 
-@author: julia
-"""
+class flightCompObject(db.Model):
+    __tablename__ = "FlightComputer"
+    flightCompId = db.Column(db.String(255), primary_key=True)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class flightCompObject:
-    def __init__(self, name, ID, PN):
+    def json(self):
+        return {'id': self.flightCompId, 'name': self.name, 'PN': self.partNumber}
+
+    def __init__(self, name, ID, partNumber):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.flightCompId = ID 
+        self.partNumber = partNumber

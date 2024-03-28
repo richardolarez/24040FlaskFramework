@@ -1,16 +1,16 @@
 from app import db
 class Battery(db.Model):
     __tablename__ = "Battery"
-    BatteryId = db.Column(db.Integer, primary_key=True)
+    batteryId = db.Column(db.String(255), primary_key=True)
     projectId = db.Column(db.Integer)
     name = db.Column(db.String(255))
     partNumber = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.id, 'name': self.name, 'PN': self.PN}
+        return {'id': self.batteryId, 'name': self.name, 'PN': self.partNumber}
 
-    def __init__(self, name, ID, PN):
+    def __init__(self, name, ID, partNumber):
         self.name = name
-        self.BatteryId = ID 
-        self.partNumber = PN
+        self.batteryId = ID 
+        self.partNumber = partNumber
         
