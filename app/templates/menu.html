@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width">
   <title>Main Menu</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,15 +28,52 @@
 
   <div class="center-form">
     <a href="/edv"><button class="button">EDV</button></a><br><br>
-    <div class="button">
-    <form action="/upload" method="post" enctype="multipart/form-data">
+  </div>
+
+<div class="center-form">
+  <button class="button" onclick="toggleTable('table1')">Create New Project</button>
+
+<table id="table1" class="hidden" style="color:white">
+  <tr>
+    <th>Please Upload the Electrical Diagram Zip File</th>
+  </tr>
+  <tr>
+    <td class="button"><form action="/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="file" accept=".zip" required>
       <button type="submit">Upload</button>
-    </form>
-  </div><br><br>
+    </form></td>
+  </tr>
+</table>
+<br><br>
+<button class="button" onclick="toggleTable('table2')">Select Existing Project</button>
+<table id="table2" class="hidden" style="color: white;">
+  <tr>
+    <th>Column 1</th>
+  </tr>
+  <tr>
+    <td>Data A</td>
+  </tr>
+  <tr>
+    <td>Data B</td>
+  </tr>
+</table>
+</div>
 
+<br><br>
+<div class="center-form">
+  <a href="/"><button class="button">Logout</button></a><br><br>
+</div>
 
-    <a href="/"><button class="button">Logout</button></a><br><br>
-  </div>
+<script>
+  function toggleTable(tableId) {
+    var table = document.getElementById(tableId);
+    if (table.classList.contains('hidden')) {
+      table.classList.remove('hidden');
+    } else {
+      table.classList.add('hidden');
+    }
+  }
+</script>
+
 </body>
 </html>
