@@ -1,15 +1,16 @@
 from app import db
+
 class AVNetworkSwitchObject(db.Model):
     __tablename__ = "AVNetworkSwitchObject"
-    avnId = db.Column(db.Integer, primary_key=True)
+    avnId = db.Column(db.String(255), primary_key=True)
     projectID = db.Column(db.Integer)
     name = db.Column(db.String(255))
-    PN = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.id, 'name': self.name, 'PN': self.PN}
+        return {'id': self.avnId, 'name': self.name, 'PN': self.partNumber}
 
-    def __init__(self, name, projectID, PN):
+    def __init__(self, name, Id, partNumber):
         self.name = name
-        self.projectID = projectID
-        self.PN = PN
+        self.avnId = str(Id)
+        self.partNumber = partNumber

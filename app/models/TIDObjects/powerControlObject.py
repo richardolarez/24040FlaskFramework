@@ -1,12 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:37:46 2024
+from app import db 
 
-@author: julia
-"""
+class powerControlObject(db.Model):
+    __tablename__ = "PowerControl"
+    powerControlId = db.Column(db.String(255), primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class powerControlObject:
-    def __init__(self, name, ID, PN):
+    def json(self):
+        return {'id': self.powerControlId, 'name': self.name, 'PN': self.partNumber}
+
+    def __init__(self, name, ID, partNumber):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.powerControlId = ID 
+        self.partNumber = partNumber

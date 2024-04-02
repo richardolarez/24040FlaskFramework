@@ -1,15 +1,19 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  9 17:47:14 2023
+from app import db 
 
-@author: julia
-"""
+class PowerSupply(db.Model):
+    __tablename__ = "PowerSupplyObject"
+    powerSupplyId = db.Column(db.String(255), primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class PowerSupply:
-    def __init__(self, name, ID, PN):
+    def json(self):
+        return {'id': self.powerSupplyId, 'name': self.name, 'PN': self.partNumber}
+
+    def __init__(self, name, ID, partNumber):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.powerSupplyId = ID 
+        self.partNumber = partNumber
         #PS Summary 
         self.volt = None
         self.currentA = None
