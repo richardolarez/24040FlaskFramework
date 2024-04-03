@@ -32,6 +32,9 @@
         .footer{
             align-content: center;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -49,12 +52,24 @@
 
             <!-- div for drop down menus-->
             <div>
-                <select class="componentDropdown">
+                <select class="componentDropdown" onchange="showTable()">
                     <option value="" disabled selected>Current T.I.D Tables</option>
                     <option value="component1">Component 1</option>
                     <option value="component2">Component 2</option>
                 </select>
-
+                <!-- Start of Invisible Table -->
+                <br>
+                <table id="table1" class="hidden" style="color: white;">
+                    <tr>
+                      <th>Column 1</th>
+                    </tr>
+                    <tr>
+                      <td>Data A</td>
+                    </tr>
+                    <tr>
+                      <td>Data B</td>
+                    </tr>
+                  </table>
                 <br><br><br><br><br>
 
                 <select class="componentDropdown">
@@ -62,7 +77,19 @@
                     <option value="component1">Component 1</option>
                     <option value="component2">Component 2</option>
                 </select>
-
+                <!-- Start of Invisible Table -->
+                <br>
+                <table id="table2" class="hidden" style="color: white;">
+                    <tr>
+                      <th>Column 1</th>
+                    </tr>
+                    <tr>
+                      <td>Data A</td>
+                    </tr>
+                    <tr>
+                      <td>Data B</td>
+                    </tr>
+                  </table>
                 <br><br><br><br><br>
 
                 <!-- <select class="componentDropdown">
@@ -73,24 +100,6 @@
             </div>
         </div>
         <div class="right">
-            <script>
-                function addRow() {
-                    var table = document.getElementById("myTable");
-                    var newRow = table.insertRow(table.rows.length);
-                    var cell1 = newRow.insertCell(0);
-                    var cell2 = newRow.insertCell(1);
-                    cell1.innerHTML = '<td>...</td>';
-                    cell2.innerHTML = '<td>...</td>';
-                    cell1.setAttribute("contenteditable", "true");
-                    cell2.setAttribute("contenteditable", "true");
-                }
-                function deleteRow() {
-                    var table = document.getElementById("myTable");
-                    var lastRowIndex = table.rows.length - 1;
-                    table.deleteRow(lastRowIndex);
-                }
-            </script>
-
     
             <button class="button" onclick="addRow()">Add+</button>
             <button class="button" onclick="deleteRow()">Delete Row</button><br><br><br>
@@ -120,5 +129,40 @@
         <a href="/menu"><button class="button">Menu</button></a>
         <a href="/"><button class="button">Logout</button></a>
     </div>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var newRow = table.insertRow(table.rows.length);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            cell1.innerHTML = '<td>...</td>';
+            cell2.innerHTML = '<td>...</td>';
+            cell1.setAttribute("contenteditable", "true");
+            cell2.setAttribute("contenteditable", "true");
+        }
+        function deleteRow() {
+            var table = document.getElementById("myTable");
+            var lastRowIndex = table.rows.length - 1;
+            table.deleteRow(lastRowIndex);
+        }
+        function showTable() {
+            var dropdown = document.querySelector('.componentDropdown');
+            var selectedComponent = dropdown.options[dropdown.selectedIndex].value;
+            var table1 = document.getElementById('table1');
+            var table2 = document.getElementById('table2');
+
+        if (selectedComponent === 'component1') {
+          table1.classList.remove('hidden');
+          table2.classList.add('hidden');
+        } else if (selectedComponent === 'component2') {
+          table1.classList.add('hidden');
+          table2.classList.remove('hidden');
+        } else {
+          table1.classList.add('hidden');
+          table2.classList.add('hidden');
+        }
+      }
+    </script>
 </body>
 </html>
