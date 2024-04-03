@@ -1,12 +1,17 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:40:25 2024
+# Description: NetworkSwitch object model
+from app import db
 
-@author: julia
-"""
+class NetworkSwitchObject(db.Model):
+    __tablename__ = "NetworkSwitchObject"
+    NetworkSwitchObjectId = db.Column(db.Integer, primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class NetworkSwitch:
+    def json(self):
+        return {'id': self.id, 'name': self.name, 'PN': self.PN}
+    
     def __init__(self, name, ID, PN):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.NetworkSwitchObjectId = ID 
+        self.partNumber = PN

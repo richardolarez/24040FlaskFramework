@@ -1,12 +1,17 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:42:07 2024
+# Desc: PDUObject class to store PDU information
+from app import db
+class PDUObject(db.Model):
+    __tablename__ = "PDUObject"
+    pduObjectId = db.Column(db.Integer, primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-@author: julia
-"""
 
-class PDUObject:
+    def json(self):
+        return {'id': self.id, 'name': self.name, 'PN': self.PN}
+    
     def __init__(self, name, ID, PN):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.pduObjectId = ID 
+        self.partNumber = PN

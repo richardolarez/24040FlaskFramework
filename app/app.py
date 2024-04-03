@@ -21,7 +21,7 @@ db = SQLAlchemy(app)
 
 
 ###################### Import the TID Models ########################
-from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses
+from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, TIDTables, Component
 
 
 ####################### CREATE TABLES ########################
@@ -133,11 +133,11 @@ def test():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for("home"))
+    return redirect(url_for("login"))
  
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("login.html")
 
 @app.route('/edv')
 def edv():

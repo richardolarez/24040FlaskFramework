@@ -1,12 +1,17 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 13 16:46:45 2024
+# Description: DAQDigitalObject model class
+from app import db
 
-@author: julia
-"""
+class DAQDigitalObject(db.Model):
+    __tablename__ = "DAQDigitalObject"
+    DAQDigitalObjectId = db.Column(db.Integer, primary_key=True)
+    projectId = db.Column(db.Integer)
+    name = db.Column(db.String(255))
+    partNumber = db.Column(db.String(255))
 
-class DAQDIGITALObject:
+    def json(self):
+        return {'id': self.id, 'name': self.name, 'PN': self.PN}
+    
     def __init__(self, name, ID, PN):
         self.name = name
-        self.ID = ID 
-        self.PN = PN
+        self.DAQDigitalObjectId = ID 
+        self.partNumber = PN
