@@ -99,7 +99,27 @@ def upload_file():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         decompress_file(filename)
         save_zip_to_db(filename)
-        return 'File uploaded successfully'
+        xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+        if xml_file_path:
+            output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
+            componentList = parseXML(xml_file_path, output_file_path)
+            for i in componentList: 
+                db.session.add(i)
+                db.session.commit()
+            return '''
+            <!doctype html>
+            <title>File uploaded</title>
+            <h1>File uploaded successfully</h1>
+            <a href="/download/visioObjects4.txt">Download visioObjects4.txt</a>
+            '''
+        else:
+            return 'No data.xml file found for parsing'
+
+#This was also added to allow for downloading the txt file so that it was possible to see if it was generated correctly. 
+@app.route('/download/<filename>')
+def download_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
+
 
 import zipfile
 
@@ -120,6 +140,48 @@ def save_zip_to_db(filename):
         db.session.commit()
 
     return 'Zip file saved to database successfully'
+
+############################ PARSING #######################
+import Parser.XML_Parser as XMLParse
+
+
+#This function will find the xml file within the uploaded zip file folders
+def find_xml_file(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == 'data.xml':
+                return os.path.join(root, file)
+    return None
+
+
+def parseTXT(file_path):
+    checkNameList = ["[AV Network Switch]", "[Li-Ion Batt]", "[Controller]", "[DAQ-Digital]", "[DAQ-PPC]", "[Flight Computer]", "[GPS]", "[IMU]", "[Network Switch]", "[Ordnance]", "[PC - Server]", "[PDU]", "[Power Control Device]", "[PS]", "[TVC Controller]"]
+    list1 = []
+    for i in range(len(checkNameList)): 
+        component_type = checkNameList[i]
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+        parsed_data = []
+        for j, line in enumerate(lines):
+            if checkNameList[i] in line:
+                start_index = max(0, j - 2)
+                end_index = min(len(lines), j + 3)
+                parsed_data.append(lines[start_index:end_index])
+        for data in parsed_data:
+            name_line = data[1].strip()  
+            pn_line = data[3].strip()  
+            unique_id_line = data[4].strip()
+            obj_type = Component(name_line, unique_id_line, pn_line, component_type)
+            list1.append(obj_type)
+    return list1
+
+
+#This function will call the xmlParser and generate the txt file
+def parseXML(input_file, output_file):
+     XMLParse.run_XMLParser(input_file, output_file) 
+     outputList = parseTXT(output_file)
+     return outputList
+
 
 ####################### APIs ########################
 # Test Route
@@ -155,10 +217,6 @@ def menu():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory('uploads', filename)
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug = True)
