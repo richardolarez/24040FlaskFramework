@@ -33,6 +33,12 @@ class Data(db.Model):
 with app.app_context(): 
     db.create_all()
 
+####### Generate Test Data #######
+from db_init import db_init
+with app.app_context():
+    db_init()
+
+
 
 ########################## Login Manager ########################
 bcrypt = Bcrypt(app)
@@ -176,9 +182,6 @@ def menu():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory('uploads', filename)
-
-
-
 
 
 if __name__ == '__main__':
