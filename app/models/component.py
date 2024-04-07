@@ -9,10 +9,4 @@ class Component(db.Model):
     componentType = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.componentId, 'name': self.componentName, 'PN': self.partNumber, 'component': self.componentType}
-
-    def __init__(self, name, ID, PN, componentType):
-        self.componentName = name
-        self.componentId = ID 
-        self.partNumber = PN
-        self.componentType = componentType
+        return{'componentId': self.componentId, 'projectId': self.projectId, 'componentName': self.componentName, 'partNumber': self.partNumber, 'componentType': self.componentType}
