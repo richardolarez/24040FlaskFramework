@@ -110,3 +110,21 @@ html {
     padding-left: 10px;
     font-size: large;
   }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  nav li {
+    display: inline;
+  }
+
+  nav a {
+    color: white;
+    padding: 10px;
+    font-size: large;
+    text-decoration: none;
+  }
