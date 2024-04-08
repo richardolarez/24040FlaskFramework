@@ -52,7 +52,7 @@
 
             <!-- div for drop down menus-->
             <div>
-                <select class="componentDropdown" onchange="showTable()">
+                <select class="componentDropdown" onchange="showTable1()">
                     <option value="" disabled selected>Current T.I.D Tables</option>
                     <option value="component1">Component 1</option>
                     <option value="component2">Component 2</option>
@@ -72,7 +72,7 @@
                   </table>
                 <br><br><br><br><br>
 
-                <select class="componentDropdown">
+                <select class="componentDropdown" onchange="showTable2()">
                     <option value="" disabled selected>Components</option>
                     <option value="component1">Component 1</option>
                     <option value="component2">Component 2</option>
@@ -146,23 +146,47 @@
             var lastRowIndex = table.rows.length - 1;
             table.deleteRow(lastRowIndex);
         }
-        function showTable() {
-            var dropdown = document.querySelector('.componentDropdown');
-            var selectedComponent = dropdown.options[dropdown.selectedIndex].value;
-            var table1 = document.getElementById('table1');
-            var table2 = document.getElementById('table2');
-
-        if (selectedComponent === 'component1') {
-          table1.classList.remove('hidden');
-          table2.classList.add('hidden');
-        } else if (selectedComponent === 'component2') {
-          table1.classList.add('hidden');
-          table2.classList.remove('hidden');
-        } else {
-          table1.classList.add('hidden');
-          table2.classList.add('hidden');
+        function showTable1() {
+          var dropdown = document.querySelector('.componentDropdown');
+          var table = document.getElementById('table1');
+          if (table.classList.contains('hidden')) {
+            table.classList.remove('hidden');
+            updateTable1(); // Initial table update when it's shown for the first time
+          }
         }
-      }
+
+        function updateTable1() {
+          // Your code to update table content goes here
+          // For example, you can dynamically generate rows based on some data
+          var tableBody = document.querySelector('#table1 tbody');
+          // Example: Add a row with some data
+          var newRow = document.createElement('tr');
+          var newData = document.createElement('td');
+          newData.textContent = 'Dynamic Data';
+          newRow.appendChild(newData);
+          tableBody.appendChild(newRow);
+        }
+
+        function showTable2() {
+          var dropdown = document.querySelector('.componentDropdown');
+          var table = document.getElementById('table2');
+          if (table.classList.contains('hidden')) {
+            table.classList.remove('hidden');
+            updateTable2(); // Initial table update when it's shown for the first time
+          }
+        }
+
+        function updateTable2() {
+          // Your code to update table content goes here
+          // For example, you can dynamically generate rows based on some data
+          var tableBody = document.querySelector('#table2 tbody');
+          // Example: Add a row with some data
+          var newRow = document.createElement('tr');
+          var newData = document.createElement('td');
+          newData.textContent = 'Dynamic Data';
+          newRow.appendChild(newData);
+          tableBody.appendChild(newRow);
+        }
     </script>
 </body>
 </html>
