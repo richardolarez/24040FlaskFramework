@@ -125,7 +125,8 @@ html {
   }
 
   table, th, td {
-    color: white;
+    background-color: white;
+    color: black;
     right: 100px;
     border: 1px solid;
   }

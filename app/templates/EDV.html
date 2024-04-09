@@ -32,6 +32,9 @@
         .footer{
             align-content: center;
         }
+        #dynamicContent {
+            display: none;
+        }
     </style>
 </head>
 
@@ -55,6 +58,25 @@
                     <option value="component2">Component 2</option>
                 </select>
 
+                <div id="dynamicContent">
+                    <button class="button" onclick="addRow()">Add+</button>
+                    <button class="button" onclick="deleteRow()">Delete Row</button>
+                    <br><br>
+                
+                    <table id="myTable">
+                        <!-- Table rows -->
+                        <tr>
+                            <th>Component</th>
+                            <th>Attribute</th>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true">...</td>
+                            <td contenteditable="true">...</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br>
                 <br><br><br><br><br>
 
                 <select class="componentDropdown">
@@ -62,57 +84,9 @@
                     <option value="component1">Component 1</option>
                     <option value="component2">Component 2</option>
                 </select>
-
                 <br><br><br><br><br>
 
-                <!-- <select class="componentDropdown">
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-           
-                </select> -->
             </div>
-        </div>
-        <div class="right">
-            <script>
-                function addRow() {
-                    var table = document.getElementById("myTable");
-                    var newRow = table.insertRow(table.rows.length);
-                    var cell1 = newRow.insertCell(0);
-                    var cell2 = newRow.insertCell(1);
-                    cell1.innerHTML = '<td>...</td>';
-                    cell2.innerHTML = '<td>...</td>';
-                    cell1.setAttribute("contenteditable", "true");
-                    cell2.setAttribute("contenteditable", "true");
-                }
-                function deleteRow() {
-                    var table = document.getElementById("myTable");
-                    var lastRowIndex = table.rows.length - 1;
-                    table.deleteRow(lastRowIndex);
-                }
-            </script>
-
-    
-            <button class="button" onclick="addRow()">Add+</button>
-            <button class="button" onclick="deleteRow()">Delete Row</button><br><br><br>
-            
-            <table id="myTable">
-            <tr>
-                <th>Component</th>
-                <th>Attribute</th>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                    <td contenteditable="true">...</td>
-                    <td contenteditable="true">...</td>
-            </tr>
-            </table>
         </div>
     </div>
     
@@ -121,4 +95,40 @@
         <a href="/"><button class="button">Logout</button></a>
     </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var tidDropdown = document.querySelector('.componentDropdown');
+        tidDropdown.addEventListener('change', function() {
+            var dynamicContent = document.getElementById('dynamicContent');
+            if (tidDropdown.value) { // If any value is selected
+                dynamicContent.style.display = 'block'; // Show the table and buttons
+            } else {
+                dynamicContent.style.display = 'none'; // Hide if no selection
+            }
+        });
+    });
+    
+    function addRow() {
+        var table = document.getElementById("myTable");
+        var newRow = table.insertRow(-1); // Inserts a row at the last position
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        cell1.innerHTML = '...'; // Initial content for the new cells
+        cell2.innerHTML = '...';
+        cell1.setAttribute("contenteditable", "true");
+        cell2.setAttribute("contenteditable", "true");
+    }
+    
+    function deleteRow() {
+        var table = document.getElementById("myTable");
+        if (table.rows.length > 2) { // Ensures the header and at least one row remain
+            table.deleteRow(-1); // Removes the last row
+        }
+    }
+    </script>    
+
+
 </html>
+
+<!--endpoint : http://127.0.0.1:8000/tid_tables/<int:project_id> -->

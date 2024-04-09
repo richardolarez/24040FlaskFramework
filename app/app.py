@@ -147,7 +147,6 @@ def edv():
 def menu():
     return render_template('menu.html')
 
-
 ####################### FILE UPLOADS ########################
 # When a user submits the file upload form, the file is saved to the uploads/ 
 # directory on the server. The user is then redirected to the /uploads/<filename> route,
@@ -162,3 +161,4 @@ def uploaded_file(filename):
 
 if __name__ == '__main__':
     app.run(debug = True)
+
