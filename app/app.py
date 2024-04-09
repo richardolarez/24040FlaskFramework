@@ -34,9 +34,10 @@ with app.app_context():
     db.create_all()
 
 ####### Generate Test Data #######
-from db_init import db_init
-with app.app_context():
-    db_init()
+# Only run this once to generate test data or after resetting the database
+# from db_init import db_init
+# with app.app_context():
+#     db_init()
 
 
 
@@ -153,7 +154,6 @@ def create_project():
     db.session.add(project)
     db.session.commit()
     return {'id': project.id}
-
 
 
 ####################### VIEWS / PAGE ROUTES ########################

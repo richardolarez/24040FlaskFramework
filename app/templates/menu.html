@@ -30,50 +30,72 @@
     <a href="/edv"><button class="button">EDV</button></a><br><br>
   </div>
 
-<div class="center-form">
-  <button class="button" onclick="toggleTable('table1')">Create New Project</button>
+  <div class="center-form">
+    <button class="button" onclick="toggleTable('table1')">Create New Project</button>
 
-<table id="table1" class="hidden" style="color:white">
-  <tr>
-    <th>Please Upload the Electrical Diagram Zip File</th>
-  </tr>
-  <tr>
-    <td class="button"><form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" accept=".zip" required>
-      <button type="submit">Upload</button>
-    </form></td>
-  </tr>
-</table>
-<br><br>
-<button class="button" onclick="toggleTable('table2')">Select Existing Project</button>
-<table id="table2" class="hidden" style="color: white;">
-  <tr>
-    <th>Column 1</th>
-  </tr>
-  <tr>
-    <td>Data A</td>
-  </tr>
-  <tr>
-    <td>Data B</td>
-  </tr>
-</table>
-</div>
+    <table id="table1" class="hidden" style="color:white">
+      <tr>
+        <th>Please Upload the Electrical Diagram Zip File</th>
+      </tr>
+      <tr>
+        <td class="button">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".zip" required>
+            <button type="submit">Upload</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <br><br>
 
-<br><br>
-<div class="center-form">
-  <a href="/"><button class="button">Logout</button></a><br><br>
-</div>
+    <button class="button" onclick="loadProjects()">Select Existing Project</button>
 
-<script>
-  function toggleTable(tableId) {
-    var table = document.getElementById(tableId);
-    if (table.classList.contains('hidden')) {
-      table.classList.remove('hidden');
-    } else {
-      table.classList.add('hidden');
+    <table id="table2" class="hidden" style="color: white;">
+      <thead>
+        <tr>
+          <th>Project ID</th>
+          <th>Project Name</th>
+        </tr>
+      </thead>
+      <tbody id="projectTableBody">
+        <!-- Projects will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <br><br>
+  <div class="center-form">
+    <a href="/"><button class="button">Logout</button></a><br><br>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.7.1/dist/htmx.js"></script>
+  <script>
+    function toggleTable(tableId) {
+      var table = document.getElementById(tableId);
+      if (table.classList.contains('hidden')) {
+        table.classList.remove('hidden');
+      } else {
+        table.classList.add('hidden');
+      }
     }
-  }
-</script>
 
+    function loadProjects() {
+      var projectTableBody = document.getElementById('projectTableBody');
+      htmx.ajax('http://127.0.0.1:8000/projects', {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function(response) {
+        var projects = JSON.parse(response);
+        projectTableBody.innerHTML = '';
+        projects.forEach(function(project) {
+          var row = '<tr><td>' + project.id + '</td><td>' + project.project + '</td></tr>';
+          projectTableBody.insertAdjacentHTML('beforeend', row);
+        });
+      }).catch(function(error) {
+        console.error('Error loading projects:', error);
+      });
+    }
+  </script>
 </body>
 </html>
