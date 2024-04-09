@@ -102,7 +102,7 @@ def upload_file():
         xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
         if xml_file_path:
             output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
-            componentList = parseXML(xml_file_path, output_file_path)
+            componentList = parseXML(xml_file_path, output_file_path, 4) #The last arguement is the projectID
             for i in componentList: 
                 db.session.add(i)
                 db.session.commit()
@@ -131,7 +131,6 @@ def decompress_file(filename):
     return f'{filename} decompressed and uploaded successfully'
 
 
-
 def save_zip_to_db(filename):
     zip_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     with open(zip_path, 'rb') as file:
@@ -154,7 +153,7 @@ def find_xml_file(directory):
     return None
 
 
-def parseTXT(file_path):
+def parseTXT(file_path, project_ID):
     checkNameList = ["[AV Network Switch]", "[Li-Ion Batt]", "[Controller]", "[DAQ-Digital]", "[DAQ-PPC]", "[Flight Computer]", "[GPS]", "[IMU]", "[Network Switch]", "[Ordnance]", "[PC - Server]", "[PDU]", "[Power Control Device]", "[PS]", "[TVC Controller]"]
     list1 = []
     for i in range(len(checkNameList)): 
@@ -171,24 +170,98 @@ def parseTXT(file_path):
             name_line = data[1].strip()  
             pn_line = data[3].strip()  
             unique_id_line = data[4].strip()
-            obj_type = Component(name_line, unique_id_line, pn_line, component_type)
+            obj_type = Component(name_line, unique_id_line, pn_line, component_type, project_ID)#The last argument is the projectID
             list1.append(obj_type)
     return list1
 
 
 #This function will call the xmlParser and generate the txt file
-def parseXML(input_file, output_file):
+def parseXML(input_file, output_file, project_id):
      XMLParse.run_XMLParser(input_file, output_file) 
-     outputList = parseTXT(output_file)
+     outputList = parseTXT(output_file, project_id)
      return outputList
 
+######################## Get Component Functions #################### 
+@app.route('/powerSupplies', methods=['GET'])
+def getPowerSupplies(): 
+     componentList = Component.query.filter_by(componentType='[PS]').all()
+     return componentList
+
+@app.route('/batteries', methods=['GET'])
+def getBatteries(): 
+     componentList = Component.query.filter_by(componentType='[Li-Ion Batt]').all()
+     return componentList
+
+@app.route('/powerControls', methods=['GET'])
+def getPowerControls(): 
+     componentList = Component.query.filter_by(componentType='[Power Control Device]').all()
+     return componentList
+
+@app.route('/DAQPPCs', methods=['GET'])
+def getDAQPPC(): 
+     componentList = Component.query.filter_by(componentType='[DAQ-PPC]').all()
+     return componentList
+
+@app.route('/flightComputers', methods=['GET'])
+def getFlightComputers(): 
+     componentList = Component.query.filter_by(componentType='[Flight Computers]').all()
+     return componentList
+
+@app.route('/ordnances', methods=['GET'])
+def getOrdnance(): 
+     componentList = Component.query.filter_by(componentType='[Ordnance]').all()
+     return componentList
+
+@app.route('/Controllers', methods=['GET'])
+def getControllers(): 
+     componentList = Component.query.filter_by(componentType='[Controller]').all()
+     return componentList
+
+@app.route('/pdus', methods=['GET'])
+def getPdus(): 
+     componentList = Component.query.filter_by(componentType='[PDU]').all()
+     return componentList
+
+@app.route('/DAQDigital', methods=['GET'])
+def getDAQDigital(): 
+     componentList = Component.query.filter_by(componentType='[DAQ-Digital]').all()
+     return componentList
+
+@app.route('/tvcControllers', methods=['GET'])
+def getTvcControllers(): 
+     componentList = Component.query.filter_by(componentType='[TVC Controller]').all()
+     return componentList
+
+@app.route('/GPS', methods=['GET'])
+def getGPS(): 
+     componentList = Component.query.filter_by(componentType='[GPS]').all()
+     return componentList
+
+@app.route('/networkSwitches', methods=['GET'])
+def getNetworkSwitches(): 
+     componentList = Component.query.filter_by(componentType='[Network Switch]').all()
+     return componentList
+
+@app.route('/IMUs', methods=['GET'])
+def getIMUs(): 
+     componentList = Component.query.filter_by(componentType='[IMU]').all()
+     return componentList
+
+@app.route('/avNetworkSwitches', methods=['GET'])
+def getAvNetworkSwitches(): 
+     componentList = Component.query.filter_by(componentType='[AV Network Switch]').all()
+     return componentList
+
+@app.route('/pcServers', methods=['GET'])
+def getPCServers(): 
+     componentList = Component.query.filter_by(componentType='[PC - Server]').all()
+     return componentList
 
 ####################### APIs ########################
 # Test Route
 @app.route('/test', methods=['GET'])
 def test():
     return {'message': 'Test route works!'}
-
 
 
 ####################### VIEWS / PAGE ROUTES ########################
