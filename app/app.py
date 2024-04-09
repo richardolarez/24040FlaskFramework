@@ -156,6 +156,17 @@ def create_project():
     return {'id': project.id}
 
 
+####################### Export Project ########################
+from exportProject import export_Project
+
+@app.route('/export_project/<int:project_id>', methods=['GET'])
+def export_project(project_id):
+    project = export_Project(project_id)
+    response = make_response(jsonify(project))
+    response.headers["Content-Disposition"] = f"attachment; filename=project_{project_id}.json"
+    response.headers["Content-Type"] = "application/json"
+    return response
+
 ####################### VIEWS / PAGE ROUTES ########################
 @app.route("/logout")
 def logout():
