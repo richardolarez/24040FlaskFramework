@@ -33,10 +33,11 @@ class Data(db.Model):
 with app.app_context(): 
     db.create_all()
 
-####### Generate Test Data #######
-from db_init import db_init
-with app.app_context():
-    db_init()
+# Comment this out after the first time build
+# ####### Generate Test Data #######
+# from db_init import db_init
+# with app.app_context():
+#     db_init()
 
 
 

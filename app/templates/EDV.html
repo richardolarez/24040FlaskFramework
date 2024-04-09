@@ -13,7 +13,7 @@
             width: 90%;
         }
         .container {
-            display: flex;
+            /* display: flex; */
             height: 90vh; /* Full height of the viewport */      
         }
         .left, .right {
@@ -43,12 +43,12 @@
 <body>
      <!--<h1>Home / Electrical Diagram View</h1> -->
     <h2 class="banner">
-    Home / Electrical Diagram View
+    Home / Project View
     </h2>
    
     <div class="container">
         <div class="left">
-            <h1>Current Electrical Diagram</h1>
+            <h1>Current Project</h1>
 
             <!-- div for drop down menus-->
             <div>
@@ -59,17 +59,29 @@
                 </select>
                 <!-- Start of Invisible Table -->
                 <br>
-                <table id="table1" class="hidden" style="color: white;">
+                <div id="table1" class="hidden">
+                  <button class="button" onclick="addRow1()">Add+</button>
+                  <button class="button" onclick="deleteRow1()">Delete Row</button><br><br><br>
+                  <table id="myTable1">
                     <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
+                      <th>Component</th>
+                      <th>Attribute</th>
+                  </tr>
+                  <tr>
+                      <td contenteditable="true">...</td>
+                      <td contenteditable="true">...</td>
+                  </tr>
+                  <tr>
+                      <td contenteditable="true">...</td>
+                      <td contenteditable="true">...</td>
+                  </tr>
+                  <tr>
+                          <td contenteditable="true">...</td>
+                          <td contenteditable="true">...</td>
+                  </tr>
                   </table>
+                </div>
+                
                 <br><br><br><br><br>
 
                 <select class="componentDropdown" onchange="showTable2()">
@@ -78,18 +90,30 @@
                     <option value="component2">Component 2</option>
                 </select>
                 <!-- Start of Invisible Table -->
-                <br>
-                <table id="table2" class="hidden" style="color: white;">
+                <div id="table2" class="hidden">
+                  <br>
+                  <button class="button" onclick="addRow2()">Add+</button>
+                  <button class="button" onclick="deleteRow2()">Delete Row</button><br><br><br>
+                  <table id="myTable2">
                     <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
+                      <th>Component</th>
+                      <th>Attribute</th>
+                  </tr>
+                  <tr>
+                      <td contenteditable="true">...</td>
+                      <td contenteditable="true">...</td>
+                  </tr>
+                  <tr>
+                      <td contenteditable="true">...</td>
+                      <td contenteditable="true">...</td>
+                  </tr>
+                  <tr>
+                          <td contenteditable="true">...</td>
+                          <td contenteditable="true">...</td>
+                  </tr>
                   </table>
+                </div>
+                
                 <br><br><br><br><br>
 
                 <!-- <select class="componentDropdown">
@@ -99,30 +123,6 @@
                 </select> -->
             </div>
         </div>
-        <div class="right">
-    
-            <button class="button" onclick="addRow()">Add+</button>
-            <button class="button" onclick="deleteRow()">Delete Row</button><br><br><br>
-            
-            <table id="myTable">
-            <tr>
-                <th>Component</th>
-                <th>Attribute</th>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                    <td contenteditable="true">...</td>
-                    <td contenteditable="true">...</td>
-            </tr>
-            </table>
-        </div>
     </div>
     
     <div class="footer">
@@ -131,8 +131,8 @@
     </div>
 
     <script>
-        function addRow() {
-            var table = document.getElementById("myTable");
+        function addRow1() {
+            var table = document.getElementById("myTable1");
             var newRow = table.insertRow(table.rows.length);
             var cell1 = newRow.insertCell(0);
             var cell2 = newRow.insertCell(1);
@@ -141,8 +141,8 @@
             cell1.setAttribute("contenteditable", "true");
             cell2.setAttribute("contenteditable", "true");
         }
-        function deleteRow() {
-            var table = document.getElementById("myTable");
+        function deleteRow1() {
+            var table = document.getElementById("myTable1");
             var lastRowIndex = table.rows.length - 1;
             table.deleteRow(lastRowIndex);
         }
@@ -158,15 +158,28 @@
         function updateTable1() {
           // Your code to update table content goes here
           // For example, you can dynamically generate rows based on some data
-          var tableBody = document.querySelector('#table1 tbody');
+          var tableBody = document.querySelector('#myTable1 tbody');
           // Example: Add a row with some data
           var newRow = document.createElement('tr');
           var newData = document.createElement('td');
-          newData.textContent = 'Dynamic Data';
           newRow.appendChild(newData);
           tableBody.appendChild(newRow);
         }
-
+        function addRow2() {
+            var table = document.getElementById("myTable2");
+            var newRow = table.insertRow(table.rows.length);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            cell1.innerHTML = '<td>...</td>';
+            cell2.innerHTML = '<td>...</td>';
+            cell1.setAttribute("contenteditable", "true");
+            cell2.setAttribute("contenteditable", "true");
+        }
+        function deleteRow2() {
+            var table = document.getElementById("myTable2");
+            var lastRowIndex = table.rows.length - 1;
+            table.deleteRow(lastRowIndex);
+        }
         function showTable2() {
           var dropdown = document.querySelector('.componentDropdown');
           var table = document.getElementById('table2');
@@ -179,11 +192,11 @@
         function updateTable2() {
           // Your code to update table content goes here
           // For example, you can dynamically generate rows based on some data
-          var tableBody = document.querySelector('#table2 tbody');
+          var tableBody = document.querySelector('#myTable2 tbody');
           // Example: Add a row with some data
           var newRow = document.createElement('tr');
           var newData = document.createElement('td');
-          newData.textContent = 'Dynamic Data';
+          // newData.textContent = 'Dynamic Data';
           newRow.appendChild(newData);
           tableBody.appendChild(newRow);
         }
