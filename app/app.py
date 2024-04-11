@@ -165,7 +165,7 @@ def logout():
  
 @app.route("/")
 def home():
-    return render_template("login.html")
+    return redirect(url_for("login"))
 
 @app.route('/edv')
 def edv():
