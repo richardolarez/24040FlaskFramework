@@ -9,6 +9,9 @@
     .hidden {
       display: none;
     }
+    .white-bg {
+      background-color: white;
+    }
   </style>
 </head>
 
@@ -48,54 +51,86 @@
     </table>
     <br><br>
 
-    <button class="button" onclick="loadProjects()">Select Existing Project</button>
+    <button class="button" onclick="fetchData()">Select Existing Project</button>
 
-    <table id="table2" class="hidden" style="color: white;">
-      <thead>
-        <tr>
-          <th>Project ID</th>
-          <th>Project Name</th>
-        </tr>
-      </thead>
-      <tbody id="projectTableBody">
-        <!-- Projects will be dynamically added here -->
-      </tbody>
-    </table>
-  </div>
+    <div
+      x-data="{ 
+        tableItems: [],
+        loading: true
+      }"
+      x-init="fetchData()"
+      class="max-w-screen-xl mx-auto px-4 md:px-8"
+    >
+      <div id="tableContainer" class="hidden white-bg"></div>
+    </div>
 
-  <br><br>
-  <div class="center-form">
-    <a href="/"><button class="button">Logout</button></a><br><br>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.7.1/dist/htmx.js"></script>
-  <script>
-    function toggleTable(tableId) {
-      var table = document.getElementById(tableId);
-      if (table.classList.contains('hidden')) {
-        table.classList.remove('hidden');
-      } else {
-        table.classList.add('hidden');
-      }
-    }
-
-    function loadProjects() {
-      var projectTableBody = document.getElementById('projectTableBody');
-      htmx.ajax('http://127.0.0.1:8000/projects', {
-        headers: {
-          'Content-Type': 'application/json'
+    <br><br>
+    <div class="center-form">
+      <a href="/"><button class="button">Logout</button></a><br><br>
+    </div>
+    <script>
+      function toggleTable(tableId) {
+        var table = document.getElementById(tableId);
+        if (table.classList.contains('hidden')) {
+          table.classList.remove('hidden');
+        } else {
+          table.classList.add('hidden');
         }
-      }).then(function(response) {
-        var projects = JSON.parse(response);
-        projectTableBody.innerHTML = '';
-        projects.forEach(function(project) {
-          var row = '<tr><td>' + project.id + '</td><td>' + project.project + '</td></tr>';
-          projectTableBody.insertAdjacentHTML('beforeend', row);
+      }
+
+      function fetchData() {
+        fetch('/projects')
+          .then(response => response.json())
+          .then(data => {
+            if (Array.isArray(data)) {
+              window.tableItems = data;
+              showTable(); // Call showTable after fetching data
+            } else {
+              console.error('Invalid data format received from API');
+            }
+            window.loading = false;
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            window.loading = false;
+          });
+      }
+
+      function generateTable(data) {
+        let table = '<table class="w-full table-auto text-sm text-left white-bg">';
+        // Generate table header
+        table += '<thead class="bg-gray-50 text-gray-600 font-medium border-b">';
+        table += '<tr>';
+        for (const key in data[0]) {
+          table += `<th class="py-3 px-6">${key}</th>`;
+        }
+        table += '</tr>';
+        table += '</thead>';
+        // Generate table body
+        table += '<tbody class="text-gray-600 divide-y">';
+        data.forEach(item => {
+          table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+          for (const key in item) {
+        table += `<td class="px-6 py-4 whitespace-nowrap">${item[key]}</td>`;
+          }
+          table += '</tr>';
         });
-      }).catch(function(error) {
-        console.error('Error loading projects:', error);
-      });
-    }
-  </script>
-</body>
+        table += '</tbody>';
+        table += '</table>';
+        return table;
+      }
+
+      function showTable() {
+        const tableContainer = document.getElementById('tableContainer');
+        tableContainer.innerHTML = generateTable(window.tableItems);
+        tableContainer.classList.remove('hidden');
+      }
+
+      function selectProject(projectId) {
+        sessionStorage.setItem('selectedProject', projectId);
+        // Redirect to another page or perform other actions as needed
+        window.location.href = '/edv';
+      }
+    </script>
+  </body>
 </html>

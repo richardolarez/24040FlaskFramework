@@ -52,51 +52,53 @@
 
             <!-- div for drop down menus-->
             <div>
-                <select class="componentDropdown" onchange="showTable1()">
-                    <option value="" disabled selected>Current T.I.D Tables</option>
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-                </select>
-                <!-- Start of Invisible Table -->
-                <br>
-                <table id="table1" class="hidden" style="color: white;">
-                    <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
-                  </table>
-                <br><br><br><br><br>
+              <select class="componentDropdown" onchange="showTables()">
+                <option value="" disabled selected>Current T.I.D Tables</option>
+                {% for tid_table in tid_tables %}
+                  <option value="{{ tid_table.id }}">{{ tid_table.name }}</option>
+                {% endfor %}
+              </select>
+              <!-- Start of Invisible Table -->
+              <br>
+              <table id="table1" class="hidden" style="color: white;">
+                <tr>
+                  <th>Column 1</th>
+                </tr>
+                <tr>
+                  <td>Data A</td>
+                </tr>
+                <tr>
+                  <td>Data B</td>
+                </tr>
+                </table>
+              <br><br><br><br><br>
 
-                <select class="componentDropdown" onchange="showTable2()">
-                    <option value="" disabled selected>Components</option>
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-                </select>
-                <!-- Start of Invisible Table -->
-                <br>
-                <table id="table2" class="hidden" style="color: white;">
-                    <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
-                  </table>
-                <br><br><br><br><br>
+              <select class="componentDropdown" onchange="showComponents()">
+                <option value="" disabled selected>Components</option>
+                <option value="1">Component 1</option>
+                <option value="component2">Component 2</option>
+              </select>
+              <!-- Start of Invisible Table -->
+              <br>
+              <table id="table2" class="hidden" style="color: white;">
+                <tr>
+                  <th>Column 1</th>
+                </tr>
+                <tr>
+                  <td>Data A</td>
+                </tr>
+                <tr>
+                  <td>Data B</td>
+                </tr>
+                </table>
+              <br><br><br><br><br>
 
-                <!-- <select class="componentDropdown">
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-           
-                </select> -->
+              <!-- <select class="componentDropdown">
+                <option value="component1">Component 1</option>
+                <option value="component2">Component 2</option>
+             
+              </select> -->
+            </div>
             </div>
         </div>
         <div class="right">
@@ -147,13 +149,21 @@
             var lastRowIndex = table.rows.length - 1;
             table.deleteRow(lastRowIndex);
         }
-        function showTable1() {
-          var dropdown = document.querySelector('.componentDropdown');
-          var table = document.getElementById('table1');
-          if (table.classList.contains('hidden')) {
-            table.classList.remove('hidden');
-            updateTable1(); // Initial table update when it's shown for the first time
-          }
+
+        function showTables() {
+          fetch('/tid_tables/1')
+            .then(response => response.json())
+            .then(data => {
+              if (Array.isArray(data)) {
+                window.tableItems = data;
+                updateTable1(); // Initial table update when it's shown for the first time
+              } else {
+                console.error('Invalid data format received from API');
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching data:', error);
+            });
         }
 
         function updateTable1() {
@@ -168,13 +178,20 @@
           tableBody.appendChild(newRow);
         }
 
-        function showTable2() {
-          var dropdown = document.querySelector('.componentDropdown');
-          var table = document.getElementById('table2');
-          if (table.classList.contains('hidden')) {
-            table.classList.remove('hidden');
-            updateTable2(); // Initial table update when it's shown for the first time
-          }
+        function showComponents() {
+          fetch('/components/1')
+            .then(response => response.json())
+            .then(data => {
+              if (Array.isArray(data)) {
+                window.tableItems = data;
+                updateTable2(); // Initial table update when it's shown for the first time
+              } else {
+                console.error('Invalid data format received from API');
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching data:', error);
+            });
         }
 
         function updateTable2() {
@@ -188,6 +205,7 @@
           newRow.appendChild(newData);
           tableBody.appendChild(newRow);
         }
+        
     </script>
 </body>
 </html>

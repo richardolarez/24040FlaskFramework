@@ -23,6 +23,9 @@ db = SQLAlchemy(app)
 ###################### Import the TID Models ########################
 from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, TIDTables, Component
 
+############### TID Tables ################
+tableNames = ['ChargeMode', 'Devices', 'GSENetwork', 'PathsLoads', 'PowerSupply', 'PowerSupplySummary', 'TelemetryNetwork', 'VehicleBattery', 'VehicleNetwork', 'UEIDaq', 'BatteryAddresses']
+
 
 ####################### CREATE TABLES ########################
 class Data(db.Model):
@@ -143,8 +146,16 @@ def get_projects():
 # Get all TID Tables for a specific project
 @app.route('/tid_tables/<int:project_id>', methods=['GET'])
 def get_tid_tables(project_id):
-    tid_tables = TIDTables.query.filter_by(project_id=project_id).all()
-    return jsonify([tid_table.json() for tid_table in tid_tables])
+    tid_tables = {}
+    for table in tableNames:
+        tid_tables[table] = db.session.query(eval(table)).filter_by(projectID=project_id).all()
+    return jsonify(tid_tables)
+    
+# Get all components for a specific project
+@app.route('/components/<int:project_id>', methods=['GET'])
+def get_components(project_id):
+    components = Component.query.filter_by(projectId=project_id).all()
+    return jsonify([component.json() for component in components])
 
 # Create a new project
 @app.route('/projects', methods=['POST'])

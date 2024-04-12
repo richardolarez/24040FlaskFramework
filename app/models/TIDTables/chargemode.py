@@ -2,7 +2,7 @@ from app import db
 class ChargeMode(db.Model):
     __tablename__ = "ChargeMode"
     id = db.Column(db.Integer, primary_key=True)
-    tid_table_id = db.Column(db.Integer, db.ForeignKey('TIDTables.id'))
+    projectID = db.Column(db.Integer)
     battery = db.Column(db.String(255))
     voltage_setting = db.Column(db.Float)
     ovp = db.Column(db.Float)
