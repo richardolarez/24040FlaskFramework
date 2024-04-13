@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Main Menu</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
   <style>
     .hidden {
       display: none;
@@ -97,9 +97,9 @@
       }
 
       function generateTable(data) {
-        let table = '<table class="w-full table-auto text-sm text-left white-bg">';
+        let table = '<table class="table table-hover">';
         // Generate table header
-        table += '<thead class="bg-gray-50 text-gray-600 font-medium border-b">';
+        table += '<thead>';
         table += '<tr>';
         for (const key in data[0]) {
           table += `<th class="py-3 px-6">${key}</th>`;

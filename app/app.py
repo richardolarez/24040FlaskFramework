@@ -8,6 +8,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
 import os
+from flask_bootstrap import Bootstrap
 
 
 
@@ -207,4 +208,5 @@ def uploaded_file(filename):
 
 
 if __name__ == '__main__':
+    Bootstrap(app)
     app.run(debug = True)

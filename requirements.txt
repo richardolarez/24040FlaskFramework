@@ -17,5 +17,5 @@ Flask-WTF
 flash
 flask_login
 flask-bcrypt
-
+flask-bootstrap
 
