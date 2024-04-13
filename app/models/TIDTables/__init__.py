@@ -10,4 +10,7 @@ from .telemetrynetwork import TelemetryNetwork
 from .vehiclebattery import VehicleBattery
 from .vehiclenetwork import VehicleNetwork
 from .chargemode import ChargeMode
-
+from .batteryDefault import BatteryDefault
+from .psassignments import PowerSupplyAssign
+from .externalPowerMode import ExternalMode
+from .powerbusconfig import PowerBusConfig

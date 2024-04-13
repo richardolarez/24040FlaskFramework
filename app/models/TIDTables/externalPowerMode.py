@@ -1,6 +1,7 @@
 from app import db
-class ChargeMode(db.Model):
-    __tablename__ = "ChargeMode"
+
+class ExternalMode(db.Model):
+    __tablename__ = "ExternalMode"
     id = db.Column(db.Integer, primary_key=True)
     tid_table_id = db.Column(db.Integer, db.ForeignKey('TIDTables.id'))
     power_supply = db.Column(db.String(255))

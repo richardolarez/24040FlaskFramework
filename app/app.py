@@ -1,5 +1,5 @@
 # app.py
-from flask import Flask, render_template, request, redirect, url_for, flash, make_response, jsonify, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, flash, make_response, jsonify, send_from_directory, send_file
 from flask_sqlalchemy import SQLAlchemy
 from os import environ
 from flask_wtf.csrf import CSRFProtect
@@ -7,6 +7,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
+from docx import Document
 import os
 
 
@@ -21,7 +22,7 @@ db = SQLAlchemy(app)
 
 
 ###################### Import the TID Models ########################
-from models import User, Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, TIDTables, Component
+from models import User, Projects, TIDTableRelationships, ChargeMode, PowerBusConfig, ExternalMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplyAssign, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, BatteryDefault, TIDTables, Component
 
 
 ####################### CREATE TABLES ########################
@@ -161,11 +162,9 @@ from exportProject import export_Project
 
 @app.route('/export_project/<int:project_id>', methods=['GET'])
 def export_project(project_id):
-    project = export_Project(project_id)
-    response = make_response(jsonify(project))
-    response.headers["Content-Disposition"] = f"attachment; filename=project_{project_id}.json"
-    response.headers["Content-Type"] = "application/json"
-    return response
+    doc_path = os.path.join(app.root_path, 'generated_document.docx')
+    export_Project(project_id, doc_path)
+    return send_file(doc_path, as_attachment=True)
 
 ####################### VIEWS / PAGE ROUTES ########################
 @app.route("/logout")
