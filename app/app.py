@@ -196,6 +196,10 @@ def edv():
 def menu():
     return render_template('menu.html')
 
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
 
 ####################### FILE UPLOADS ########################
 # When a user submits the file upload form, the file is saved to the uploads/ 
