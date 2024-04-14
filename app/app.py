@@ -86,7 +86,7 @@ def login():
 		if bcrypt.check_password_hash(user.password, request.form.get("password")):
 		# Use the login_user method to log in the user
 			login_user(user)
-			return redirect(url_for("menu"))
+			return redirect(url_for("home_page"))
 	# Redirect the user back to the home
 	# (we'll create the home route in a moment)
 	return render_template("login.html")
@@ -216,7 +216,7 @@ def logout():
  
 @app.route("/")
 def home():
-    return render_template("login.html")
+    return redirect(url_for("login"))
 
 @app.route('/edv')
 def edv():
