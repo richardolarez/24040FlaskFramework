@@ -71,6 +71,7 @@ html {
   .sidebar a:hover{
     background: #023a76;
     color: #023a76;
+    cursor: pointer;
   }
   
   
