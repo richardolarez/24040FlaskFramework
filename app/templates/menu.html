@@ -9,65 +9,66 @@
     .hidden {
       display: none;
     }
-    .white-bg {
-      background-color: white;
-    }
+
   </style>
 </head>
 
 <body>
-  <!--<h1>Home / Electrical Diagram View</h1> -->
-  <h2 class="banner">
+  <!-- Banner -->
+  <div class="banner">
     <img src=static/images/Engineering.png alt="Engineering">
     <img src=static/images/NGC.png alt="NGC logo">
-  </h2>
-  <div>
-    <img src=static/images/Janusimage.png alt="Janus Logo" class="logo">
+  </div>
+  <!-- Side bar -->
+  <div class="sidebar">
+    <ul >
+      <li><a href="/home">Home</a></li>
+      <li><a href="/edv">View</a></li>
+      <li><a onclick="toggleTable('table1')">Create Project</a></li>
+      <li><a onclick="fetchData()">Select Project</a></li>
+      <li><a href="/">Logout</a></li>
+    </ul>
   </div>
 
-  <h3 class="name">J.A.N.U.S.</h3>
-  <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
-  <h3 class="name2">Main Menu</h3>
+  <!-- Start of main body -->
+  <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+  
+        <h3 class="name">J.A.N.U.S.</h3>
+        <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+        <h3 class="name2">Main Menu</h3>
 
-  <div class="center-form">
-    <a href="/edv"><button class="button">EDV</button></a><br><br>
+        <div class="center-form">
+          <table id="table1" class="hidden" style="color:white">
+            <tr>
+              <th>Please Upload the Electrical Diagram Zip File</th>
+            </tr>
+            <tr>
+              <td class="button">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                  <input type="file" name="file" accept=".zip" required>
+                </form>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Table to show projects -->
+          <div
+            x-data="{ 
+              tableItems: [],
+              loading: true
+            }"
+            x-init="fetchData()"
+            class="max-w-screen-xl mx-auto px-4 md:px-8"
+          >
+            <div id="tableContainer" class="hidden white-bg"></div>
+          </div>
+          <!-- end of table to show projects -->
+
+
   </div>
+</body>
+  <!-- end of main body -->
 
-  <div class="center-form">
-    <button class="button" onclick="toggleTable('table1')">Create New Project</button>
-
-    <table id="table1" class="hidden" style="color:white">
-      <tr>
-        <th>Please Upload the Electrical Diagram Zip File</th>
-      </tr>
-      <tr>
-        <td class="button">
-          <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".zip" required>
-            <button type="submit">Upload</button>
-          </form>
-        </td>
-      </tr>
-    </table>
-    <br><br>
-
-    <button class="button" onclick="fetchData()">Select Existing Project</button>
-
-    <div
-      x-data="{ 
-        tableItems: [],
-        loading: true
-      }"
-      x-init="fetchData()"
-      class="max-w-screen-xl mx-auto px-4 md:px-8"
-    >
-      <div id="tableContainer" class="hidden white-bg"></div>
-    </div>
-
-    <br><br>
-    <div class="center-form">
-      <a href="/"><button class="button">Logout</button></a><br><br>
-    </div>
     <script>
       function toggleTable(tableId) {
         var table = document.getElementById(tableId);
@@ -97,21 +98,21 @@
       }
 
       function generateTable(data) {
-        let table = '<table class="w-full table-auto text-sm text-left white-bg">';
+        let table = '<table class="table">';
         // Generate table header
-        table += '<thead class="bg-gray-50 text-gray-600 font-medium border-b">';
+        table += '<thead class="table-header">';
         table += '<tr>';
         for (const key in data[0]) {
-          table += `<th class="py-3 px-6">${key}</th>`;
+          table += `<th class="table-titles">${key}</th>`;
         }
         table += '</tr>';
         table += '</thead>';
         // Generate table body
-        table += '<tbody class="text-gray-600 divide-y">';
+        table += '<tbody class="table-body">';
         data.forEach(item => {
           table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
           for (const key in item) {
-        table += `<td class="px-6 py-4 whitespace-nowrap">${item[key]}</td>`;
+        table += `<td class="table-cell">${item[key]}</td>`;
           }
           table += '</tr>';
         });
@@ -131,6 +132,7 @@
         // Redirect to another page or perform other actions as needed
         window.location.href = '/edv';
       }
+      
     </script>
-  </body>
+
 </html>

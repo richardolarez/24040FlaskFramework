@@ -7,29 +7,31 @@
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
 </head>
-</head>
+
+<!-- Start of Main Body -->
 <body>
-	<h2 class="banner">
+	<!-- Banner -->
+	<div class="banner">
 		<img src=static/images/Engineering.png alt="Engineering">
 		<img src=static/images/NGC.png alt="NGC logo">
-	  </h2>
-	
-	  <div>
-		<img src=static/images/Janusimage.png alt="Janus Logo" class="logo">
-	  </div>
-	<nav>
+	</div>
+	<!-- Side bar -->
+	<div class="sidebar">
 		<ul>
-			<li><a href="/login">Login</a></li>
-			<li><a href="/register">Create account</a></li>
+			<li><a href="/home">Home</a></li>
+			<li><a href="/menu">Main Menu</a></li>
+			<li><a href="/">Logout</a></li>
 		</ul>
-	</nav>
-	<h3 class="name">J.A.N.U.S.</h3>
-	<h3 class="name2">Electrical & Technical Diagram Assistant</h3>
-	{% if current_user.is_authenticated %}
-	<h1 class="name2">You are logged in</h1>
-	<a class="center-form" href="/logout">Logout</a>
-	{% else %}
-	<h1 class="name2">You are not logged in</h1>
-	{% endif %}
+	</div>
+
+	<!-- Start of main body -->
+	<div class="logo" style="background-image: url(static/images/Janusimage.png);">
+		<h3 class="name">J.A.N.U.S.</h3>
+		<h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+
+		<p class="name2">J.A.N.U.S. : Junction Annotation & Network Utility System</p>
+
+	</div>
+
 </body>
 </html>
