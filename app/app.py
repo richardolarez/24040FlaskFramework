@@ -13,7 +13,8 @@ import os
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Set the SECRET_KEY configuration option
 
 app.app_context()
@@ -146,10 +147,39 @@ def get_projects():
 # Get all TID Tables for a specific project
 @app.route('/tid_tables/<int:project_id>', methods=['GET'])
 def get_tid_tables(project_id):
+
+# tableNames = ['ChargeMode', 'Devices', 'GSENetwork', 'PathsLoads', 'PowerSupply', 'PowerSupplySummary', 'TelemetryNetwork', 'VehicleBattery', 'VehicleNetwork', 'UEIDaq', 'BatteryAddresses']
+
     tid_tables = {}
-    for table in tableNames:
-        tid_tables[table] = db.session.query(eval(table)).filter_by(projectID=project_id).all()
+    tid_tables['ChargeMode'] = ChargeMode.query.filter_by(projectID=project_id).all()
+    tid_tables['ChargeMode'] = [charge_mode.json() for charge_mode in tid_tables['ChargeMode']]
+    tid_tables['Devices'] = Devices.query.filter_by(projectID=project_id).all()
+    tid_tables['Devices'] = [device.json() for device in tid_tables['Devices']]
+    tid_tables['GSENetwork'] = GSENetwork.query.filter_by(projectID=project_id).all()
+    tid_tables['GSENetwork'] = [gse_network.json() for gse_network in tid_tables['GSENetwork']]
+    tid_tables['PathsLoads'] = PathsLoads.query.filter_by(projectID=project_id).all()
+    tid_tables['PathsLoads'] = [paths_loads.json() for paths_loads in tid_tables['PathsLoads']]
+    tid_tables['PowerSupply'] = PowerSupply.query.filter_by(projectID=project_id).all()
+    tid_tables['PowerSupply'] = [power_supply.json() for power_supply in tid_tables['PowerSupply']]
+    tid_tables['PowerSupplySummary'] = PowerSupplySummary.query.filter_by(projectID=project_id).all()
+    tid_tables['PowerSupplySummary'] = [power_supply_summary.json() for power_supply_summary in tid_tables['PowerSupplySummary']]
+    tid_tables['TelemetryNetwork'] = TelemetryNetwork.query.filter_by(projectID=project_id).all()
+    tid_tables['TelemetryNetwork'] = [telemetry_network.json() for telemetry_network in tid_tables['TelemetryNetwork']]
+    tid_tables['VehicleBattery'] = VehicleBattery.query.filter_by(projectID=project_id).all()
+    tid_tables['VehicleBattery'] = [vehicle_battery.json() for vehicle_battery in tid_tables['VehicleBattery']]
+    tid_tables['VehicleNetwork'] = VehicleNetwork.query.filter_by(projectID=project_id).all()
+    tid_tables['VehicleNetwork'] = [vehicle_network.json() for vehicle_network in tid_tables['VehicleNetwork']]
+    tid_tables['UEIDaq'] = UEIDaq.query.filter_by(projectID=project_id).all()
+    tid_tables['UEIDaq'] = [uei_daq.json() for uei_daq in tid_tables['UEIDaq']]
+    tid_tables['BatteryAddresses'] = BatteryAddresses.query.filter_by(projectID=project_id).all()
+    tid_tables['BatteryAddresses'] = [battery_addresses.json() for battery_addresses in tid_tables['BatteryAddresses']]
     return jsonify(tid_tables)
+
+# Get ChargeMode for a specific project
+@app.route('/charge_mode/<int:project_id>', methods=['GET'])
+def get_charge_mode(project_id):
+    charge_mode = ChargeMode.query.filter_by(projectID=project_id).all()
+    return jsonify([charge_mode.json() for charge_mode in charge_mode])
     
 # Get all components for a specific project
 @app.route('/components/<int:project_id>', methods=['GET'])
@@ -195,6 +225,12 @@ def edv():
 @app.route('/menu')
 def menu():
     return render_template('menu.html')
+
+@app.route('/home')
+def home_page():
+    return render_template('home.html')
+
+
 
 
 ####################### FILE UPLOADS ########################
