@@ -51,25 +51,24 @@
           <li><a href="/home">Home</a></li>
           <li><a href="/menu">Main Menu</a></li>
           <li><a href="/export_project/1">Export</a></li>
-    
           <li><a href="/">Logout</a></li>
         </ul>
       </div>
     
-      <!-- Logo Background -->
-      <div class="logo" style="background-image: url(static/images/Janusimage.png);">
-
-        <!-- Start of main body -->
-        <div id="tables-container"></div>
-        <div id="tableContainer"></div>
-      </div>
+    <!-- Logo Background -->
+    <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+      <!-- Display Project Name Based on session storage variable -->
+      <h3 class="name2">Project Name: <span id="projectName"></span></h3>
+      
+      <!-- Start of main body -->
+      <div id="tables-container"></div>
+      <div id="tableContainer"></div>
+    </div>
 
   </div>
   </body>
 
     <script>
-
-
 
         function addRow() {
             var table = document.getElementById("myTable");
@@ -123,20 +122,25 @@
 
 
         function showComponents() {
-          fetch('/components/1')
-            .then(response => response.json())
-            .then(data => {
-              if (Array.isArray(data)) {
-                window.tableItems = data;
-                showTable(); // Initial table update when it's shown for the first time
-              } else {
-                console.error('Invalid data format received from API');
-              }
-            })
-            .catch(error => {
-              console.error('Error fetching data:', error);
-            });
+            // Retrieve the project id from session storage
+            var projectId = sessionStorage.getItem("projectId");
+
+            // Fetch components using the session storage project id
+            fetch('/components/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.tableItems = data;
+                        showTable(); // Initial table update when it's shown for the first time
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
         }
+
 
         function generateTable(data) {
         let table = '<table class="table">';
@@ -171,6 +175,15 @@
         // Call the function to show tables when the page is loaded
       window.addEventListener('DOMContentLoaded', showTables());
       window.addEventListener('DOMContentLoaded', showComponents());
+
+      // Retrieve the project name from session storage
+      var projectName = sessionStorage.getItem("projectName");
+
+      // Update the HTML with the project name
+      document.getElementById("projectName").innerText = projectName;
+
+      // Retrieve the project id from session storage
+      var projectId = sessionStorage.getItem("projectId");
 
         
     </script>

@@ -97,6 +97,13 @@
           });
       }
 
+      function selectProject(projectId, projectName) {
+        sessionStorage.setItem('projectId', projectId);
+        sessionStorage.setItem('projectName', projectName);
+        // Redirect to another page or perform other actions as needed
+        window.location.href = '/edv';
+      }
+
       function generateTable(data) {
         let table = '<table class="table">';
         // Generate table header
@@ -110,7 +117,7 @@
         // Generate table body
         table += '<tbody class="table-body">';
         data.forEach(item => {
-          table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+          table += `<tr onclick="selectProject('${item.id}', '${item.project}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
           for (const key in item) {
         table += `<td class="table-cell">${item[key]}</td>`;
           }
@@ -127,11 +134,7 @@
         tableContainer.classList.remove('hidden');
       }
 
-      function selectProject(projectId) {
-        sessionStorage.setItem('selectedProject', projectId);
-        // Redirect to another page or perform other actions as needed
-        window.location.href = '/edv';
-      }
+
       
     </script>
 

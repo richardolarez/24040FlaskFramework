@@ -82,6 +82,10 @@
           var response = JSON.parse(xhr.responseText);
           // Handle response as needed
           console.log(response);
+          //   Save the project id from the response in session storage variable
+          sessionStorage.setItem("projectId", response.id);
+          // Save the project name in session storage variable
+            sessionStorage.setItem("projectName", projectName);
           // Redirect to /edv after project creation
           window.location.href = "/edv";
         } else {

@@ -235,7 +235,6 @@ def home_page():
 def projects():
     return render_template('newProject.html')
 
-
 ####################### FILE UPLOADS ########################
 # When a user submits the file upload form, the file is saved to the uploads/ 
 # directory on the server. The user is then redirected to the /uploads/<filename> route,
