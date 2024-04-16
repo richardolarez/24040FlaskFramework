@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>New Project</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+
+<body>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="static/images/Engineering.png" alt="Engineering">
+    <img src="static/images/NGC.png" alt="NGC logo">
+  </div>
+  <!-- Side bar -->
+  <div class="sidebar">
+    <ul >
+      <li><a href="/home">Home</a></li>
+      <li><a href="/">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Start of main body -->
+  <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+    <h3 class="name">J.A.N.U.S.</h3>
+    <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+    <h3 class="name2">Create a new project</h3>
+
+    <div class="center-form">
+      <form id="projectForm">
+        <table id="table1" style="color:white">
+          <tr>
+            <th>Please Enter Project Name:</th>
+            <td><input type="text" id="projectName" name="name" required></td>
+          </tr>
+          <tr>
+            <th>Please Upload the Electrical Diagram Zip File:</th>
+            <td class="button">
+              <input type="file" id="fileInput" accept=".zip" required>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><button type="button" onclick="createProject()">Create Project</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- End of main body -->
+
+  <script>
+    function createProject() {
+      var projectName = document.getElementById("projectName").value;
+      var fileInput = document.getElementById("fileInput").files[0];
+
+      if (projectName.trim() === "") {
+        alert("Please enter a project name.");
+        return;
+      }
+
+      if (!fileInput) {
+        alert("Please select a file.");
+        return;
+      } else if (fileInput.type !== "application/zip") {
+        alert("Please select a zip file.");
+        return;
+      } 
+
+      var formData = new FormData();
+      formData.append("name", projectName);
+      formData.append("file", fileInput);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/project");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          // Handle response as needed
+          console.log(response);
+          // Redirect to /edv after project creation
+          window.location.href = "/edv";
+        } else {
+          // Handle error
+          console.error(xhr.statusText);
+        }
+      };
+      xhr.send(JSON.stringify({ name: projectName }));
+    }
+  </script>
+</body>
+</html>
