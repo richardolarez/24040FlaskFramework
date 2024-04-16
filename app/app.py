@@ -13,8 +13,8 @@ import os
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Set the SECRET_KEY configuration option
 
 app.app_context()
