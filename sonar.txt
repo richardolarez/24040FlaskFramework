@@ -1,0 +1,1 @@
+sonar-scanner   -Dsonar.projectKey=TEAM_2_SWFE502   -Dsonar.sources=.   -Dsonar.host.url=sonar.def.engr.arizona.edu   -Dsonar.token=sqp_0361e25f9e0f6556c04a82ca28442399c9a9b421 -X

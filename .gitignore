@@ -1,2 +1,4 @@
 .scannerwork
 venv
+__pycache__
+*.pyc

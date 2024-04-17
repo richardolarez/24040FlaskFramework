@@ -23,7 +23,7 @@ db = SQLAlchemy(app)
 
 
 ###################### Import the TID Models ########################
-from models import User, Projects, TIDTableRelationships, ChargeMode, PowerBusConfig, ExternalMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplyAssign, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, BatteryDefault, TIDTables, Component
+from models import User, Projects, ChargeMode, PowerBusConfig, ExternalMode, Devices, GSENetwork, PathsLoads, PowerSupply, PowerSupplyAssign, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, BatteryDefault, TIDTables, Component
 
 ############### TID Tables ################
 tableNames = ['ChargeMode', 'Devices', 'GSENetwork', 'PathsLoads', 'PowerSupply', 'PowerSupplySummary', 'TelemetryNetwork', 'VehicleBattery', 'VehicleNetwork', 'UEIDaq', 'BatteryAddresses']
@@ -145,48 +145,65 @@ def get_projects():
     projects = Projects.query.all()
     return jsonify([project.json() for project in projects])
 
-# Get all TID Tables for a specific project
-@app.route('/tid_tables/<int:project_id>', methods=['GET'])
-def get_tid_tables(project_id):
+####################### TID Tables ########################
+# Get battery Addresses for a specific project
+@app.route('/battery_addresses/<int:project_id>', methods=['GET'])
+def get_battery_addresses(project_id):
+    battery_addresses = BatteryAddresses.query.filter_by(projectID=project_id).all()
+    return jsonify([battery_addresses.json() for battery_addresses in battery_addresses])
 
-# tableNames = ['ChargeMode', 'Devices', 'GSENetwork', 'PathsLoads', 'PowerSupply', 'PowerSupplySummary', 'TelemetryNetwork', 'VehicleBattery', 'VehicleNetwork', 'UEIDaq', 'BatteryAddresses']
-
-    tid_tables = {}
-    tid_tables['ChargeMode'] = ChargeMode.query.filter_by(projectID=project_id).all()
-    tid_tables['ChargeMode'] = [charge_mode.json() for charge_mode in tid_tables['ChargeMode']]
-    tid_tables['Devices'] = Devices.query.filter_by(projectID=project_id).all()
-    tid_tables['Devices'] = [device.json() for device in tid_tables['Devices']]
-    tid_tables['GSENetwork'] = GSENetwork.query.filter_by(projectID=project_id).all()
-    tid_tables['GSENetwork'] = [gse_network.json() for gse_network in tid_tables['GSENetwork']]
-    tid_tables['PathsLoads'] = PathsLoads.query.filter_by(projectID=project_id).all()
-    tid_tables['PathsLoads'] = [paths_loads.json() for paths_loads in tid_tables['PathsLoads']]
-    tid_tables['PowerSupply'] = PowerSupply.query.filter_by(projectID=project_id).all()
-    tid_tables['PowerSupply'] = [power_supply.json() for power_supply in tid_tables['PowerSupply']]
-    tid_tables['PowerSupplySummary'] = PowerSupplySummary.query.filter_by(projectID=project_id).all()
-    tid_tables['PowerSupplySummary'] = [power_supply_summary.json() for power_supply_summary in tid_tables['PowerSupplySummary']]
-    tid_tables['TelemetryNetwork'] = TelemetryNetwork.query.filter_by(projectID=project_id).all()
-    tid_tables['TelemetryNetwork'] = [telemetry_network.json() for telemetry_network in tid_tables['TelemetryNetwork']]
-    tid_tables['VehicleBattery'] = VehicleBattery.query.filter_by(projectID=project_id).all()
-    tid_tables['VehicleBattery'] = [vehicle_battery.json() for vehicle_battery in tid_tables['VehicleBattery']]
-    tid_tables['VehicleNetwork'] = VehicleNetwork.query.filter_by(projectID=project_id).all()
-    tid_tables['VehicleNetwork'] = [vehicle_network.json() for vehicle_network in tid_tables['VehicleNetwork']]
-    tid_tables['UEIDaq'] = UEIDaq.query.filter_by(projectID=project_id).all()
-    tid_tables['UEIDaq'] = [uei_daq.json() for uei_daq in tid_tables['UEIDaq']]
-    tid_tables['BatteryAddresses'] = BatteryAddresses.query.filter_by(projectID=project_id).all()
-    tid_tables['BatteryAddresses'] = [battery_addresses.json() for battery_addresses in tid_tables['BatteryAddresses']]
-    return jsonify(tid_tables)
+# Get battery Default for a specific project
+@app.route('/battery_default/<int:project_id>', methods=['GET'])
+def get_battery_default(project_id):
+    battery_default = BatteryDefault.query.filter_by(projectID=project_id).all()
+    return jsonify([battery_default.json() for battery_default in battery_default])
 
 # Get ChargeMode for a specific project
 @app.route('/charge_mode/<int:project_id>', methods=['GET'])
 def get_charge_mode(project_id):
     charge_mode = ChargeMode.query.filter_by(projectID=project_id).all()
     return jsonify([charge_mode.json() for charge_mode in charge_mode])
+
+# Get Devices for a specific project
+@app.route('/devices/<int:project_id>', methods=['GET'])
+def get_devices(project_id):
+    devices = Devices.query.filter_by(projectID=project_id).all()
+    return jsonify([devices.json() for devices in devices])
+
+# Get GSENetwork for a specific project
+@app.route('/gse_network/<int:project_id>', methods=['GET'])
+def get_gse_network(project_id):
+    gse_network = GSENetwork.query.filter_by(projectID=project_id).all()
+    return jsonify([gse_network.json() for gse_network in gse_network])
+
+# Get PathsLoads for a specific project
+@app.route('/paths_loads/<int:project_id>', methods=['GET'])
+def get_paths_loads(project_id):
+    paths_loads = PathsLoads.query.filter_by(projectID=project_id).all()
+    return jsonify([paths_loads.json() for paths_loads in paths_loads])
+
+# Get Power Bus Config for a specific project
+@app.route('/power_bus_config/<int:project_id>', methods=['GET'])
+def get_power_bus_config(project_id):
+    power_bus_config = PowerBusConfig.query.filter_by(projectID=project_id).all()
+    return jsonify([power_bus_config.json() for power_bus_config in power_bus_config])
+
+# Get PowerSupply for a specific project
+@app.route('/power_supply/<int:project_id>', methods=['GET'])
+def get_power_supply(project_id):
+    power_supply = PowerSupply.query.filter_by(projectID=project_id).all()
+    return jsonify([power_supply.json() for power_supply in power_supply])
+
+# Get Poser
+
+######################## End of TID Tables ########################
     
 # Get all components for a specific project
 @app.route('/components/<int:project_id>', methods=['GET'])
 def get_components(project_id):
     components = Component.query.filter_by(projectId=project_id).all()
     return jsonify([component.json() for component in components])
+
 
 # Create a new project
 @app.route('/project', methods=['POST'])
