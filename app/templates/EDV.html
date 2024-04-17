@@ -62,7 +62,9 @@
       
       <!-- Start of main body -->
       <div id="tables-container"></div>
-      <div id="tableContainer"></div>
+      <div id="tableContainer">
+        <h3 class="name2">Project Components</h3>
+      </div>
     </div>
 
   </div>
@@ -88,43 +90,53 @@
 
         function showTables() {
           fetch('/tid_tables/1')
-            .then(response => response.json())
-            .then(data => {
-                // Generate tables dynamically
-                Object.keys(data).forEach(tableKey => {
-                    let tableData = data[tableKey];
-                    let tableHTML = '<h2>' + tableKey + '</h2><table  class="table"><tr>';
-                    tableHTML += '<thead class="table-header">';
+              .then(response => response.json())
+              .then(data => {
+                  // Generate tables dynamically
+                  Object.keys(data).forEach(tableKey => {
+                      let tableData = data[tableKey];
+                      let tableHTML = '<h2>' + tableKey + '</h2><table  class="table"><tr>';
+                      tableHTML += '<thead class="table-header">';
 
-                    // Add table headers
-                    Object.keys(tableData[0]).forEach(header => {
-                        tableHTML += '<th class="table-titles">' + header + '</th>';
-                    });
-                    tableHTML += '</tr>';
-                    tableHTML += '</thead>';
-                    // Generate table body
-                    tableHTML += '<tbody class="table-body">';
-                    // Add table rows
-                    tableData.forEach(row => {
-                        tableHTML += '<tr>';
-                        Object.values(row).forEach(value => {
-                            tableHTML += '<td>' + value + '</td>';
-                        });
-                        tableHTML += '</tr>';
-                    });
-                    tableHTML += '</tbody>';
-                    tableHTML += '</table>';
-                    document.getElementById('tables-container').innerHTML += tableHTML;
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-        }
+                      // Add table headers if tableData is not empty
+                      if (tableData.length > 0) {
+                          Object.keys(tableData[0]).forEach(header => {
+                              tableHTML += '<th class="table-titles">' + header + '</th>';
+                          });
+                          tableHTML += '</tr>';
+                          tableHTML += '</thead>';
+                          // Generate table body
+                          tableHTML += '<tbody class="table-body">';
+                          // Add table rows
+                          tableData.forEach(row => {
+                              tableHTML += '<tr>';
+                              Object.values(row).forEach(value => {
+                                  tableHTML += '<td>' + value + '</td>';
+                              });
+                              tableHTML += '</tr>';
+                          });
+                          tableHTML += '</tbody>';
+                      } else {
+                          // If tableData is empty, only generate table headers
+                          Object.keys(data[tableKey]).forEach(header => {
+                              tableHTML += '<th class="table-titles">' + header + '</th>';
+                          });
+                          tableHTML += '</tr>';
+                          tableHTML += '</thead>';
+                      }
+
+                      tableHTML += '</table>';
+                      document.getElementById('tables-container').innerHTML += tableHTML;
+                  });
+              })
+              .catch(error => console.error('Error fetching data:', error));
+      }
+
 
 
         function showComponents() {
             // Retrieve the project id from session storage
             var projectId = sessionStorage.getItem("projectId");
-
             // Fetch components using the session storage project id
             fetch('/components/' + projectId)
                 .then(response => response.json())
