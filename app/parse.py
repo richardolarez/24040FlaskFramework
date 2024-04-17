@@ -54,7 +54,7 @@ def run_XMLParser(input_file, output_file):
             f.write(f"Children: {children}\n")
             f.write("\n")
             
-def parseTXT(file_path):
+def parseTXT(file_path, project_id):
     checkNameList = ["[AV Network Switch]", "[Li-Ion Batt]", "[Controller]", "[DAQ-Digital]", "[DAQ-PPC]", "[Flight Computer]", "[GPS]", "[IMU]", "[Network Switch]", "[Ordnance]", "[PC - Server]", "[PDU]", "[Power Control Device]", "[PS]", "[TVC Controller]"]
     list1 = []
     for i in range(len(checkNameList)): 
@@ -71,12 +71,12 @@ def parseTXT(file_path):
             name_line = data[1].strip()  
             pn_line = data[3].strip()  
             unique_id_line = data[4].strip()
-            obj_type = Component(name_line, unique_id_line, pn_line, component_type)
+            obj_type = Component(componentName = name_line, componentId = unique_id_line, projectId = project_id, partNumber = pn_line, componentType=component_type)
             list1.append(obj_type)
     return list1
 
 #This function will call the xmlParser and generate the txt file
-def parseXML(input_file, output_file):
+def parseXML(input_file, output_file, project_id):
      run_XMLParser(input_file, output_file) 
-     outputList = parseTXT(output_file)
+     outputList = parseTXT(output_file, project_id)
      return outputList
