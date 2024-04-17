@@ -188,12 +188,13 @@ def get_components(project_id):
     return jsonify([component.json() for component in components])
 
 # Create a new project
-@app.route('/projects', methods=['POST'])
+@app.route('/project', methods=['POST'])
 def create_project():
     data = request.get_json()
-    project = Projects(name=data['name'], description=data['description'])
+    project = Projects(project=data['name'])
     db.session.add(project)
     db.session.commit()
+    newProjectID = project.id
     return {'id': project.id}
 
 
@@ -230,8 +231,9 @@ def menu():
 def home_page():
     return render_template('home.html')
 
-
-
+@app.route('/project')
+def projects():
+    return render_template('newProject.html')
 
 ####################### FILE UPLOADS ########################
 # When a user submits the file upload form, the file is saved to the uploads/ 
