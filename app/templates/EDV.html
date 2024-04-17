@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>EDV</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='EDV.css') }}">
+    <title>Project View</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
     <script src="https://unpkg.com/htmx.org@latest"></script>
 
     <style>
@@ -38,100 +38,40 @@
     </style>
 </head>
 
-  
-
-<body>
-     <!--<h1>Home / Electrical Diagram View</h1> -->
-    <h2 class="banner">
-    Project View
-    </h2>
    
-    <div class="container">
-        <div class="left">
-            <h1>Current Project </h1>
-
-            <!-- div for drop down menus-->
-            <div>
-                <select class="componentDropdown" onchange="showTable1()">
-                    <option value="" disabled selected>Current T.I.D Tables</option>
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-                </select>
-                <!-- Start of Invisible Table -->
-                <br>
-                <table id="table1" class="hidden" style="color: white;">
-                    <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
-                  </table>
-                <br><br><br><br><br>
-
-                <select class="componentDropdown" onchange="showTable2()">
-                    <option value="" disabled selected>Components</option>
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-                </select>
-                <!-- Start of Invisible Table -->
-                <br>
-                <table id="table2" class="hidden" style="color: white;">
-                    <tr>
-                      <th>Column 1</th>
-                    </tr>
-                    <tr>
-                      <td>Data A</td>
-                    </tr>
-                    <tr>
-                      <td>Data B</td>
-                    </tr>
-                  </table>
-                <br><br><br><br><br>
-
-                <!-- <select class="componentDropdown">
-                    <option value="component1">Component 1</option>
-                    <option value="component2">Component 2</option>
-           
-                </select> -->
-            </div>
-        </div>
-        <div class="right">
-    
-            <button class="button" onclick="addRow()">Add+</button>
-            <button class="button" onclick="deleteRow()">Delete Row</button><br><br><br>
-            
-            <table id="myTable">
-            <tr>
-                <th>Component</th>
-                <th>Attribute</th>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                <td contenteditable="true">...</td>
-                <td contenteditable="true">...</td>
-            </tr>
-            <tr>
-                    <td contenteditable="true">...</td>
-                    <td contenteditable="true">...</td>
-            </tr>
-            </table>
-        </div>
+<body>
+  <!-- Banner -->
+    <div class="banner">
+        <img src=static/images/Engineering.png alt="Engineering">
+        <img src=static/images/NGC.png alt="NGC logo">
     </div>
-    
-    <div class="footer">
-        <a href="/menu"><button class="button">Menu</button></a>
-        <a href="/"><button class="button">Logout</button></a>
-        <a href="/export_project/1"><button class="button">Export Project</button></a>
+      <!-- Side bar -->
+      <div class="sidebar">
+        <ul >
+          <li><a href="/home">Home</a></li>
+          <li><a href="/menu">Main Menu</a></li>
+          <li><a href="/export_project/1">Export</a></li>
+          <li><a href="/">Logout</a></li>
+        </ul>
+      </div>
+
+    <!-- Logo Background -->
+    <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+      <!-- Display Project Name Based on session storage variable -->
+      <h3 class="name2">Project Name: <span id="projectName"></span></h3>
+      
+      <!-- Start of main body -->
+      <div id="tables-container"></div>
+      <div id="tableContainer">
+        <h3 class="name2">Project Components</h3>
+      </div>
     </div>
+
+  </div>
+  </body>
 
     <script>
+
         function addRow() {
             var table = document.getElementById("myTable");
             var newRow = table.insertRow(table.rows.length);
@@ -147,47 +87,116 @@
             var lastRowIndex = table.rows.length - 1;
             table.deleteRow(lastRowIndex);
         }
-        function showTable1() {
-          var dropdown = document.querySelector('.componentDropdown');
-          var table = document.getElementById('table1');
-          if (table.classList.contains('hidden')) {
-            table.classList.remove('hidden');
-            updateTable1(); // Initial table update when it's shown for the first time
+
+        function showTables() {
+          fetch('/tid_tables/1')
+              .then(response => response.json())
+              .then(data => {
+                  // Generate tables dynamically
+                  Object.keys(data).forEach(tableKey => {
+                      let tableData = data[tableKey];
+                      let tableHTML = '<h2>' + tableKey + '</h2><table  class="table"><tr>';
+                      tableHTML += '<thead class="table-header">';
+
+                      // Add table headers if tableData is not empty
+                      if (tableData.length > 0) {
+                          Object.keys(tableData[0]).forEach(header => {
+                              tableHTML += '<th class="table-titles">' + header + '</th>';
+                          });
+                          tableHTML += '</tr>';
+                          tableHTML += '</thead>';
+                          // Generate table body
+                          tableHTML += '<tbody class="table-body">';
+                          // Add table rows
+                          tableData.forEach(row => {
+                              tableHTML += '<tr>';
+                              Object.values(row).forEach(value => {
+                                  tableHTML += '<td>' + value + '</td>';
+                              });
+                              tableHTML += '</tr>';
+                          });
+                          tableHTML += '</tbody>';
+                      } else {
+                          // If tableData is empty, only generate table headers
+                          Object.keys(data[tableKey]).forEach(header => {
+                              tableHTML += '<th class="table-titles">' + header + '</th>';
+                          });
+                          tableHTML += '</tr>';
+                          tableHTML += '</thead>';
+                      }
+
+                      tableHTML += '</table>';
+                      document.getElementById('tables-container').innerHTML += tableHTML;
+                  });
+              })
+              .catch(error => console.error('Error fetching data:', error));
+      }
+
+
+
+        function showComponents() {
+            // Retrieve the project id from session storage
+            var projectId = sessionStorage.getItem("projectId");
+            // Fetch components using the session storage project id
+            fetch('/components/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.tableItems = data;
+                        showTable(); // Initial table update when it's shown for the first time
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+
+        function generateTable(data) {
+        let table = '<table class="table">';
+        // Generate table header
+        table += '<thead class="table-header">';
+        table += '<tr>';
+        for (const key in data[0]) {
+          table += `<th class="table-titles">${key}</th>`;
+        }
+        table += '</tr>';
+        table += '</thead>';
+        // Generate table body
+        table += '<tbody class="table-body">';
+        data.forEach(item => {
+          table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+          for (const key in item) {
+        table += `<td class="table-cell">${item[key]}</td>`;
           }
-        }
+          table += '</tr>';
+        });
+        table += '</tbody>';
+        table += '</table>';
+        return table;
+      }
 
-        function updateTable1() {
-          // Your code to update table content goes here
-          // For example, you can dynamically generate rows based on some data
-          var tableBody = document.querySelector('#table1 tbody');
-          // Example: Add a row with some data
-          var newRow = document.createElement('tr');
-          var newData = document.createElement('td');
-          newData.textContent = 'Dynamic Data';
-          newRow.appendChild(newData);
-          tableBody.appendChild(newRow);
-        }
+      function showTable() {
+        const tableContainer = document.getElementById('tableContainer');
+        tableContainer.innerHTML = generateTable(window.tableItems);
+        tableContainer.classList.remove('hidden');
+      }
 
-        function showTable2() {
-          var dropdown = document.querySelector('.componentDropdown');
-          var table = document.getElementById('table2');
-          if (table.classList.contains('hidden')) {
-            table.classList.remove('hidden');
-            updateTable2(); // Initial table update when it's shown for the first time
-          }
-        }
+        // Call the function to show tables when the page is loaded
+      window.addEventListener('DOMContentLoaded', showTables());
+      window.addEventListener('DOMContentLoaded', showComponents());
 
-        function updateTable2() {
-          // Your code to update table content goes here
-          // For example, you can dynamically generate rows based on some data
-          var tableBody = document.querySelector('#table2 tbody');
-          // Example: Add a row with some data
-          var newRow = document.createElement('tr');
-          var newData = document.createElement('td');
-          newData.textContent = 'Dynamic Data';
-          newRow.appendChild(newData);
-          tableBody.appendChild(newRow);
-        }
+      // Retrieve the project name from session storage
+      var projectName = sessionStorage.getItem("projectName");
+
+      // Update the HTML with the project name
+      document.getElementById("projectName").innerText = projectName;
+
+      // Retrieve the project id from session storage
+      var projectId = sessionStorage.getItem("projectId");
+
+        
     </script>
-</body>
 </html>

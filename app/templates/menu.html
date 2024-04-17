@@ -9,93 +9,133 @@
     .hidden {
       display: none;
     }
+
   </style>
 </head>
 
 <body>
-  <!--<h1>Home / Electrical Diagram View</h1> -->
-  <h2 class="banner">
+  <!-- Banner -->
+  <div class="banner">
     <img src=static/images/Engineering.png alt="Engineering">
     <img src=static/images/NGC.png alt="NGC logo">
-  </h2>
-  <div>
-    <img src=static/images/Janusimage.png alt="Janus Logo" class="logo">
+  </div>
+  <!-- Side bar -->
+  <div class="sidebar">
+    <ul >
+      <li><a href="/home">Home</a></li>
+      <li><a href="/edv">View</a></li>
+      <li><a href="/project">Create Project</a></li>
+      <li><a onclick="fetchData()">Select Project</a></li>
+      <li><a href="/">Logout</a></li>
+    </ul>
   </div>
 
-  <h3 class="name">J.A.N.U.S.</h3>
-  <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
-  <h3 class="name2">Main Menu</h3>
+  <!-- Start of main body -->
+  <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+  
+        <h3 class="name">J.A.N.U.S.</h3>
+        <h3 class="name2">Electrical & Technical Diagram Assistant</h3>
+        <h3 class="name2">Main Menu</h3>
 
-  <div class="center-form">
-    <a href="/edv"><button class="button">EDV</button></a><br><br>
+        <div class="center-form">
+          <table id="table1" class="hidden" style="color:white">
+            <tr>
+              <th>Please Upload the Electrical Diagram Zip File</th>
+            </tr>
+            <tr>
+              <td class="button">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                  <input type="file" name="file" accept=".zip" required>
+                </form>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Table to show projects -->
+          <div
+            x-data="{ 
+              tableItems: [],
+              loading: true
+            }"
+            x-init="fetchData()"
+            class="max-w-screen-xl mx-auto px-4 md:px-8"
+          >
+            <div id="tableContainer" class="hidden white-bg"></div>
+          </div>
+          <!-- end of table to show projects -->
+
+
   </div>
-
-  <div class="center-form">
-    <button class="button" onclick="toggleTable('table1')">Create New Project</button>
-
-    <table id="table1" class="hidden" style="color:white">
-      <tr>
-        <th>Please Upload the Electrical Diagram Zip File</th>
-      </tr>
-      <tr>
-        <td class="button">
-          <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".zip" required>
-            <button type="submit">Upload</button>
-          </form>
-        </td>
-      </tr>
-    </table>
-    <br><br>
-
-    <button class="button" onclick="loadProjects()">Select Existing Project</button>
-
-    <table id="table2" class="hidden" style="color: white;">
-      <thead>
-        <tr>
-          <th>Project ID</th>
-          <th>Project Name</th>
-        </tr>
-      </thead>
-      <tbody id="projectTableBody">
-        <!-- Projects will be dynamically added here -->
-      </tbody>
-    </table>
-  </div>
-
-  <br><br>
-  <div class="center-form">
-    <a href="/"><button class="button">Logout</button></a><br><br>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.7.1/dist/htmx.js"></script>
-  <script>
-    function toggleTable(tableId) {
-      var table = document.getElementById(tableId);
-      if (table.classList.contains('hidden')) {
-        table.classList.remove('hidden');
-      } else {
-        table.classList.add('hidden');
-      }
-    }
-
-    function loadProjects() {
-      var projectTableBody = document.getElementById('projectTableBody');
-      htmx.ajax('http://127.0.0.1:8000/projects', {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(function(response) {
-        var projects = JSON.parse(response);
-        projectTableBody.innerHTML = '';
-        projects.forEach(function(project) {
-          var row = '<tr><td>' + project.id + '</td><td>' + project.project + '</td></tr>';
-          projectTableBody.insertAdjacentHTML('beforeend', row);
-        });
-      }).catch(function(error) {
-        console.error('Error loading projects:', error);
-      });
-    }
-  </script>
 </body>
+  <!-- end of main body -->
+
+    <script>
+      function toggleTable(tableId) {
+        var table = document.getElementById(tableId);
+        if (table.classList.contains('hidden')) {
+          table.classList.remove('hidden');
+        } else {
+          table.classList.add('hidden');
+        }
+      }
+
+      function fetchData() {
+        fetch('/projects')
+          .then(response => response.json())
+          .then(data => {
+            if (Array.isArray(data)) {
+              window.tableItems = data;
+              showTable(); // Call showTable after fetching data
+            } else {
+              console.error('Invalid data format received from API');
+            }
+            window.loading = false;
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            window.loading = false;
+          });
+      }
+
+      function selectProject(projectId, projectName) {
+        sessionStorage.setItem('projectId', projectId);
+        sessionStorage.setItem('projectName', projectName);
+        // Redirect to another page or perform other actions as needed
+        window.location.href = '/edv';
+      }
+
+      function generateTable(data) {
+        let table = '<table class="table">';
+        // Generate table header
+        table += '<thead class="table-header">';
+        table += '<tr>';
+        for (const key in data[0]) {
+          table += `<th class="table-titles">${key}</th>`;
+        }
+        table += '</tr>';
+        table += '</thead>';
+        // Generate table body
+        table += '<tbody class="table-body">';
+        data.forEach(item => {
+          table += `<tr onclick="selectProject('${item.id}', '${item.project}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+          for (const key in item) {
+        table += `<td class="table-cell">${item[key]}</td>`;
+          }
+          table += '</tr>';
+        });
+        table += '</tbody>';
+        table += '</table>';
+        return table;
+      }
+
+      function showTable() {
+        const tableContainer = document.getElementById('tableContainer');
+        tableContainer.innerHTML = generateTable(window.tableItems);
+        tableContainer.classList.remove('hidden');
+      }
+
+
+      
+    </script>
+
 </html>

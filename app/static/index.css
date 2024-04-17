@@ -1,6 +1,8 @@
+
+
 html {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
   }
   
   .banner {
@@ -8,10 +10,9 @@ html {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background: #eab101;
     background: radial-gradient(#eab101, #7c5d03);
     height: 100px;
-    font-size: 50pt;
+    font-size: 50pt;                                       
     margin: 0;
     padding: 0;
     border: 0;
@@ -33,6 +34,46 @@ html {
       max-height: 50px; /* Smaller size on small screens */
     }
   }
+
+  .sidebar{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: radial-gradient(#eab101, #7c5d03);
+    width: 120px;
+    height: calc(100vh - 100px);
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+  }
+
+  .sidebar li {
+    display: block;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .sidebar a:hover{
+    background: #023a76;
+    color: #023a76;
+    cursor: pointer;
+  }
+  
   
   body {
     position: relative; /* Constrain the absolute positioning within the body */
@@ -55,14 +96,7 @@ html {
     height: relative;
   }
   
-  .logo {
-    position: absolute; /* Position the logo absolutely within the body */
-    top: 0; /* Align the top edge of the image with the top of the parent */
-    width: 100vw; /* Stretch the image to the width of the parent */
-    left: 0; /* Align the left edge of the image with the left of the parent */
-    z-index: -1; /* Send it to the back */
-    object-fit: cover; /* Cover the parent completely */
-  }
+
   
   .button {
     background: #eab101;
@@ -127,4 +161,82 @@ html {
     padding: 10px;
     font-size: large;
     text-decoration: none;
+  }
+
+  .table {
+    width: 60vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 130px;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .table-header {
+    background-color: #023a76;
+    color: #fff;
+    border: 1px solid #898686;
+  }
+
+  .table-titles {
+    padding: 10px;
+  }
+
+  .table-body {
+    background-color: #FFFFFF;
+  }
+
+  .table-cell {
+    padding: 10px;
+    border: 1px solid #898686;
+  }
+
+  .table-cell:hover {
+    background-color: #6b6b6b;
+    color: #fff;
+  }
+
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+
+  .logo {
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #tables-container{
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 100%;
+  }
+
+  #tables-container h2 {
+    color: white;
+    font-size: large;
+  }
+
+  #tablesContainer{
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 100%;
+  }
+
+  #tablesContainer h2 {
+    color: white;
+    font-size: large;
   }
