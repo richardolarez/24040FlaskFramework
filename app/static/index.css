@@ -168,10 +168,11 @@ html {
     max-width: calc(60vw - 120px);
     border-collapse: collapse;
     margin-top: 20px;
-    margin-left: 130px;
+    /* margin-left: 130px; */
     align-items: center;
     border-radius: 5px;
     overflow-x: auto;
+    overflow-y: auto;
   }
 
   .table-header {
