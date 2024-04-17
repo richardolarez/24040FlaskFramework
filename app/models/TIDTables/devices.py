@@ -5,6 +5,7 @@ class Devices(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     projectID = db.Column(db.Integer)
     device = db.Column(db.String(255))
+    sampling_rate = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.id, 'device': self.device}
+        return {'id': self.id, 'device': self.device, "sampling_rate": self.sampling_rate}

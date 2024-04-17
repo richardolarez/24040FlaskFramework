@@ -17,5 +17,6 @@ Flask-WTF
 flash
 flask_login
 flask-bcrypt
+python-docx
 
 
