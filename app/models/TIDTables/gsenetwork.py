@@ -10,4 +10,4 @@ class GSENetwork(db.Model):
     host_name = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.id, 'gse_net_device': self.gse_net_device, 'ip_address': self.ip_address, 'sub_net_mask': self.sub_net_mask, 'host_name': self.host_name}
+        return {'id': self.id, 'gse_net_device': self.gse_net_device, 'ip_address': self.ip_address, 'sub_net_mask': self.sub_net_mask, 'host_name': self.host_name, 'projectID': self.projectID}

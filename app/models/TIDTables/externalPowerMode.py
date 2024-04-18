@@ -3,7 +3,7 @@ from app import db
 class ExternalMode(db.Model):
     __tablename__ = "ExternalMode"
     id = db.Column(db.Integer, primary_key=True)
-    tid_table_id = db.Column(db.Integer, db.ForeignKey('TIDTables.id'))
+    projectID = db.Column(db.Integer)
     power_supply = db.Column(db.String(255))
     battery = db.Column(db.String(255))
     voltage_setting = db.Column(db.Float)
