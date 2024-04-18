@@ -306,11 +306,29 @@ def get_power_supply_summary(project_id):
     power_supply_summary = PowerSupplySummary.query.filter_by(projectID=project_id).all()
     return jsonify([power_supply_summary.json() for power_supply_summary in power_supply_summary])
 
+# Post Power Supply Summary for a specific project
+@app.route('/power_supply_summary', methods=['POST'])
+def post_power_supply_summary():
+    data = request.get_json()
+    power_supply_summary = PowerSupplySummary(projectID=data['projectID'], part_number=data['part_number'], voltage=data['voltage'], current=data['current'], power=data['power'])
+    db.session.add(power_supply_summary)
+    db.session.commit()
+    return {'id': power_supply_summary.id}
+
 # Get Power Supply Assignments for a specific project
 @app.route('/power_supply_assign/<int:project_id>', methods=['GET'])
 def get_power_supply_assign(project_id):
     power_supply_assign = PowerSupplyAssign.query.filter_by(projectID=project_id).all()
     return jsonify([power_supply_assign.json() for power_supply_assign in power_supply_assign])
+
+# Post Power Supply Assignments for a specific project
+@app.route('/power_supply_assign', methods=['POST'])
+def post_power_supply_assign():
+    data = request.get_json()
+    power_supply_assign = PowerSupplyAssign(projectID=data['projectID'], power_supply=data['power_supply'], battery=data['battery'], devices=data['devices'], ext_pwr=data['ext_pwr'], batt_chg=data['batt_chg'], control=data['control'], monitor=data['monitor'])
+    db.session.add(power_supply_assign)
+    db.session.commit()
+    return {'id': power_supply_assign.id}
 
 # Get Telemetry Network for a specific project
 @app.route('/telemetry_network/<int:project_id>', methods=['GET'])
@@ -318,11 +336,29 @@ def get_telemetry_network(project_id):
     telemetry_network = TelemetryNetwork.query.filter_by(projectID=project_id).all()
     return jsonify([telemetry_network.json() for telemetry_network in telemetry_network])
 
+# Post Telemetry Network for a specific project
+@app.route('/telemetry_network', methods=['POST'])
+def post_telemetry_network():
+    data = request.get_json()
+    telemetry_network = TelemetryNetwork(projectID=data['projectID'], tlm_net_device=data['tlm_net_device'], ip_address=data['ip_address'], sub_net_mask=data['sub_net_mask'], host_name=data['host_name'])
+    db.session.add(telemetry_network)
+    db.session.commit()
+    return {'id': telemetry_network.id}
+
 # Get UEIDaq for a specific project
 @app.route('/uei_daq/<int:project_id>', methods=['GET'])
 def get_uei_daq(project_id):
     uei_daq = UEIDaq.query.filter_by(projectID=project_id).all()
     return jsonify([uei_daq.json() for uei_daq in uei_daq])
+
+# Post UEIDaq for a specific project
+@app.route('/uei_daq', methods=['POST'])
+def post_uei_daq():
+    data = request.get_json()
+    uei_daq = UEIDaq(projectID=data['projectID'], power_daq_layer=data['power_daq_layer'], bit=data['bit'], pin=data['pin'], signal=data['signal'], initial=data['initial'])
+    db.session.add(uei_daq)
+    db.session.commit()
+    return {'id': uei_daq.id}
 
 # Get Vehicle Battery for a specific project
 @app.route('/vehicle_battery/<int:project_id>', methods=['GET'])
@@ -330,11 +366,29 @@ def get_vehicle_battery(project_id):
     vehicle_battery = VehicleBattery.query.filter_by(projectID=project_id).all()
     return jsonify([vehicle_battery.json() for vehicle_battery in vehicle_battery])
 
+# Post Vehicle Battery for a specific project
+@app.route('/vehicle_battery', methods=['POST'])
+def post_vehicle_battery():
+    data = request.get_json()
+    vehicle_battery = VehicleBattery(projectID=data['projectID'], battery=data['battery'], psv=data['psv'], ueiv=data['ueiv'], batv=data['batv'], cell=data['cell'], temp=data['temp'], loadv=data['loadv'], loadi=data['loadi'])
+    db.session.add(vehicle_battery)
+    db.session.commit()
+    return {'id': vehicle_battery.id}
+
 # Get Vehicle Network for a specific project
 @app.route('/vehicle_network/<int:project_id>', methods=['GET'])
 def get_vehicle_network(project_id):
     vehicle_network = VehicleNetwork.query.filter_by(projectID=project_id).all()
     return jsonify([vehicle_network.json() for vehicle_network in vehicle_network])
+
+# Post Vehicle Network for a specific project
+@app.route('/vehicle_network', methods=['POST'])
+def post_vehicle_network():
+    data = request.get_json()
+    vehicle_network = VehicleNetwork(projectID=data['projectID'], device=data['device'], ip_address=data['ip_address'], sub_net_mask=data['sub_net_mask'], host_name=data['host_name'])
+    db.session.add(vehicle_network)
+    db.session.commit()
+    return {'id': vehicle_network.id}
 
 ######################## End of TID Tables ########################
     
