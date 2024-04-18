@@ -4,29 +4,56 @@ from docx import Document
 from docx.shared import Pt
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.shared import Cm
+from io import BytesIO
 
-def export_Project(projectId, file_path):
-    project = Projects.query.filter_by(id=projectId).first()
+# def export_Project(projectId, file_path):
+#     project = Projects.query.filter_by(id=projectId).first()
+#     doc = Document()
+#     PowerSupplyTables(doc, projectId)
+#     PathsAndLoadsTable(doc, projectId)
+#     ChargeModeTables(doc, projectId)
+#     GseNetIpAddresses(doc, projectId)
+#     BatteryAddressTable(doc, projectId)
+#     SamplingRateTable(doc, projectId)
+#     VehicleNet(doc, projectId)
+#     BatteryDefaultTable(doc, projectId)
+#     BatteryDischargeTable(doc, projectId)
+#     PowerSupplyAssignTable(doc, projectId)
+#     ExternalModeTables(doc, projectId)
+#     PowerBusConfigTable(doc, projectId)
+#     daqs = Component.query.filter_by(componentType = '[DAQ-Digital]').all()
+#     for daq in daqs: 
+#          UEIDaqTable(doc, daq, projectId)
+#     doc.save(file_path)
+    
+def export_Project(projectId):
+    # Assuming the export_Project function returns the byte content of the generated document
     doc = Document()
-    PowerSupplyTables(doc)
-    PathsAndLoadsTable(doc)
-    ChargeModeTables(doc)
-    GseNetIpAddresses(doc)
-    BatteryAddressTable(doc)
-    SamplingRateTable(doc)
-    VehicleNet(doc)
-    BatteryDefaultTable(doc)
-    BatteryDischargeTable(doc)
-    PowerSupplyAssignTable(doc)
-    ExternalModeTables(doc)
-    PowerBusConfigTable(doc)
-    daqs = Component.query.filter_by(componentType = '[DAQ-Digital]').all()
+    PowerSupplyTables(doc, projectId)
+    PathsAndLoadsTable(doc, projectId)
+    ChargeModeTables(doc, projectId)
+    GseNetIpAddresses(doc, projectId)
+    BatteryAddressTable(doc, projectId)
+    SamplingRateTable(doc, projectId)
+    VehicleNet(doc, projectId)
+    BatteryDefaultTable(doc, projectId)
+    BatteryDischargeTable(doc, projectId)
+    PowerSupplyAssignTable(doc, projectId)
+    ExternalModeTables(doc, projectId)
+    PowerBusConfigTable(doc, projectId)
+    daqs = Component.query.filter_by(componentType='[DAQ-Digital]').all()
     for daq in daqs: 
-         UEIDaqTable(doc, daq)
-    doc.save(file_path)
+         UEIDaqTable(doc, daq, projectId)
+    
+    # Create a BytesIO object to store the byte content of the document
+    buffer = BytesIO()
+    doc.save(buffer)
+    buffer.seek(0)  # Reset the buffer position to the beginning
+    
+    return buffer.getvalue()  # Return the byte content of the document
 
-def PowerSupplyTables(doc):
-    power_supplies = PowerSupply.query.all()
+def PowerSupplyTables(doc, projectId):
+    power_supplies = PowerSupply.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=7)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -70,8 +97,8 @@ def PowerSupplyTables(doc):
         row_cells[6].text = power_supply.red_green_current_limits
     doc.add_paragraph() 
 
-def ChargeModeTables(doc):
-    chargeTable = ChargeMode.query.all()
+def ChargeModeTables(doc, projectId):
+    chargeTable = ChargeMode.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=8)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -117,8 +144,8 @@ def ChargeModeTables(doc):
         row_cells[7].text = charge.red_green_current_limits
     doc.add_paragraph() 
 
-def GseNetIpAddresses(doc):
-    networks = GSENetwork.query.all()
+def GseNetIpAddresses(doc, projectId):
+    networks = GSENetwork.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=4)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -150,8 +177,8 @@ def GseNetIpAddresses(doc):
 
     doc.add_paragraph() 
 
-def ChargeModeTables(doc):
-    chargeTable = ChargeMode.query.all()
+def ChargeModeTables(doc, projectId):
+    chargeTable = ChargeMode.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=8)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -197,8 +224,8 @@ def ChargeModeTables(doc):
         row_cells[7].text = charge.red_green_current_limits
     doc.add_paragraph() 
 
-def ExternalModeTables(doc):
-    chargeTable = ExternalMode.query.all()
+def ExternalModeTables(doc, projectId):
+    chargeTable = ExternalMode.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=8)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -245,8 +272,8 @@ def ExternalModeTables(doc):
     doc.add_paragraph() 
 
 
-def BatteryAddressTable(doc):
-    batteries = BatteryAddresses.query.all()
+def BatteryAddressTable(doc, projectId):
+    batteries = BatteryAddresses.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=2)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -274,8 +301,8 @@ def BatteryAddressTable(doc):
 
     doc.add_paragraph() 
      
-def SamplingRateTable(doc):
-    devices = Devices.query.all()
+def SamplingRateTable(doc, projectId):
+    devices = Devices.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=2)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -303,8 +330,8 @@ def SamplingRateTable(doc):
 
     doc.add_paragraph() 
 
-def VehicleNet(doc):
-    devices = VehicleNetwork.query.all()
+def VehicleNet(doc, projectId):
+    devices = VehicleNetwork.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=2)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -332,8 +359,8 @@ def VehicleNet(doc):
         
     doc.add_paragraph()
 
-def BatteryDefaultTable(doc):
-    devices = BatteryDefault.query.all()
+def BatteryDefaultTable(doc, projectId):
+    devices = BatteryDefault.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=3)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -363,8 +390,8 @@ def BatteryDefaultTable(doc):
         
     doc.add_paragraph()
      
-def BatteryDischargeTable(doc):
-    devices = VehicleBattery.query.all()
+def BatteryDischargeTable(doc, projectId):
+    devices = VehicleBattery.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=8)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -404,8 +431,8 @@ def BatteryDischargeTable(doc):
 
     doc.add_paragraph() 
 
-def PowerSupplyAssignTable(doc):
-    devices = PowerSupplyAssign.query.all()
+def PowerSupplyAssignTable(doc, projectId):
+    devices = PowerSupplyAssign.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=7)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -434,7 +461,7 @@ def PowerSupplyAssignTable(doc):
     for device in devices:
         row_cells = table.add_row().cells
         row_cells[0].text = device.power_supply
-        row_cells[1].text = device.battery
+        row_cells[1].text = device.battery if device.battery is not None else ""
         row_cells[2].text = device.devices
         row_cells[3].text = device.ext_pwr
         row_cells[4].text = device.batt_chg
@@ -443,8 +470,8 @@ def PowerSupplyAssignTable(doc):
 
     doc.add_paragraph() 
 
-def PowerBusConfigTable(doc):
-    devices = PowerBusConfig.query.all()
+def PowerBusConfigTable(doc, projectId):
+    devices = PowerBusConfig.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=9)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells
@@ -493,8 +520,8 @@ def PowerBusConfigTable(doc):
         row_cells[8].text = device.bus_i_high
     doc.add_paragraph() 
 
-def UEIDaqTable(doc, daq):
-    devices = UEIDaq.query.filter_by(power_daq_layer=daq.componentName).all()
+def UEIDaqTable(doc, daq, projectId):
+    devices = UEIDaq.query.filter_by(power_daq_layer=daq.componentName, projectID=projectId).all()
     table = doc.add_table(rows=2, cols=4)
     table.style = 'Table Grid'
     title_cells = table.rows[0].cells 
@@ -527,8 +554,8 @@ def UEIDaqTable(doc, daq):
         row_cells[3].text = device.initial
     doc.add_paragraph()
 
-def PathsAndLoadsTable(doc):
-    devices = PathsLoads.query.all()
+def PathsAndLoadsTable(doc, projectId):
+    devices = PathsLoads.query.filter_by(projectID=projectId).all()
     table = doc.add_table(rows=1, cols=6)
     table.style = 'Table Grid'
     hdr_cells = table.rows[0].cells

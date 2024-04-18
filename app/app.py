@@ -9,6 +9,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_bcrypt import Bcrypt
 from docx import Document
 import os
+from io import BytesIO
 
 
 
@@ -427,13 +428,18 @@ def create_project():
 
 ####################### Export Project ########################
 from exportProject import export_Project
+from flask import send_file
 
 @app.route('/export_project/<int:project_id>', methods=['GET'])
 def export_project(project_id):
-    doc_path = os.path.join(app.root_path, 'generated_document.docx')
-    export_Project(project_id, doc_path)
-    return send_file(doc_path, as_attachment=True)
-
+    # Export the project and get the byte content of the document
+    doc_content = export_Project(project_id)
+    
+    # Send the byte content of the document as a file attachment with specified filename
+    return send_file(BytesIO(doc_content),
+                     mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                     as_attachment=True,
+                     download_name='generated_document.docx')
 ####################### VIEWS / PAGE ROUTES ########################
 @app.route("/logout")
 def logout():

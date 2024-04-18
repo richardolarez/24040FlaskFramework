@@ -30,7 +30,6 @@
         .footer{
             align-content: center;
         }
-
         .modal {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
@@ -38,11 +37,12 @@
             align-items: center;
             justify-content: center;
             top: 50%;
-            left: 50%;
+            left: 85%;
             transform: translate(-50%, -50%);
             color: white;
-            background-color: rgb(7, 7, 7); /* Fallback color */
-            background-color: rgba(7, 7, 7, 0.9); /* Black w/ opacity */
+            background-color: black; /* Solid black background */
+            width: auto; /* Adjust the width as desired */
+            height: auto; /* Adjust the height as desired */
         }
     </style>
 </head>
@@ -54,15 +54,83 @@
         <img src=static/images/Engineering.png alt="Engineering">
         <img src=static/images/NGC.png alt="NGC logo">
     </div>
-      <!-- Side bar -->
-      <div class="sidebar">
-        <ul >
-          <li><a href="/home">Home</a></li>
-          <li><a href="/menu">Main Menu</a></li>
-          <li><a href="/export_project/1">Export</a></li>
-          <li><a href="/">Logout</a></li>
+    <!-- Side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/menu">Main Menu</a></li>
+            <li><a href="#" id="exportLink">Export</a></li>
+            <li><a href="/">Logout</a></li>
         </ul>
-      </div>
+    </div>
+
+  <!-- Export Project Confirmation Modal -->
+<div id="exportProjectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Export Project</h2>
+        <p>Are you sure you want to export the project?</p>
+        <button id="confirmExportBtn">Export</button>
+    </div>
+</div>
+
+<script>
+    // Function to open the export project modal
+    document.getElementById('exportLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.getElementById('exportProjectModal');
+        modal.style.display = "block";
+    });
+
+    // Function to close the modal
+    document.querySelector("#exportProjectModal .close").addEventListener("click", function() {
+        var modal = document.getElementById('exportProjectModal');
+        modal.style.display = "none";
+    });
+
+    // Function to handle export confirmation
+    document.getElementById('confirmExportBtn').addEventListener('click', function() {
+        // Make AJAX request to export project
+        var projectId = sessionStorage.getItem("projectId");
+        fetch('/export_project/' + projectId, {
+            method: 'GET'
+        })
+        .then(response => {
+            if (response.ok) {
+                // Get the content disposition header to extract the filename
+                var contentDisposition = response.headers.get('content-disposition');
+                var filename = '';
+                if (contentDisposition && contentDisposition.indexOf('attachment') !== -1) {
+                    var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                    var matches = filenameRegex.exec(contentDisposition);
+                    if (matches != null && matches[1]) filename = matches[1].replace(/['"]/g, '');
+                }
+                // Create a new blob object and create a link to download the file
+                response.blob().then(blob => {
+                    var url = window.URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename || 'generated_document.docx';
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                });
+                // Export successful, close the modal
+                var modal = document.getElementById('exportProjectModal');
+                modal.style.display = "none";
+            } else {
+                // Handle error case
+                console.error('Error exporting project');
+            }
+        })
+        .catch(error => {
+            console.error('Error exporting project:', error);
+        });
+    });
+
+</script>
+
+
+
 
     <!-- Start Logo Background -->
     <div class="logo" style="background-image: url(static/images/Janusimage.png);">
@@ -706,76 +774,103 @@
         <!-- Start of Power Supply Assignment Modal -->
         <div id="addPowerSupplyAssignmentModal" class="modal">
             <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Add New Power Supply Assignment</h2>
-            <form id="addPowerSupplyAssignmentForm">
-            <label for="powerSupply">Power Supply:</label>
-            <select id="powerSupply_psassign" name="power_supply_psassign" required>
-                <option value="">Select a power supply</option>
-                <!-- Fetch options from endpoint and populate the select element -->
-                <script>
-                    // Fetch and populate options for the power supply select element
-                    fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        if (Array.isArray(data)) {
-                                            const powerSupplySelect_ps_assign = document.getElementById('powerSupply_psassign');
-                                            data.forEach(item => {
-                                                const option = document.createElement('option');
-                                                option.value = item.componentName;
-                                                option.textContent = item.componentName;
-                                                powerSupplySelect_ps_assign.appendChild(option);
-                                            });
-                                        } else {
-                                            console.error('Invalid data format received from API');
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.error('Error fetching data:', error);
-                                    });
-                </script>
-            </select><br><br>
-            <label for="battery">Battery:</label>
-            <select id="batteryName_psassign" name="batteryName_psassign" required>
-                <option value="">Select a battery</option>
-                <!-- Fetch options from endpoint and populate the select element -->
-                <script>
-                    // Fetch and populate options for the battery select element
-                    fetch('/batteries/' + sessionStorage.getItem("projectId"))
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        if (Array.isArray(data)) {
-                                            const batterySelect_ps_assign = document.getElementById('batteryName_psassign');
-                                            data.forEach(item => {
-                                                const option = document.createElement('option');
-                                                option.value = item.componentName;
-                                                option.textContent = item.componentName;
-                                                batterySelect_ps_assign.appendChild(option);
-                                            });
-                                        } else {
-                                            console.error('Invalid data format received from API');
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.error('Error fetching data:', error);
-                                    });
-                </script>
-            </select><br><br>
-            <label for="device">Device:</label>
-            <input type="text" id="device" name="device" required><br><br>
-            <label for="ext_pwr">External Power:</label>
-            <input type="text" id="ext_pwr" name="ext_pwr" required><br><br>
-            <label for="batt_chg">Battery Charge:</label>
-            <input type="text" id="batt_chg" name="batt_chg" required><br><br>
-            <label for="control">Control:</label>
-            <input type="text" id="control" name="control" required><br><br>
-            <label for="monitor">Monitor:</label>
-            <input type="text" id="monitor" name="monitor" required><br><br>
-            <button type="submit">Submit</button>
-            </form>
+                <span class="close">&times;</span>
+                <h2>Add New Power Supply Assignment</h2>
+                <form id="addPowerSupplyAssignmentForm">
+                    <label for="powerSupply">Power Supply:</label>
+                    <select id="powerSupply_psassign" name="power_supply_psassign" required>
+                        <option value="">Select a power supply</option>
+                        <!-- Fetch options from endpoint and populate the select element -->
+                        <script>
+                            // Fetch and populate options for the power supply select element
+                            fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (Array.isArray(data)) {
+                                        const powerSupplySelect_ps_assign = document.getElementById('powerSupply_psassign');
+                                        data.forEach(item => {
+                                            const option = document.createElement('option');
+                                            option.value = item.componentName;
+                                            option.textContent = item.componentName;
+                                            powerSupplySelect_ps_assign.appendChild(option);
+                                        });
+                                    } else {
+                                        console.error('Invalid data format received from API');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching data:', error);
+                                });
+                        </script>
+                    </select><br><br>
+                    <label for="battery">Battery:</label>
+                    <!-- Change the battery dropdown to a multi-select dropdown -->
+                    <select id="batteryName_psassign" name="batteryName_psassign[]" multiple required>
+                        <option value="">Select batteries</option>
+                        <!-- Fetch options from endpoint and populate the select element -->
+                        <script>
+                            // Fetch and populate options for the battery select element
+                            fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (Array.isArray(data)) {
+                                        const batterySelect_ps_assign = document.getElementById('batteryName_psassign');
+                                        data.forEach(item => {
+                                            const option = document.createElement('option');
+                                            option.value = item.componentName;
+                                            option.textContent = item.componentName;
+                                            batterySelect_ps_assign.appendChild(option);
+                                        });
+                                    } else {
+                                        console.error('Invalid data format received from API');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching data:', error);
+                                });
+                        </script>
+                    </select><br><br>
+                    <label for="device">Device:</label>
+                    <select id="device_ps_assign" name="device_ps_assign" multiple required>
+                        <option value="">Select devices</option>
+                        <!-- Fetch options from endpoint and populate the select element -->
+                        <script>
+                            // Fetch and populate options for the device select element
+                            fetch('/components/' + sessionStorage.getItem("projectId"))
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (Array.isArray(data)) {
+                                        const deviceSelect_ps_assign = document.getElementById('device_ps_assign');
+                                        data.forEach(item => {
+                                            const option = document.createElement('option');
+                                            option.value = item.componentName;
+                                            option.textContent = item.componentName;
+                                            deviceSelect_ps_assign.appendChild(option);
+                                        });
+                                    } else {
+                                        console.error('Invalid data format received from API');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching data:', error);
+                                });
+                        </script>
+    
+                    </select><br><br>
+                    <label for="ext_pwr">External Power:</label>
+                    <input type="text" id="ext_pwr" name="ext_pwr" required><br><br>
+                    <label for="batt_chg">Battery Charge:</label>
+                    <input type="text" id="batt_chg" name="batt_chg" required><br><br>
+                    <label for="control">Control:</label>
+                    <input type="text" id="control" name="control" required><br><br>
+                    <label for="monitor">Monitor:</label>
+                    <input type="text" id="monitor" name="monitor" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
         <!-- End of Power Supply Assignment Modal -->
+
 
         <!-- Start of Telemetry Network Table -->
         <div id="telemetryNetworkTable"></div>
@@ -941,7 +1036,7 @@
         function generateVehicleNetworkTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Vehicle Network</caption>';
+            table += '<caption class="name2">VEH NET IP Addresses</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -1049,7 +1144,7 @@
         function generateVehicleBatteryTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Vehicle Battery</caption>';
+            table += '<caption class="name2">Battery Discharge Red/Green Limits</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -1167,7 +1262,7 @@
         function generateUEIDaqTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">UEIDaq</caption>';
+            table += '<caption class="name2">Power DAQ Assignments</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -1438,36 +1533,48 @@
         document.getElementById("addPowerSupplyAssignmentForm").addEventListener("submit", function(event) {
             event.preventDefault();
             var formData = new FormData(this);
+
+            // Get selected battery options as an array
+            var selectedBatteries = Array.from(formData.getAll('batteryName_psassign[]'));
+            // Convert the array to a string
+            var batteryString = selectedBatteries.join(', '); // Change the separator as needed
+
+            // Get selected device options as an array
+            var selectedDevices = Array.from(formData.getAll('device_ps_assign'));
+            // Convert the array to a string
+            var deviceString = selectedDevices.join(', '); // Change the separator as needed
+
             fetch('/power_supply_assign', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-            projectID: sessionStorage.getItem("projectId"),
-            power_supply: formData.get('power_supply_psassign'),
-            battery: formData.get('batteryName_psassign'),
-            devices: formData.get('device'),
-            ext_pwr: formData.get('ext_pwr'),
-            batt_chg: formData.get('batt_chg'),
-            control: formData.get('control'),
-            monitor: formData.get('monitor')
-            })
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    projectID: sessionStorage.getItem("projectId"),
+                    power_supply: formData.get('power_supply_psassign'),
+                    battery: batteryString,
+                    devices: deviceString, // Use the concatenated string
+                    ext_pwr: formData.get('ext_pwr'),
+                    batt_chg: formData.get('batt_chg'),
+                    control: formData.get('control'),
+                    monitor: formData.get('monitor')
+                })
             })
             .then(response => response.json())
             .then(data => {
-            // Assuming data is the newly added power supply assignment object returned by the server
-            console.log('New power supply assignment added:', data);
-            // Close the modal
-            var modal = document.getElementById('addPowerSupplyAssignmentModal');
-            modal.style.display = "none";
-            // Refresh the table
-            showPowerSupplyAssignment(); // Call the function to fetch and display power supply assignment
+                // Assuming data is the newly added power supply assignment object returned by the server
+                console.log('New power supply assignment added:', data);
+                // Close the modal
+                var modal = document.getElementById('addPowerSupplyAssignmentModal');
+                modal.style.display = "none";
+                // Refresh the table
+                showPowerSupplyAssignment(); // Call the function to fetch and display power supply assignment
             })
             .catch(error => {
-            console.error('Error adding power supply assignment:', error);
+                console.error('Error adding power supply assignment:', error);
             });
         });
+
 
         function showPowerSupplyAssignmentTable() {
             const tableContainer = document.getElementById('powerSupplyAssignmentTable');
@@ -1722,7 +1829,7 @@
         function generatePowerBusConfigTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Power Bus Config</caption>';
+            table += '<caption class="name2">Power Bus Configuration Details</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -1846,7 +1953,7 @@
         function generatePathsLoadsTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Paths/Loads</caption>';
+            table += '<caption class="name2">Power Supply Path and Loads</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -1959,7 +2066,7 @@
         function generateGSENetworkTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">GSE Network</caption>';
+            table += '<caption class="name2">GSE NET IP ADDRESSES</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -2067,7 +2174,7 @@
         function generateExternalPowerModeTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">External Power Mode</caption>';
+            table += '<caption class="name2">External Power Mode Voltage/Current Limits</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -2186,7 +2293,7 @@
         function generateDevicesTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Devices</caption>';
+            table += '<caption class="name2">Device Sampling Rates</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -2287,7 +2394,7 @@
         function generateChargeModeTable(data){
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Charge Mode</caption>';
+            table += '<caption class="name2">Battery Charge Mode Voltage/Current Limits</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -2408,7 +2515,7 @@
         function generateBatteryDefaultTable(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Battery Default</caption>';
+            table += '<caption class="name2">Battery Load Default Current Settings</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
@@ -2530,7 +2637,7 @@
         function generateBatteryAdresses(data) {
             let table = '<table class="table">';
             // Table caption (title)
-            table += '<caption class="name2">Battery Addresses</caption>';
+            table += '<caption class="name2">LI-ION Battery Serial Addresses</caption>';
             // Generate table header
             table += '<thead class="table-header">';
             table += '<tr>';
