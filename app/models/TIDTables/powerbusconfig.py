@@ -15,5 +15,5 @@ class PowerBusConfig(db.Model):
     bus_i_high = db.Column(db.String(255))
 
     def json(self):
-        return {'id': self.id, "power_supply": self.power_supply, 'battery': self.battery, 'component': self.component, 'ext_pwr': self.ext_pwr, 'int_pwr': self.int_pwr, 'bus_v_low': self.bus_v_low, 'bus_v_high': self.bus_v_high, 'bus_i_low': self.bus_i_low, 'bus_i_low': self.bus_i_high}
+        return {'id': self.id, "power_supply": self.power_supply, 'battery': self.battery, 'component': self.component, 'ext_pwr': self.ext_pwr, 'int_pwr': self.int_pwr, 'bus_v_low': self.bus_v_low, 'bus_v_high': self.bus_v_high, 'bus_i_low': self.bus_i_low, 'bus_i_high': self.bus_i_high}
     

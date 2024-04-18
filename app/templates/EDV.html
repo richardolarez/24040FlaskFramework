@@ -390,6 +390,213 @@
         </div>
         <!-- End of GSE Network Modal -->
 
+        <!-- Start of Paths/Loads Table -->
+        <div id="pathsLoadsTable"></div>
+        <!-- End of Paths/Loads Table -->
+
+        <!-- Start of Paths/Loads Modal -->
+        <div id="addPathLoadModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Path/Load</h2>
+            <form id="addPathLoadForm">
+            <label for="powerSupply">Power Supply:</label>
+            <select id="ps_pathsloads" name="ps_pathsloads" required>
+                <option value="">Select a power supply</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the power supply select element
+                    fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const powerSupplySelect_pathsloads = document.getElementById('ps_pathsloads');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                powerSupplySelect_pathsloads.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+            </select><br><br>
+            <label for="battery">Battery:</label>
+            <select id="batt_pathsloads" name="batt_pathsloads" required>
+                <option value="">Select a battery</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the battery select element
+                    fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const batterySelect_pathsloads = document.getElementById('batt_pathsloads');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                batterySelect_pathsloads.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+
+            </select><br><br>
+            <label for="ptmChannel">PTM Channel:</label>
+            <input type="text" id="ptmChannel" name="ptm_channel" required><br><br>
+            <label for="components">Components:</label>
+            <select id="components_pathsloads" name="components_pathsloads" required>
+                <option value="">Select a component</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the component select element
+                    fetch('/components/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const componentSelect_pathsloads = document.getElementById('components_pathsloads');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                componentSelect_pathsloads.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+            </select><br><br>
+            <label for="current">Current:</label>
+            <input type="text" id="current" name="current" required><br><br>
+            <label for="range">Range:</label>
+            <input type="text" id="range" name="range" required><br><br>
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of Paths/Loads Modal -->
+
+        <!-- Start of Power Bus Config Table -->
+        <div id="powerBusConfigTable"></div>
+        <!-- End of Power Bus Config Table -->
+
+        <!-- Start of Power Bus Config Modal -->
+        <div id="addPowerBusConfigModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Power Bus Config</h2>
+            <form id="addPowerBusConfigForm">
+            <label for="powerSupply">Power Supply:</label>
+            <select id="powerSupply_bus" name="power_supply_bus" required>
+                <option value="">Select a power supply</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the power supply select element
+                    fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const powerSupplySelect_bus = document.getElementById('powerSupply_bus');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                powerSupplySelect_bus.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+            </select><br><br>
+            <label for="battery">Battery:</label>
+            <select id="batteryName_PowerBusConfig" name="battery" required>
+                <option value="">Select a battery</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the battery select element
+                    fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const batterySelect_PowerBusConfig = document.getElementById('batteryName_PowerBusConfig');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                batterySelect_PowerBusConfig.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+            </select><br><br>
+            <label for="component" >Component:</label>
+            <select id="componentName_PowerBusConfig" name="componentName_PowerBusConfig" required>
+                <option value="">Select a component</option>
+                <!-- Fetch options from endpoint and populate the select element -->
+                <script>
+                    // Fetch and populate options for the component select element
+                    fetch('/components/' + sessionStorage.getItem("projectId"))
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (Array.isArray(data)) {
+                                            const componentSelect_PowerBusConfig = document.getElementById('componentName_PowerBusConfig');
+                                            data.forEach(item => {
+                                                const option = document.createElement('option');
+                                                option.value = item.componentName;
+                                                option.textContent = item.componentName;
+                                                componentSelect_PowerBusConfig.appendChild(option);
+                                            });
+                                        } else {
+                                            console.error('Invalid data format received from API');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching data:', error);
+                                    });
+                </script>
+            </select><br><br>
+            <label for="ext_pwr">External Power:</label>
+            <input type="text" id="ext_pwr" name="ext_pwr" required><br><br>
+            <label for="int_pwer">Internal Power:</label>
+            <input type="text" id="int_pwer" name="int_pwer" required><br><br>
+            <label for="bus_v_low">Bus Voltage Low:</label>
+            <input type="text" id="bus_v_low" name="bus_v_low" required><br><br>
+            <label for="bus_v_high">Bus Voltage High:</label>
+            <input type="text" id="bus_v_high" name="bus_v_high" required><br><br>
+            <label for="bus_i_low">Bus Current Low:</label>
+            <input type="text" id="bus_i_low" name="bus_i_low" required><br><br>
+            <label for="bus_i_high">Bus Current High:</label>
+            <input type="text" id="bus_i_high" name="bus_i_high" required><br><br>
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of Power Bus Config Modal -->
+
         
         <!-- Component Table -->
         <div id="tableContainer"></div>
@@ -399,6 +606,243 @@
     <!-- End of Logo Background -->  
 
     <script>
+        // ____________________ Power Bus Config Table ______________________________________________________
+        function showPowerBusConfig() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/power_bus_config/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.powerBusConfig = data;
+                        showPowerBusConfigTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generatePowerBusConfigTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Power Bus Config</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Power Supply</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">Component</th>';
+            table += '<th class="table-titles">External Power</th>';
+            table += '<th class="table-titles">Internal Power</th>';
+            table += '<th class="table-titles">Bus Voltage Low</th>';
+            table += '<th class="table-titles">Bus Voltage High</th>';
+            table += '<th class="table-titles">Bus Current Low</th>';
+            table += '<th class="table-titles">Bus Current High</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.power_supply}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.component}</td>`;
+                    table += `<td class="table-cell">${item.ext_pwr}</td>`;
+                    table += `<td class="table-cell">${item.int_pwr}</td>`;
+                    table += `<td class="table-cell">${item.bus_v_low}</td>`;
+                    table += `<td class="table-cell">${item.bus_v_high}</td>`;
+                    table += `<td class="table-cell">${item.bus_i_low}</td>`;
+                    table += `<td class="table-cell">${item.bus_i_high}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="10">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddPowerBusConfigModal()">Add New Power Bus Config</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new power bus config
+        // Function to open the modal
+        function openAddPowerBusConfigModal() {
+            var modal = document.getElementById('addPowerBusConfigModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addPowerBusConfigModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from power bus config modal
+        document.getElementById("addPowerBusConfigForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/power_bus_config', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            power_supply: formData.get('power_supply_bus'),
+            battery: formData.get('battery'),
+            component: formData.get('componentName_PowerBusConfig'),
+            ext_pwr: formData.get('ext_pwr'),
+            int_pwr: formData.get('int_pwer'),
+            bus_v_low: formData.get('bus_v_low'),
+            bus_v_high: formData.get('bus_v_high'),
+            bus_i_low: formData.get('bus_i_low'),
+            bus_i_high: formData.get('bus_i_high')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added power bus config object returned by the server
+            console.log('New power bus config added:', data);
+            // Close the modal
+            var modal = document.getElementById('addPowerBusConfigModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showPowerBusConfig(); // Call the function to fetch and display power bus config
+            })
+            .catch(error => {
+            console.error('Error adding power bus config:', error);
+            });
+        });
+
+        function showPowerBusConfigTable() {
+            const tableContainer = document.getElementById('powerBusConfigTable');
+            tableContainer.innerHTML = generatePowerBusConfigTable(window.powerBusConfig);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _________________________ End of Power Bus Config Table ______________________________________________________
+
+
+
+        //  __________________ Paths/Loads Table ______________________________________________________
+        function showPathsLoads() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/paths_loads/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.pathsLoads = data;
+                        showPathsLoadsTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generatePathsLoadsTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Paths/Loads</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Power Supply</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">PTM Channel</th>';
+            table += '<th class="table-titles">Components</th>';
+            table += '<th class="table-titles">Current</th>';
+            table += '<th class="table-titles">Range</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.power_supply}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.ptm_channel}</td>`;
+                    table += `<td class="table-cell">${item.components}</td>`;
+                    table += `<td class="table-cell">${item.current}</td>`;
+                    table += `<td class="table-cell">${item.range_}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="6">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddPathLoadModal()">Add New Path/Load</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new path/load
+        // Function to open the modal
+        function openAddPathLoadModal() {
+            var modal = document.getElementById('addPathLoadModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addPathLoadModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from path/load modal
+        document.getElementById("addPathLoadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/paths_loads', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            power_supply: formData.get('ps_pathsloads'),
+            battery: formData.get('batt_pathsloads'),
+            ptm_channel: formData.get('ptm_channel'),
+            components: formData.get('components_pathsloads'),
+            current: formData.get('current'),
+            range_: formData.get('range')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added path/load object returned by the server
+            console.log('New path/load added:', data);
+            // Close the modal
+            var modal = document.getElementById('addPathLoadModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showPathsLoads(); // Call the function to fetch and display paths/loads
+            })
+            .catch(error => {
+            console.error('Error adding path/load:', error);
+            });
+        });
+
+        function showPathsLoadsTable() {
+            const tableContainer = document.getElementById('pathsLoadsTable');
+            tableContainer.innerHTML = generatePathsLoadsTable(window.pathsLoads);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _________________________ End of Paths/Loads Table ______________________________________________________
+
         // _________________________ GSE Network Table ______________________________________________________
         function showGSENetwork() {
             var projectId = sessionStorage.getItem("projectId");
@@ -1117,6 +1561,8 @@
       window.addEventListener('DOMContentLoaded', showDevices);
       window.addEventListener('DOMContentLoaded', showExternalPowerMode);
       window.addEventListener('DOMContentLoaded', showGSENetwork);
+      window.addEventListener('DOMContentLoaded', showPathsLoads);
+      window.addEventListener('DOMContentLoaded', showPowerBusConfig);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");

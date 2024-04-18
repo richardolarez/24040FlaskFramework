@@ -261,11 +261,29 @@ def get_paths_loads(project_id):
     paths_loads = PathsLoads.query.filter_by(projectID=project_id).all()
     return jsonify([paths_loads.json() for paths_loads in paths_loads])
 
+# Post PathsLoads for a specific project
+@app.route('/paths_loads', methods=['POST'])
+def post_paths_loads():
+    data = request.get_json()
+    paths_loads = PathsLoads(projectID=data['projectID'], power_supply=data['power_supply'], battery=data['battery'], ptm_channel=data['ptm_channel'], components=data['components'], current=data['current'], range_=data['range_'])
+    db.session.add(paths_loads)
+    db.session.commit()
+    return {'id': paths_loads.id}
+
 # Get Power Bus Config for a specific project
 @app.route('/power_bus_config/<int:project_id>', methods=['GET'])
 def get_power_bus_config(project_id):
     power_bus_config = PowerBusConfig.query.filter_by(projectID=project_id).all()
     return jsonify([power_bus_config.json() for power_bus_config in power_bus_config])
+
+# Post Power Bus Config for a specific project
+@app.route('/power_bus_config', methods=['POST'])
+def post_power_bus_config():
+    data = request.get_json()
+    power_bus_config = PowerBusConfig(projectID=data['projectID'], power_supply=data['power_supply'], battery=data['battery'], component=data['component'], ext_pwr=data['ext_pwr'], int_pwr=data['int_pwr'], bus_v_low=data['bus_v_low'], bus_v_high=data['bus_v_high'], bus_i_low=data['bus_i_low'], bus_i_high=data['bus_i_high'])
+    db.session.add(power_bus_config)
+    db.session.commit()
+    return {'id': power_bus_config.id}
 
 # Get PowerSupply for a specific project
 @app.route('/power_supply/<int:project_id>', methods=['GET'])
