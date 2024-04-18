@@ -86,11 +86,9 @@ def login():
 		# Check if the password entered is the 
 		# same as the user's password
 		if bcrypt.check_password_hash(user.password, request.form.get("password")):
-		# Use the login_user method to log in the user
+		    # Use the login_user method to log in the user
 			login_user(user)
 			return redirect(url_for("home_page"))
-	# Redirect the user back to the home
-	# (we'll create the home route in a moment)
 	return render_template("login.html")
 
 
@@ -426,6 +424,7 @@ def create_project():
     return {'id': project.id}
 
 
+
 ####################### Export Project ########################
 from exportProject import export_Project
 from flask import send_file
@@ -434,12 +433,19 @@ from flask import send_file
 def export_project(project_id):
     # Export the project and get the byte content of the document
     doc_content = export_Project(project_id)
+
+    project = Projects.query.filter_by(id=project_id).first()
+    # get project name
+    project = project.project
+    
+    # Define the filename with project_id included
+    filename = f'project_{project}_document.docx'
     
     # Send the byte content of the document as a file attachment with specified filename
     return send_file(BytesIO(doc_content),
                      mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
                      as_attachment=True,
-                     download_name='generated_document.docx')
+                     download_name=filename)
 ####################### VIEWS / PAGE ROUTES ########################
 @app.route("/logout")
 def logout():

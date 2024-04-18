@@ -16,7 +16,8 @@
             right: 0;
             overflow-y: auto;
             position: relative;
-            height: calc(100vh - 100px);   
+            height: calc(100vh - 100px);
+            width: auto;   
         }
         .left, .right {
             flex: 1; /* Each section takes up equal space */
@@ -44,6 +45,21 @@
             width: auto; /* Adjust the width as desired */
             height: auto; /* Adjust the height as desired */
         }
+
+        .exportModal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            overflow: auto; /* Enable scroll if needed */
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: black; /* Solid black background */
+            width: 60%; /* Adjust the width as desired */
+            height: 60%; /* Adjust the height as desired */
+        }
     </style>
 </head>
 
@@ -65,12 +81,12 @@
     </div>
 
   <!-- Export Project Confirmation Modal -->
-<div id="exportProjectModal" class="modal">
+<div id="exportProjectModal" class="exportModal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Export Project</h2>
-        <p>Are you sure you want to export the project?</p>
-        <button id="confirmExportBtn">Export</button>
+        <p>This action will download the tables in there current state. If you would like to continue please click Download</p>
+        <button id="confirmExportBtn">Download</button>
     </div>
 </div>
 
