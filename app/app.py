@@ -151,6 +151,12 @@ def get_batteries(project_id):
     batteries = Component.query.filter_by(projectId=project_id, componentType='[Li-Ion Batt]').all()
     return jsonify([battery.json() for battery in batteries])
 
+# Get [PS] components for a specific project
+@app.route('/power_supplies/<int:project_id>', methods=['GET'])
+def get_power_supplies(project_id):
+    power_supplies = Component.query.filter_by(projectId=project_id, componentType='[PS]').all()
+    return jsonify([power_supply.json() for power_supply in power_supplies])
+
 ####################### TID Tables ########################
 # Get battery Addresses for a specific project
 @app.route('/battery_addresses/<int:project_id>', methods=['GET'])
@@ -188,6 +194,15 @@ def post_battery_default():
 def get_charge_mode(project_id):
     charge_mode = ChargeMode.query.filter_by(projectID=project_id).all()
     return jsonify([charge_mode.json() for charge_mode in charge_mode])
+
+# Post ChargeMode for a specific project
+@app.route('/charge_mode', methods=['POST'])
+def post_charge_mode():
+    data = request.get_json()
+    charge_mode = ChargeMode(projectID=data['projectID'], power_supply=data['power_supply'], battery=data['battery'], voltage_setting=data['voltage_setting'], ovp=data['ovp'], current_setting=data['current_setting'], current_limit=data['current_limit'], red_green_voltage_limits=data['red_green_voltage_limits'], red_green_current_limits=data['red_green_current_limits'])
+    db.session.add(charge_mode)
+    db.session.commit()
+    return {'id': charge_mode.id}
 
 # Get Devices for a specific project
 @app.route('/devices/<int:project_id>', methods=['GET'])

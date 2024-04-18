@@ -172,9 +172,57 @@
             <h2>Add New Charge Mode</h2>
             <form id="addChargeModeForm">
                 <label for="powerSupply">Power Supply:</label>
-                <input type="text" id="powerSupply" name="power_supply" required><br><br>
+                <select id="powerSupply" name="power_supply" required>
+                    <option value="">Select a power supply</option>
+                    <!-- Fetch options from endpoint and populate the select element -->
+                    <script>
+                        // Fetch and populate options for the power supply select element
+                        fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (Array.isArray(data)) {
+                                                const powerSupplySelect = document.getElementById('powerSupply');
+                                                data.forEach(item => {
+                                                    const option = document.createElement('option');
+                                                    option.value = item.componentName;
+                                                    option.textContent = item.componentName;
+                                                    powerSupplySelect.appendChild(option);
+                                                });
+                                            } else {
+                                                console.error('Invalid data format received from API');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error fetching data:', error);
+                                        });
+                    </script>
+                </select><br><br>
                 <label for="battery">Battery:</label>
-                <input type="text" id="battery" name="battery" required><br><br>
+                <select id="batteryName_ChargeMode" name="battery" required>
+                    <option value="">Select a battery</option>
+                    <!-- Fetch options from endpoint and populate the select element -->
+                    <script>
+                        // Fetch and populate options for the battery select element
+                        fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (Array.isArray(data)) {
+                                                const batterySelect_ChargeMode = document.getElementById('batteryName_ChargeMode');
+                                                data.forEach(item => {
+                                                    const option = document.createElement('option');
+                                                    option.value = item.componentName;
+                                                    option.textContent = item.componentName;
+                                                    batterySelect_ChargeMode.appendChild(option);
+                                                });
+                                            } else {
+                                                console.error('Invalid data format received from API');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error fetching data:', error);
+                                        });
+                    </script>
+                </select><br><br>
                 <label for="voltageSetting">Voltage Setting:</label>
                 <input type="text" id="voltageSetting" name="voltage_setting" required><br><br>
                 <label for="ovp">OVP:</label>
@@ -193,8 +241,27 @@
         </div>
         <!-- End of Charge Mode Modal -->
 
+        <!-- Start of Devices Table -->
+        <div id="devicesTable"></div>
+        <!-- End of Devices Table -->
+        
+        <!-- Start of Devices Modal -->
+        <div id="addDeviceModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Device</h2>
+            <form id="addDeviceForm"></form>
+                <label for="deviceName">Device Name:</label>
+                <input type="text" id="deviceName" name="device_name" required><br><br>
+                <label for="samplingRate">Sampling Rate:</label>
+                <input type="text" id="samplingRate" name="sampling_rate" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of Devices Modal -->
 
-
+        
         <!-- Component Table -->
         <div id="tableContainer"></div>
         <!-- End of Tables -->
@@ -588,6 +655,7 @@
       window.addEventListener('DOMContentLoaded', showBatteryAdresses);
       window.addEventListener('DOMContentLoaded', showComponents);
       window.addEventListener('DOMContentLoaded', showBatteryDefault);
+      window.addEventListener('DOMContentLoaded', showChargeMode);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");
