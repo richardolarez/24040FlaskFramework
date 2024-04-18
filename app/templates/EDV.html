@@ -286,6 +286,110 @@
         </div>
         <!-- End of Devices Modal -->
 
+        <!-- Start of External Power Mode Table -->
+        <div id="externalPowerModeTable"></div>
+        <!-- End of External Power Mode Table -->
+
+        <!-- Start of External Power Mode Modal -->
+        <div id="addExternalPowerModeModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New External Power Mode</h2>
+            <form id="addExternalPowerModeForm">
+                <label for="powerSupply">Power Supply:</label>
+                <select id="powerSupply_ex" name="power_supply" required>
+                    <option value="">Select a power supply</option>
+                    <!-- Fetch options from endpoint and populate the select element -->
+                    <script>
+                        // Fetch and populate options for the power supply select element
+                        fetch('/power_supplies/' + sessionStorage.getItem("projectId"))
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (Array.isArray(data)) {
+                                                const powerSupplySelect_ex = document.getElementById('powerSupply_ex');
+                                                data.forEach(item => {
+                                                    const option = document.createElement('option');
+                                                    option.value = item.componentName;
+                                                    option.textContent = item.componentName;
+                                                    powerSupplySelect_ex.appendChild(option);
+                                                });
+                                            } else {
+                                                console.error('Invalid data format received from API');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error fetching data:', error);
+                                        });
+                    </script>
+                </select><br><br>
+                <label for="battery">Battery:</label>
+                <select id="batteryName_ExternalPowerMode" name="battery" required>
+                    <option value="">Select a battery</option>
+                    <!-- Fetch options from endpoint and populate the select element -->
+                    <script>
+                        // Fetch and populate options for the battery select element
+                        fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (Array.isArray(data)) {
+                                                const batterySelect_ExternalPowerMode = document.getElementById('batteryName_ExternalPowerMode');
+                                                data.forEach(item => {
+                                                    const option = document.createElement('option');
+                                                    option.value = item.componentName;
+                                                    option.textContent = item.componentName;
+                                                    batterySelect_ExternalPowerMode.appendChild(option);
+                                                });
+                                            } else {
+                                                console.error('Invalid data format received from API');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error fetching data:', error);
+                                        });
+                    </script>
+                </select><br><br>
+                <label for="voltageSetting">Voltage Setting:</label>
+                <input type="text" id="voltageSetting" name="voltage_setting" required><br><br>
+                <label for="ovp">OVP:</label>
+                <input type="text" id="ovp" name="ovp" required><br><br>
+                <label for="currentSetting">Current Setting:</label>
+                <input type="text" id="currentSetting" name="current_setting" required><br><br>
+                <label for="currentLimit">Current Limit:</label>
+                <input type="text" id="currentLimit" name="current_limit" required><br><br>
+                <label for="redGreenCurrentLimits">Red Green Current Limits:</label>
+                <input type="text" id="redGreenCurrentLimits" name="red_green_current_limits" required><br><br>
+                <label for="redGreenVoltageLimits">Red Green Voltage Limits:</label>
+                <input type="text" id="redGreenVoltageLimits" name="red_green_voltage_limits" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of External Power Mode Modal -->
+
+        <!-- Start of GSE Network Table -->
+        <div id="gseNetworkTable"></div>
+        <!-- End of GSE Network Table -->
+
+        <!-- Start of GSE Network Modal -->
+        <div id="addGSENetworkModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New GSE Network</h2>
+            <form id="addGSENetworkForm">
+            <label for="gseNetDevice">GSE Net Device:</label>
+            <input type="text" id="gseNetDevice" name="gse_net_device" required><br><br>
+            <label for="ipAddress">IP Address:</label>
+            <input type="text" id="ipAddress" name="ip_address" required><br><br>
+            <label for="subNetMask">Subnet Mask:</label>
+            <input type="text" id="subNetMask" name="sub_net_mask" required><br><br>
+            <label for="hostName">Host Name:</label>
+            <input type="text" id="hostName" name="host_name" required><br><br>
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of GSE Network Modal -->
+
         
         <!-- Component Table -->
         <div id="tableContainer"></div>
@@ -295,6 +399,233 @@
     <!-- End of Logo Background -->  
 
     <script>
+        // _________________________ GSE Network Table ______________________________________________________
+        function showGSENetwork() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/gse_network/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.gseNetwork = data;
+                        showGSENetworkTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generateGSENetworkTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">GSE Network</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">GSE Net Device</th>';
+            table += '<th class="table-titles">IP Address</th>';
+            table += '<th class="table-titles">Subnet Mask</th>';
+            table += '<th class="table-titles">Host Name</th>';
+
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.gse_net_device}</td>`;
+                    table += `<td class="table-cell">${item.ip_address}</td>`;
+                    table += `<td class="table-cell">${item.sub_net_mask}</td>`;
+                    table += `<td class="table-cell">${item.host_name}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="4">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddGSENetworkModal()">Add New GSE Network</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new GSE network
+        // Function to open the modal
+        function openAddGSENetworkModal() {
+            var modal = document.getElementById('addGSENetworkModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addGSENetworkModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from GSE network modal
+        document.getElementById("addGSENetworkForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/gse_network', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            gse_net_device: formData.get('gse_net_device'),
+            ip_address: formData.get('ip_address'),
+            sub_net_mask: formData.get('sub_net_mask'),
+            host_name: formData.get('host_name')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added GSE network object returned by the server
+            console.log('New GSE network added:', data);
+            // Close the modal
+            var modal = document.getElementById('addGSENetworkModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showGSENetwork(); // Call the function to fetch and display GSE networks
+            })
+            .catch(error => {
+            console.error('Error adding GSE network:', error);
+            });
+        });
+
+        function showGSENetworkTable() {
+            const tableContainer = document.getElementById('gseNetworkTable');
+            tableContainer.innerHTML = generateGSENetworkTable(window.gseNetwork);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _______________________________________ End of GSE Network Table _______________________________________
+
+        // _____________________ External Mode Table ______________________________________________________
+        function showExternalPowerMode() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/external_mode/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.externalPowerMode = data;
+                        showExternalPowerModeTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generateExternalPowerModeTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">External Power Mode</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Power Supply</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">Voltage Setting</th>';
+            table += '<th class="table-titles">OVP</th>';
+            table += '<th class="table-titles">Current Setting</th>';
+            table += '<th class="table-titles">Current Limit</th>';
+            table += '<th class="table-titles">Red Green Current Limits</th>';
+            table += '<th class="table-titles">Red Green Voltage Limits</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.power_supply}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.voltage_setting}</td>`;
+                    table += `<td class="table-cell">${item.ovp}</td>`;
+                    table += `<td class="table-cell">${item.current_setting}</td>`;
+                    table += `<td class="table-cell">${item.current_limit}</td>`;
+                    table += `<td class="table-cell">${item.red_green_current_limits}</td>`;
+                    table += `<td class="table-cell">${item.red_green_voltage_limits}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="9">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddExternalPowerModeModal()">Add New External Power Mode</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new external power mode
+        // Function to open the modal
+        function openAddExternalPowerModeModal() {
+            var modal = document.getElementById('addExternalPowerModeModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addExternalPowerModeModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from external power mode modal
+        document.getElementById("addExternalPowerModeForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/external_mode', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            power_supply: formData.get('power_supply'),
+            battery: formData.get('battery'),
+            voltage_setting: formData.get('voltage_setting'),
+            ovp: formData.get('ovp'),
+            current_setting: formData.get('current_setting'),
+            current_limit: formData.get('current_limit'),
+            red_green_current_limits: formData.get('red_green_current_limits'),
+            red_green_voltage_limits: formData.get('red_green_voltage_limits')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added external power mode object returned by the server
+            console.log('New external power mode added:', data);
+            // Close the modal
+            var modal = document.getElementById('addExternalPowerModeModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showExternalPowerMode(); // Call the function to fetch and display external power modes
+            })
+            .catch(error => {
+            console.error('Error adding external power mode:', error);
+            });
+        });
+
+        function showExternalPowerModeTable() {
+            const tableContainer = document.getElementById('externalPowerModeTable');
+            tableContainer.innerHTML = generateExternalPowerModeTable(window.externalPowerMode);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _______________________________________ End of External Mode Table _______________________________________
+
         // _______- Devices Table______________________________________________________
         function showDevices() {
             var projectId = sessionStorage.getItem("projectId");
@@ -784,6 +1115,8 @@
       window.addEventListener('DOMContentLoaded', showBatteryDefault);
       window.addEventListener('DOMContentLoaded', showChargeMode);
       window.addEventListener('DOMContentLoaded', showDevices);
+      window.addEventListener('DOMContentLoaded', showExternalPowerMode);
+      window.addEventListener('DOMContentLoaded', showGSENetwork);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");

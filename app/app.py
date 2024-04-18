@@ -225,11 +225,35 @@ def post_devices():
     db.session.commit()
     return {'id': devices.id}
 
+# Get External Mode for a specific project
+@app.route('/external_mode/<int:project_id>', methods=['GET'])
+def get_external_mode(project_id):
+    external_mode = ExternalMode.query.filter_by(projectID=project_id).all()
+    return jsonify([external_mode.json() for external_mode in external_mode])
+
+# Post External Mode for a specific project
+@app.route('/external_mode', methods=['POST'])
+def post_external_mode():
+    data = request.get_json()
+    external_mode = ExternalMode(projectID=data['projectID'], power_supply=data['power_supply'], battery=data['battery'], voltage_setting=data['voltage_setting'], ovp=data['ovp'], current_setting=data['current_setting'], current_limit=data['current_limit'], red_green_voltage_limits=data['red_green_voltage_limits'], red_green_current_limits=data['red_green_current_limits'])
+    db.session.add(external_mode)
+    db.session.commit()
+    return {'id': external_mode.id}
+
 # Get GSENetwork for a specific project
 @app.route('/gse_network/<int:project_id>', methods=['GET'])
 def get_gse_network(project_id):
     gse_network = GSENetwork.query.filter_by(projectID=project_id).all()
     return jsonify([gse_network.json() for gse_network in gse_network])
+
+# Post GSENetwork for a specific project
+@app.route('/gse_network', methods=['POST'])
+def post_gse_network():
+    data = request.get_json()
+    gse_network = GSENetwork(projectID=data['projectID'], gse_net_device=data['gse_net_device'], ip_address=data['ip_address'], sub_net_mask=data['sub_net_mask'], host_name=data['host_name'])
+    db.session.add(gse_network)
+    db.session.commit()
+    return {'id': gse_network.id}
 
 # Get PathsLoads for a specific project
 @app.route('/paths_loads/<int:project_id>', methods=['GET'])
