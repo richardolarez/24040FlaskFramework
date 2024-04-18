@@ -14,7 +14,7 @@ import os
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+#app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Set the SECRET_KEY configuration option
 
@@ -114,6 +114,13 @@ def upload_file():
         return 'File uploaded successfully'
 
 import zipfile
+
+def find_xml_file(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == 'data.xml':
+                return os.path.join(root, file)
+    return None
 
 
 def decompress_file(filename):
@@ -398,6 +405,7 @@ def get_components(project_id):
     components = Component.query.filter_by(projectId=project_id).all()
     return jsonify([component.json() for component in components])
 
+from parse import parseXML
 
 # Create a new project
 @app.route('/project', methods=['POST'])
@@ -406,7 +414,14 @@ def create_project():
     project = Projects(project=data['name'])
     db.session.add(project)
     db.session.commit()
-    # newProjectID = project.id
+    newProjectID = project.id
+    xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+    if xml_file_path:
+        output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
+        componentList = parseXML(xml_file_path, output_file_path, newProjectID)
+        for i in componentList: 
+            db.session.add(i)
+            db.session.commit()
     return {'id': project.id}
 
 
