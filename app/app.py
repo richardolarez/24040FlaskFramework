@@ -9,12 +9,12 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_bcrypt import Bcrypt
 from docx import Document
 import os
-import parse
+
 
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+#app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Set the SECRET_KEY configuration option
 
@@ -256,6 +256,7 @@ def get_components(project_id):
     components = Component.query.filter_by(projectId=project_id).all()
     return jsonify([component.json() for component in components])
 
+from parse import parseXML
 
 # Create a new project
 @app.route('/project', methods=['POST'])
@@ -268,7 +269,7 @@ def create_project():
     xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
     if xml_file_path:
         output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
-        componentList = parse.parseXML(xml_file_path, output_file_path, newProjectID)
+        componentList = parseXML(xml_file_path, output_file_path, newProjectID)
         for i in componentList: 
             db.session.add(i)
             db.session.commit()
