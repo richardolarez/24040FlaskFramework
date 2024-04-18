@@ -32,9 +32,6 @@
         .footer{
             align-content: center;
         }
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 
@@ -62,82 +59,45 @@
       
       <!-- Start of main body -->
       <div id="tables-container"></div>
-      <div id="tableContainer">
-        <h3 class="name2">Project Components</h3>
+      <div id="batteryAdressesTable">
+        <button onclick="addBatteryAddressRow()">Add Row</button>
+        <table id="batteryTable" class="table">
+            <!-- Table content generated dynamically -->
+        </table>
+        <button onclick="saveBatteryAddresses()">Save Changes</button>
       </div>
+      <div id="tableContainer"></div>
     </div>
 
   </div>
   </body>
 
     <script>
-        function addRow() {
-            var table = document.getElementById("myTable");
-            var newRow = table.insertRow(table.rows.length);
-            var cell1 = newRow.insertCell(0);
-            var cell2 = newRow.insertCell(1);
-            cell1.innerHTML = '<td>...</td>';
-            cell2.innerHTML = '<td>...</td>';
-            cell1.setAttribute("contenteditable", "true");
-            cell2.setAttribute("contenteditable", "true");
-        }
-        function deleteRow() {
-            var table = document.getElementById("myTable");
-            var lastRowIndex = table.rows.length - 1;
-            table.deleteRow(lastRowIndex);
-        }
-
-
-      function showTables() {
-            fetch('/tid_tables/1')
+        function showBatteryAdresses() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/battery_addresses/' + projectId)
                 .then(response => response.json())
                 .then(data => {
-                    // Generate tables dynamically
-                    Object.keys(data).forEach(tableKey => {
-                        let tableData = data[tableKey];
-                        let tableHTML = '<h2>' + tableKey + '</h2><table class="table"><thead class="table-header"><tr>';
-
-                        // If tableData is not empty, generate table headers from the first row
-                        if (tableData.length > 0) {
-                            Object.keys(tableData[0]).forEach(header => {
-                                tableHTML += '<th class="table-titles">' + header + '</th>';
-                            });
-                            tableHTML += '</tr></thead><tbody class="table-body">';
-
-                            // Generate table body
-                            tableData.forEach(row => {
-                                tableHTML += '<tr>';
-                                Object.values(row).forEach(value => {
-                                    tableHTML += '<td>' + value + '</td>';
-                                });
-                                tableHTML += '</tr>';
-                            });
-                        } else {
-                            // If tableData is empty, generate an empty row with table headers
-                            Object.keys(data[tableKey]).forEach(header => {
-                                tableHTML += '<th class="table-titles">' + header + '</th>';
-                            });
-                            tableHTML += '</tr></thead><tbody class="table-body"><tr><td colspan="' + Object.keys(data[tableKey]).length + '">No data available</td></tr>';
-                        }
-
-                        tableHTML += '</tbody></table>';
-                        document.getElementById('tables-container').innerHTML += tableHTML;
-                    });
+                    if (Array.isArray(data)) {
+                        window.batteryAdresses = data;
+                        showBatteryAdressesTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
                 })
-                .catch(error => console.error('Error fetching data:', error));
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
         }
 
-
         function showComponents() {
-            // Retrieve the project id from session storage
             var projectId = sessionStorage.getItem("projectId");
-            // Fetch components using the session storage project id
             fetch('/components/' + projectId)
                 .then(response => response.json())
                 .then(data => {
                     if (Array.isArray(data)) {
                         window.tableItems = data;
-                        showTable(); // Initial table update when it's shown for the first time
+                        showTable();
                     } else {
                         console.error('Invalid data format received from API');
                     }
@@ -148,39 +108,83 @@
         }
 
 
-        function generateTable(data) {
-        let table = '<table class="table">';
-        // Generate table header
-        table += '<thead class="table-header">';
-        table += '<tr>';
-        for (const key in data[0]) {
-          table += `<th class="table-titles">${key}</th>`;
+        function generateBatteryAdresses(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Battery Addresses</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">RS485 Address</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.rs485_address}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="3">No data available</td></tr>';
+            }
+            table += '</tbody>';
+            table += '</table>';
+            return table;
         }
-        table += '</tr>';
-        table += '</thead>';
-        // Generate table body
-        table += '<tbody class="table-body">';
-        data.forEach(item => {
-          table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
-          for (const key in item) {
-        table += `<td class="table-cell">${item[key]}</td>`;
-          }
+
+        function generateComponentTable(data) {
+          let table = '<table class="table">';
+          // Table caption (title)
+          table += '<caption class="name2">Project Identified Components</caption>';
+          // Generate table header
+          table += '<thead class="table-header">';
+          table += '<tr>';
+          table += '<th class="table-titles">ID</th>';
+          table += '<th class="table-titles">Component</th>';
+          table += '<th class="table-titles">Type</th>';
+          table += '<th class="table-titles">Description</th>';
           table += '</tr>';
-        });
-        table += '</tbody>';
-        table += '</table>';
-        return table;
+          table += '</thead>';
+          // Generate table body
+          table += '<tbody class="table-body">';
+          if (data.length > 0) {
+              data.forEach(item => {
+                  table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
+                  table += `<td class="table-cell">${item.id}</td>`;
+                  table += `<td class="table-cell">${item.component}</td>`;
+                  table += `<td class="table-cell">${item.type}</td>`;
+                  table += `<td class="table-cell">${item.description}</td>`;
+                  table += '</tr>';
+              });
+          } else {
+              table += '<tr><td colspan="4">No data available</td></tr>';
+          }
+          table += '</tbody>';
+          table += '</table>';
+          return table;
+        }
+      
+      function showBatteryAdressesTable() {
+          const tableContainer = document.getElementById('batteryAdressesTable');
+          tableContainer.innerHTML = generateBatteryAdresses(window.batteryAdresses);
+          tableContainer.classList.remove('hidden');
       }
 
       function showTable() {
-        const tableContainer = document.getElementById('tableContainer');
-        tableContainer.innerHTML = generateTable(window.tableItems);
-        tableContainer.classList.remove('hidden');
+            const tableContainer = document.getElementById('tableContainer');
+            tableContainer.innerHTML = generateComponentTable(window.tableItems);
+            tableContainer.classList.remove('hidden');
       }
 
-        // Call the function to show tables when the page is loaded
-      window.addEventListener('DOMContentLoaded', showTables());
-      window.addEventListener('DOMContentLoaded', showComponents());
+      // Register event listeners without invoking the functions
+      window.addEventListener('DOMContentLoaded', showBatteryAdresses);
+      window.addEventListener('DOMContentLoaded', showComponents);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");
@@ -189,8 +193,6 @@
       document.getElementById("projectName").innerText = projectName;
 
       // Retrieve the project id from session storage
-      var projectId = sessionStorage.getItem("projectId");
-
-        
+      var projectId = sessionStorage.getItem("projectId"); 
     </script>
 </html>

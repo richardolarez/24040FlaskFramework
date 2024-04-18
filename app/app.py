@@ -152,6 +152,17 @@ def get_battery_addresses(project_id):
     battery_addresses = BatteryAddresses.query.filter_by(projectID=project_id).all()
     return jsonify([battery_addresses.json() for battery_addresses in battery_addresses])
 
+# Save Changes to Battery Addresses
+@app.route('/battery_addresses', methods=['POST'])
+def save_battery_addresses():
+    data = request.get_json()
+    for battery_address in data:
+        battery = BatteryAddresses.query.get(battery_address['id'])
+        battery.battery = battery_address['battery']
+        battery.rs485_address = battery_address['rs485_address']
+        db.session.commit()
+    return {'message': 'Battery Addresses saved successfully'}
+
 # Get battery Default for a specific project
 @app.route('/battery_default/<int:project_id>', methods=['GET'])
 def get_battery_default(project_id):
@@ -194,7 +205,41 @@ def get_power_supply(project_id):
     power_supply = PowerSupply.query.filter_by(projectID=project_id).all()
     return jsonify([power_supply.json() for power_supply in power_supply])
 
-# Get Poser
+# Get Power Supply Summary for a specific project
+@app.route('/power_supply_summary/<int:project_id>', methods=['GET'])
+def get_power_supply_summary(project_id):
+    power_supply_summary = PowerSupplySummary.query.filter_by(projectID=project_id).all()
+    return jsonify([power_supply_summary.json() for power_supply_summary in power_supply_summary])
+
+# Get Power Supply Assignments for a specific project
+@app.route('/power_supply_assign/<int:project_id>', methods=['GET'])
+def get_power_supply_assign(project_id):
+    power_supply_assign = PowerSupplyAssign.query.filter_by(projectID=project_id).all()
+    return jsonify([power_supply_assign.json() for power_supply_assign in power_supply_assign])
+
+# Get Telemetry Network for a specific project
+@app.route('/telemetry_network/<int:project_id>', methods=['GET'])
+def get_telemetry_network(project_id):
+    telemetry_network = TelemetryNetwork.query.filter_by(projectID=project_id).all()
+    return jsonify([telemetry_network.json() for telemetry_network in telemetry_network])
+
+# Get UEIDaq for a specific project
+@app.route('/uei_daq/<int:project_id>', methods=['GET'])
+def get_uei_daq(project_id):
+    uei_daq = UEIDaq.query.filter_by(projectID=project_id).all()
+    return jsonify([uei_daq.json() for uei_daq in uei_daq])
+
+# Get Vehicle Battery for a specific project
+@app.route('/vehicle_battery/<int:project_id>', methods=['GET'])
+def get_vehicle_battery(project_id):
+    vehicle_battery = VehicleBattery.query.filter_by(projectID=project_id).all()
+    return jsonify([vehicle_battery.json() for vehicle_battery in vehicle_battery])
+
+# Get Vehicle Network for a specific project
+@app.route('/vehicle_network/<int:project_id>', methods=['GET'])
+def get_vehicle_network(project_id):
+    vehicle_network = VehicleNetwork.query.filter_by(projectID=project_id).all()
+    return jsonify([vehicle_network.json() for vehicle_network in vehicle_network])
 
 ######################## End of TID Tables ########################
     
@@ -212,7 +257,7 @@ def create_project():
     project = Projects(project=data['name'])
     db.session.add(project)
     db.session.commit()
-    newProjectID = project.id
+    # newProjectID = project.id
     return {'id': project.id}
 
 

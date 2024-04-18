@@ -1,5 +1,5 @@
 from app import db
-from models import Projects, TIDTableRelationships, ChargeMode, Devices, GSENetwork, PathsLoads, PowerBusConfig, PowerSupply, PowerSupplyAssign, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, BatteryDefault, TIDTables, Component, ExternalMode
+from models import Projects, ChargeMode, Devices, GSENetwork, PathsLoads, PowerBusConfig, PowerSupply, PowerSupplyAssign, PowerSupplySummary, TelemetryNetwork, VehicleBattery, VehicleNetwork, UEIDaq, BatteryAddresses, BatteryDefault, TIDTables, Component, ExternalMode
 from docx import Document
 from docx.shared import Pt
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
