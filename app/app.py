@@ -145,6 +145,12 @@ def get_projects():
     projects = Projects.query.all()
     return jsonify([project.json() for project in projects])
 
+# Get [Li-Ion Batt] components for a specific project
+@app.route('/batteries/<int:project_id>', methods=['GET'])
+def get_batteries(project_id):
+    batteries = Component.query.filter_by(projectId=project_id, componentType='[Li-Ion Batt]').all()
+    return jsonify([battery.json() for battery in batteries])
+
 ####################### TID Tables ########################
 # Get battery Addresses for a specific project
 @app.route('/battery_addresses/<int:project_id>', methods=['GET'])
@@ -152,16 +158,15 @@ def get_battery_addresses(project_id):
     battery_addresses = BatteryAddresses.query.filter_by(projectID=project_id).all()
     return jsonify([battery_addresses.json() for battery_addresses in battery_addresses])
 
-# Save Changes to Battery Addresses
+# Post battery Addresses for a specific project
 @app.route('/battery_addresses', methods=['POST'])
-def save_battery_addresses():
+def post_battery_addresses():
     data = request.get_json()
-    for battery_address in data:
-        battery = BatteryAddresses.query.get(battery_address['id'])
-        battery.battery = battery_address['battery']
-        battery.rs485_address = battery_address['rs485_address']
-        db.session.commit()
-    return {'message': 'Battery Addresses saved successfully'}
+    battery_addresses = BatteryAddresses(projectID=data['projectID'], battery=data['battery'], rs485_address=data['rs485_address'])
+    db.session.add(battery_addresses)
+    db.session.commit()
+    return {'id': battery_addresses.id}
+
 
 # Get battery Default for a specific project
 @app.route('/battery_default/<int:project_id>', methods=['GET'])

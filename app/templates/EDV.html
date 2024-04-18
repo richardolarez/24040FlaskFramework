@@ -13,8 +13,10 @@
             width: 90%;
         }
         .container {
-            display: flex;
-            height: 90vh; /* Full height of the viewport */      
+            right: 0;
+            overflow-y: auto;
+            position: relative;
+            height: calc(100vh - 100px);   
         }
         .left, .right {
             flex: 1; /* Each section takes up equal space */
@@ -23,14 +25,24 @@
             align-items: center;
             text-align: center;
             justify-content: flex-start;
-        }   
-        .componentDropdown {
-            width: 90%; /* Adjust this value to fill more of the container */
-            max-width: 400px; /* Optional: Set a max width for larger screens */
-            margin: 10px auto; /* Center the dropdowns horizontally within their container */
-        }
+        }        
+        
         .footer{
             align-content: center;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            overflow: auto; /* Enable scroll if needed */
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgb(7, 7, 7); /* Fallback color */
+            background-color: rgba(7, 7, 7, 0.9); /* Black w/ opacity */
         }
     </style>
 </head>
@@ -52,27 +64,83 @@
         </ul>
       </div>
 
-    <!-- Logo Background -->
+    <!-- Start Logo Background -->
     <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+    <div class="container">
       <!-- Display Project Name Based on session storage variable -->
       <h3 class="name2">Project Name: <span id="projectName"></span></h3>
       
-      <!-- Start of main body -->
-      <div id="tables-container"></div>
-      <div id="batteryAdressesTable">
-        <button onclick="addBatteryAddressRow()">Add Row</button>
-        <table id="batteryTable" class="table">
-            <!-- Table content generated dynamically -->
-        </table>
-        <button onclick="saveBatteryAddresses()">Save Changes</button>
-      </div>
-      <div id="tableContainer"></div>
-    </div>
+      <!-- Start of Tables -->
+        <div id="tables-container"></div>
+        <div id="batteryAdressesTable"></div>
 
-  </div>
-  </body>
+            <!-- Battery Address Modal -->
+            <div id="addBatteryModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Add New Battery Address</h2>
+                    <form id="addBatteryForm">
+                        <label for="batteryName">Battery Name:</label>
+                        <select id="batteryName" name="battery" required>
+                            <option value="">Select a battery</option>
+                            <!-- Fetch options from endpoint and populate the select element -->
+                            <script>
+                            // Fetch and populate options for the battery select element
+                            fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (Array.isArray(data)) {
+                                                    const batterySelect = document.getElementById('batteryName');
+                                                    data.forEach(item => {
+                                                        const option = document.createElement('option');
+                                                        option.value = item.componentName;
+                                                        option.textContent = item.componentName;
+                                                        batterySelect.appendChild(option);
+                                                    });
+                                                } else {
+                                                    console.error('Invalid data format received from API');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error fetching data:', error);
+                                            });
+                            </script>
+                        </select><br><br>
+                        <label for="rs485Address">RS485 Address:</label>
+                        <input type="text" id="rs485Address" name="rs485_address" required><br><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        <div id="tableContainer"></div>
+        <!-- End of Tables -->
+    </div>
+    </div>
+    <!-- End of Logo Background -->  
 
     <script>
+        // Fetch and populate options for the battery select element
+        fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        const batterySelect = document.getElementById('batteryName');
+                        data.forEach(item => {
+                            const option = document.createElement('option');
+                            option.value = item.battery;
+                            option.textContent = item.battery;
+                            batterySelect.appendChild(option);
+                        });
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
         function showBatteryAdresses() {
             var projectId = sessionStorage.getItem("projectId");
             fetch('/battery_addresses/' + projectId)
@@ -134,9 +202,54 @@
                 table += '<tr><td colspan="3">No data available</td></tr>';
             }
             table += '</tbody>';
+
             table += '</table>';
+            table += '<button class="table" onclick="openAddBatteryModal()">Add New Battery Address</button>';
             return table;
         }
+
+        // Modal functions for adding a new battery address
+         // Function to open the modal
+        function openAddBatteryModal() {
+            var modal = document.getElementById('addBatteryModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addBatteryModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission
+        document.getElementById("addBatteryForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/battery_addresses', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            battery: formData.get('battery'),
+            rs485_address: formData.get('rs485_address')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added battery address object returned by the server
+            console.log('New battery address added:', data);
+            // Close the modal
+            var modal = document.getElementById('addBatteryModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showBatteryAdresses(); // Call the function to fetch and display battery addresses
+            })
+            .catch(error => {
+            console.error('Error adding battery address:', error);
+            });
+        });
 
         function generateComponentTable(data) {
           let table = '<table class="table">';
@@ -148,19 +261,21 @@
           table += '<th class="table-titles">ID</th>';
           table += '<th class="table-titles">Component</th>';
           table += '<th class="table-titles">Type</th>';
-          table += '<th class="table-titles">Description</th>';
+          table += '<th class="table-titles">Part Number</th>';
+          table += '<th class="table-titles">Project ID</th>'
           table += '</tr>';
           table += '</thead>';
           // Generate table body
           table += '<tbody class="table-body">';
           if (data.length > 0) {
               data.forEach(item => {
-                  table += `<tr onclick="selectProject('${item.id}')" style="cursor: pointer;">`; // Added style to change cursor to pointer
-                  table += `<td class="table-cell">${item.id}</td>`;
-                  table += `<td class="table-cell">${item.component}</td>`;
-                  table += `<td class="table-cell">${item.type}</td>`;
-                  table += `<td class="table-cell">${item.description}</td>`;
-                  table += '</tr>';
+              table += '<tr>';
+              table += `<td class="table-cell">${item.componentId}</td>`;
+              table += `<td class="table-cell">${item.componentName}</td>`;
+              table += `<td class="table-cell">${item.componentType}</td>`;
+              table += `<td class="table-cell">${item.partNumber}</td>`;
+              table += `<td class='table-cell'>${item.projectId}</td>`;
+              table += '</tr>';
               });
           } else {
               table += '<tr><td colspan="4">No data available</td></tr>';
@@ -195,4 +310,6 @@
       // Retrieve the project id from session storage
       var projectId = sessionStorage.getItem("projectId"); 
     </script>
+
+</body>
 </html>
