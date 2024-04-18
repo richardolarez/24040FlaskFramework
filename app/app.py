@@ -174,6 +174,15 @@ def get_battery_default(project_id):
     battery_default = BatteryDefault.query.filter_by(projectID=project_id).all()
     return jsonify([battery_default.json() for battery_default in battery_default])
 
+# Post battery Default for a specific project
+@app.route('/battery_default', methods=['POST'])
+def post_battery_default():
+    data = request.get_json()
+    battery_default = BatteryDefault(projectID=data['projectID'], battery=data['battery'], capacity=data['capacity'], discharge_current=data['discharge_current'])
+    db.session.add(battery_default)
+    db.session.commit()
+    return {'id': battery_default.id}
+
 # Get ChargeMode for a specific project
 @app.route('/charge_mode/<int:project_id>', methods=['GET'])
 def get_charge_mode(project_id):

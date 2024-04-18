@@ -72,6 +72,7 @@
       
       <!-- Start of Tables -->
         <div id="tables-container"></div>
+        <!-- Battery Address Table -->
         <div id="batteryAdressesTable"></div>
 
             <!-- Battery Address Modal -->
@@ -112,8 +113,89 @@
                     </form>
                 </div>
             </div>
+            <!-- End of Battery Address Modal -->
+        <!-- End of Battery Address Table -->
 
 
+
+        <!-- Battery Default Table -->
+        <div id="batteryDefaultTable"></div>
+        <!-- Battery Default Modal -->
+        <div id="addBatteryDefaultModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Battery Default</h2>
+                <form id="addBatteryDefaultForm">
+                    <label for="batteryName">Battery Name:</label>
+                    <select id="batteryName_DefaultTable" name="battery" required>
+                        <option value="">Select a battery</option>
+                        <!-- Fetch options from endpoint and populate the select element -->
+                        <script>
+                            // Fetch and populate options for the battery select element
+                            fetch('/batteries/' + sessionStorage.getItem("projectId"))
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (Array.isArray(data)) {
+                                                    const batterySelect_DefaultTable = document.getElementById('batteryName_DefaultTable');
+                                                    data.forEach(item => {
+                                                        const option = document.createElement('option');
+                                                        option.value = item.componentName;
+                                                        option.textContent = item.componentName;
+                                                        batterySelect_DefaultTable.appendChild(option);
+                                                    });
+                                                } else {
+                                                    console.error('Invalid data format received from API');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error fetching data:', error);
+                                            });
+                        </script>
+                    </select><br><br>
+                    <label for="capacity">Capacity:</label>
+                    <input type="text" id="capacity" name="capacity" required><br><br>
+                    <label for="dischargeCurrent">Discharge Current:</label>
+                    <input type="text" id="dischargeCurrent" name="discharge_current" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- End of Battery Default Modal -->
+
+        <!-- Start of Charge Mode Table -->
+        <div id="chargeModeTable"></div>
+        <!-- End of Charge Mode Table -->
+        <!-- Start of Charge Mode Modal -->
+        <div id="addChargeModeModal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Charge Mode</h2>
+            <form id="addChargeModeForm">
+                <label for="powerSupply">Power Supply:</label>
+                <input type="text" id="powerSupply" name="power_supply" required><br><br>
+                <label for="battery">Battery:</label>
+                <input type="text" id="battery" name="battery" required><br><br>
+                <label for="voltageSetting">Voltage Setting:</label>
+                <input type="text" id="voltageSetting" name="voltage_setting" required><br><br>
+                <label for="ovp">OVP:</label>
+                <input type="text" id="ovp" name="ovp" required><br><br>
+                <label for="currentSetting">Current Setting:</label>
+                <input type="text" id="currentSetting" name="current_setting" required><br><br>
+                <label for="currentLimit">Current Limit:</label>
+                <input type="text" id="currentLimit" name="current_limit" required><br><br>
+                <label for="redGreenCurrentLimits">Red Green Current Limits:</label>
+                <input type="text" id="redGreenCurrentLimits" name="red_green_current_limits" required><br><br>
+                <label for="redGreenVoltageLimits">Red Green Voltage Limits:</label>
+                <input type="text" id="redGreenVoltageLimits" name="red_green_voltage_limits" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- End of Charge Mode Modal -->
+
+
+
+        <!-- Component Table -->
         <div id="tableContainer"></div>
         <!-- End of Tables -->
     </div>
@@ -121,18 +203,15 @@
     <!-- End of Logo Background -->  
 
     <script>
-        // Fetch and populate options for the battery select element
-        fetch('/batteries/' + sessionStorage.getItem("projectId"))
+        // _______- Charge Mode Table ______________________________________________________
+        function showChargeMode() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/charge_mode/' + projectId)
                 .then(response => response.json())
                 .then(data => {
                     if (Array.isArray(data)) {
-                        const batterySelect = document.getElementById('batteryName');
-                        data.forEach(item => {
-                            const option = document.createElement('option');
-                            option.value = item.battery;
-                            option.textContent = item.battery;
-                            batterySelect.appendChild(option);
-                        });
+                        window.chargeMode = data;
+                        showChargeModeTable();
                     } else {
                         console.error('Invalid data format received from API');
                     }
@@ -140,6 +219,214 @@
                 .catch(error => {
                     console.error('Error fetching data:', error);
                 });
+        }
+
+        function generateChargeModeTable(data){
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Charge Mode</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Power Supply</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">Voltage Setting</th>';
+            table += '<th class="table-titles">OVP</th>';
+            table += '<th class="table-titles">Current Setting</th>';
+            table += '<th class="table-titles">Current Limit</th>';
+            table += '<th class="table-titles">Red Green Current Limits</th>';
+            table += '<th class="table-titles">Red Green Voltage Limits</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.power_supply}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.voltage_setting}</td>`;
+                    table += `<td class="table-cell">${item.ovp}</td>`;
+                    table += `<td class="table-cell">${item.current_setting}</td>`;
+                    table += `<td class="table-cell">${item.current_limit}</td>`;
+                    table += `<td class="table-cell">${item.red_green_current_limits}</td>`;
+                    table += `<td class="table-cell">${item.red_green_voltage_limits}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="9">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddChargeModeModal()">Add New Charge Mode</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new charge mode
+        // Function to open the modal
+        function openAddChargeModeModal() {
+            var modal = document.getElementById('addChargeModeModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addChargeModeModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from charge mode modal
+        document.getElementById("addChargeModeForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/charge_mode', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            power_supply: formData.get('power_supply'),
+            battery: formData.get('battery'),
+            voltage_setting: formData.get('voltage_setting'),
+            ovp: formData.get('ovp'),
+            current_setting: formData.get('current_setting'),
+            current_limit: formData.get('current_limit'),
+            red_green_current_limits: formData.get('red_green_current_limits'),
+            red_green_voltage_limits: formData.get('red_green_voltage_limits')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added charge mode object returned by the server
+            console.log('New charge mode added:', data);
+            // Close the modal
+            var modal = document.getElementById('addChargeModeModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showChargeMode(); // Call the function to fetch and display charge modes
+            })
+            .catch(error => {
+            console.error('Error adding charge mode:', error);
+            });
+        });
+
+        function showChargeModeTable() {
+            const tableContainer = document.getElementById('chargeModeTable');
+            tableContainer.innerHTML = generateChargeModeTable(window.chargeMode);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _______________________________________ End of Charge Mode Table _______________________________________
+
+        // _______- Battery Default Table ______________________________________________________
+
+        // Show battery default table
+        function showBatteryDefault() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/battery_default/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.batteryDefault = data;
+                        showBatteryDefaultTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generateBatteryDefaultTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Battery Default</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Battery</th>';
+            table += '<th class="table-titles">Capacity</th>';
+            table += '<th class="table-titles">Discharge Current</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.battery}</td>`;
+                    table += `<td class="table-cell">${item.capacity}</td>`;
+                    table += `<td class="table-cell">${item.discharge_current}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="3">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddBatteryDefaultModal()">Add New Battery Default</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new battery default
+         // Function to open the modal
+        function openAddBatteryDefaultModal() {
+            var modal = document.getElementById('addBatteryDefaultModal');
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addBatteryDefaultModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from battery default modal
+        document.getElementById("addBatteryDefaultForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/battery_default', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            battery: formData.get('battery'),
+            capacity: formData.get('capacity'),
+            discharge_current: formData.get('discharge_current')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added battery default object returned by the server
+            console.log('New battery default added:', data);
+            // Close the modal
+            var modal = document.getElementById('addBatteryDefaultModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showBatteryDefaultTable(); // Call the function to fetch and display battery defaults
+            })
+            .catch(error => {
+            console.error('Error adding battery default:', error);
+            });
+        });
+
+        function showBatteryDefaultTable() {
+            const tableContainer = document.getElementById('batteryDefaultTable');
+            tableContainer.innerHTML = generateBatteryDefaultTable(window.batteryDefault);
+            tableContainer.classList.remove('hidden');
+        }
+        
+
+        // _______________________________________ End of Battery Default Table _______________________________________
 
         function showBatteryAdresses() {
             var projectId = sessionStorage.getItem("projectId");
@@ -300,6 +587,7 @@
       // Register event listeners without invoking the functions
       window.addEventListener('DOMContentLoaded', showBatteryAdresses);
       window.addEventListener('DOMContentLoaded', showComponents);
+      window.addEventListener('DOMContentLoaded', showBatteryDefault);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");
