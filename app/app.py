@@ -291,6 +291,15 @@ def get_power_supply(project_id):
     power_supply = PowerSupply.query.filter_by(projectID=project_id).all()
     return jsonify([power_supply.json() for power_supply in power_supply])
 
+# Post PowerSupply for a specific project
+@app.route('/power_supply', methods=['POST'])
+def post_power_supply():
+    data = request.get_json()
+    power_supply = PowerSupply(projectID=data['projectID'], power_supply=data['power_supply'], battery_system=data['battery_system'], voltage_setting=data['voltage_setting'], ovp=data['ovp'], current_limit=data['current_limit'], red_green_voltage_limits=data['red_green_voltage_limits'], red_green_current_limits=data['red_green_current_limits'])
+    db.session.add(power_supply)
+    db.session.commit()
+    return {'id': power_supply.id}
+
 # Get Power Supply Summary for a specific project
 @app.route('/power_supply_summary/<int:project_id>', methods=['GET'])
 def get_power_supply_summary(project_id):
