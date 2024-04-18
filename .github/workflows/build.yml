@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: SonarQube Scan
+        run: sonar-scanner -Dsonar.projectKey=24040_App -Dsonar.sources=. -Dsonar.host.url=http://sonar.def.engr.arizona.edu:9000 -Dsonar.token=sqp_8a9aab1f48db50c828beeee3a2a16c93d43b9a76 -X
