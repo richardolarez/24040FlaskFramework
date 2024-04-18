@@ -43,7 +43,7 @@ $ sonar-scanner \
 Build 
 - There is a GitHub action that checks if the project builds.
 
-Testing
+Analysis
 - Composition Analysis using Snyk that automatically generates a report based on dependencies used in the code.
 - Static Code Analysis  using SonarQube. 
 
