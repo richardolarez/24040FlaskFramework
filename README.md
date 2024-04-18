@@ -44,7 +44,6 @@ Build
 - There is a GitHub action that checks if the project builds.
 
 Testing
-- The unit tests are also automatically run during this stage of the pipeline.
 - Composition Analysis using Snyk that automatically generates a report based on dependencies used in the code.
 - Static Code Analysis  using SonarQube. 
 
