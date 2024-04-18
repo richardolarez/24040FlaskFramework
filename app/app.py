@@ -9,7 +9,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_bcrypt import Bcrypt
 from docx import Document
 import os
-
+import parse
 
 
 ####################### FLASK APP CONFIGURATION ########################
@@ -114,6 +114,13 @@ def upload_file():
         return 'File uploaded successfully'
 
 import zipfile
+
+def find_xml_file(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file == 'data.xml':
+                return os.path.join(root, file)
+    return None
 
 
 def decompress_file(filename):
@@ -257,7 +264,14 @@ def create_project():
     project = Projects(project=data['name'])
     db.session.add(project)
     db.session.commit()
-    # newProjectID = project.id
+    newProjectID = project.id
+    xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+    if xml_file_path:
+        output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
+        componentList = parse.parseXML(xml_file_path, output_file_path, newProjectID)
+        for i in componentList: 
+            db.session.add(i)
+            db.session.commit()
     return {'id': project.id}
 
 
