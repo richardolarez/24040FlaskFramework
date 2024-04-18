@@ -418,7 +418,7 @@ def create_project():
     newProjectID = project.id
     xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
     if xml_file_path:
-        output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects4.txt')
+        output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects.txt')
         componentList = parseXML(xml_file_path, output_file_path, newProjectID)
         for i in componentList: 
             db.session.add(i)

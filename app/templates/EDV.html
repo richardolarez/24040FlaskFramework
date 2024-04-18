@@ -390,8 +390,8 @@
                                         });
                     </script>
                 </select><br><br>
-                <label for="battery">Battery:</label>
-                <select id="batteryName_ExternalPowerMode" name="battery" required>
+                <label for="battery">Battery/System:</label>
+                <select id="batteryName_ExternalPowerMode" name="battery_ExternalPowerMode[]" multiple required>
                     <option value="">Select a battery</option>
                     <!-- Fetch options from endpoint and populate the select element -->
                     <script>
@@ -420,8 +420,6 @@
                 <input type="text" id="voltageSetting" name="voltage_setting" required><br><br>
                 <label for="ovp">OVP:</label>
                 <input type="text" id="ovp" name="ovp" required><br><br>
-                <label for="currentSetting">Current Setting:</label>
-                <input type="text" id="currentSetting" name="current_setting" required><br><br>
                 <label for="currentLimit">Current Limit:</label>
                 <input type="text" id="currentLimit" name="current_limit" required><br><br>
                 <label for="redGreenCurrentLimits">Red Green Current Limits:</label>
@@ -2183,7 +2181,6 @@
             table += '<th class="table-titles">Battery</th>';
             table += '<th class="table-titles">Voltage Setting</th>';
             table += '<th class="table-titles">OVP</th>';
-            table += '<th class="table-titles">Current Setting</th>';
             table += '<th class="table-titles">Current Limit</th>';
             table += '<th class="table-titles">Red Green Current Limits</th>';
             table += '<th class="table-titles">Red Green Voltage Limits</th>';
@@ -2198,8 +2195,7 @@
                     table += `<td class="table-cell">${item.power_supply}</td>`;
                     table += `<td class="table-cell">${item.battery}</td>`;
                     table += `<td class="table-cell">${item.voltage_setting}</td>`;
-                    table += `<td class="table-cell">${item.ovp}</td>`;
-                    table += `<td class="table-cell">${item.current_setting}</td>`;
+                    table += `<td class="table-cell">${item.ovp}</td>`
                     table += `<td class="table-cell">${item.current_limit}</td>`;
                     table += `<td class="table-cell">${item.red_green_current_limits}</td>`;
                     table += `<td class="table-cell">${item.red_green_voltage_limits}</td>`;
@@ -2232,6 +2228,15 @@
         document.getElementById("addExternalPowerModeForm").addEventListener("submit", function(event) {
             event.preventDefault();
             var formData = new FormData(this);
+
+            // Get selected battery options from the array
+            var selectedBatteries = Array.from(formData.getAll('batteryName_external[]'));
+            // Convert the array to a string
+            var batteryString = selectedBatteries.join(', '); // Change the separator as needed
+
+            
+
+
             fetch('/external_mode', {
             method: 'POST',
             headers: {
@@ -2243,7 +2248,6 @@
             battery: formData.get('battery'),
             voltage_setting: formData.get('voltage_setting'),
             ovp: formData.get('ovp'),
-            current_setting: formData.get('current_setting'),
             current_limit: formData.get('current_limit'),
             red_green_current_limits: formData.get('red_green_current_limits'),
             red_green_voltage_limits: formData.get('red_green_voltage_limits')
