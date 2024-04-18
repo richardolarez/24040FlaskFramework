@@ -157,6 +157,12 @@ def get_power_supplies(project_id):
     power_supplies = Component.query.filter_by(projectId=project_id, componentType='[PS]').all()
     return jsonify([power_supply.json() for power_supply in power_supplies])
 
+# Get [Controller] components for a specific project
+@app.route('/controllers/<int:project_id>', methods=['GET'])
+def get_controllers(project_id):
+    controllers = Component.query.filter_by(projectId=project_id, componentType='[Controller]').all()
+    return jsonify([controller.json() for controller in controllers])
+
 ####################### TID Tables ########################
 # Get battery Addresses for a specific project
 @app.route('/battery_addresses/<int:project_id>', methods=['GET'])
@@ -209,6 +215,15 @@ def post_charge_mode():
 def get_devices(project_id):
     devices = Devices.query.filter_by(projectID=project_id).all()
     return jsonify([devices.json() for devices in devices])
+
+# Post Devices for a specific project
+@app.route('/devices', methods=['POST'])
+def post_devices():
+    data = request.get_json()
+    devices = Devices(projectID=data['projectID'], device=data['device'], sampling_rate=data['sampling_rate'])
+    db.session.add(devices)
+    db.session.commit()
+    return {'id': devices.id}
 
 # Get GSENetwork for a specific project
 @app.route('/gse_network/<int:project_id>', methods=['GET'])

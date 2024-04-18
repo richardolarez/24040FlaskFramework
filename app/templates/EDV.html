@@ -250,14 +250,39 @@
             <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Add New Device</h2>
-            <form id="addDeviceForm"></form>
+            <form id="addDeviceForm">
                 <label for="deviceName">Device Name:</label>
-                <input type="text" id="deviceName" name="device_name" required><br><br>
+
+                <select id="deviceName" name="deviceName" required>
+                    <option value="">Select a device</option>
+                    <!-- fetch components per projectid -->
+                    <script>
+                        fetch('/components/' + sessionStorage.getItem("projectId"))
+                            .then(response => response.json())
+                            .then(data => {
+                                if (Array.isArray(data)) {
+                                    const deviceTypeSelect = document.getElementById('deviceName');
+                                    data.forEach(item => {
+                                        const option = document.createElement('option');
+                                        option.value = item.componentName;
+                                        option.textContent = item.componentName;
+                                        deviceTypeSelect.appendChild(option);
+                                    });
+                                } else {
+                                    console.error('Invalid data format received from API');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching data:', error);
+                            });
+                    </script>
+                </select><br><br>
                 <label for="samplingRate">Sampling Rate:</label>
                 <input type="text" id="samplingRate" name="sampling_rate" required><br><br>
                 <button type="submit">Submit</button>
             </form>
             </div>
+            
         </div>
         <!-- End of Devices Modal -->
 
@@ -270,6 +295,107 @@
     <!-- End of Logo Background -->  
 
     <script>
+        // _______- Devices Table______________________________________________________
+        function showDevices() {
+            var projectId = sessionStorage.getItem("projectId");
+            fetch('/devices/' + projectId)
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        window.devices = data;
+                        showDevicesTable();
+                    } else {
+                        console.error('Invalid data format received from API');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function generateDevicesTable(data) {
+            let table = '<table class="table">';
+            // Table caption (title)
+            table += '<caption class="name2">Devices</caption>';
+            // Generate table header
+            table += '<thead class="table-header">';
+            table += '<tr>';
+            table += '<th class="table-titles">ID</th>';
+            table += '<th class="table-titles">Device Name</th>';
+            table += '<th class="table-titles">Sampling Rate</th>';
+            table += '</tr>';
+            table += '</thead>';
+            // Generate table body
+            table += '<tbody class="table-body">';
+            if (data.length > 0) {
+                data.forEach(item => {
+                    table += '<tr>';
+                    table += `<td class="table-cell">${item.id}</td>`;
+                    table += `<td class="table-cell">${item.device}</td>`;
+                    table += `<td class="table-cell">${item.sampling_rate}</td>`;
+                    table += '</tr>';
+                });
+            } else {
+                table += '<tr><td colspan="3">No data available</td></tr>';
+            }
+            table += '</tbody>';
+
+            table += '</table>';
+            table += '<button class="table" onclick="openAddDeviceModal()">Add New Device</button>';
+            return table;
+        }
+
+        // Modal functions for adding a new device
+        // Function to open the modal
+        function openAddDeviceModal() {
+            var modal = document.getElementById('addDeviceModal');
+            modal.style.display = "block";
+        }
+        
+        // Function to close the modal
+        document.getElementsByClassName("close")[0].addEventListener("click", function() {
+            var modal = document.getElementById('addDeviceModal');
+            modal.style.display = "none";
+        });
+
+        // Function to handle form submission from device modal
+        document.getElementById("addDeviceForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch('/devices', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+            projectID: sessionStorage.getItem("projectId"),
+            device: formData.get('deviceName'),
+            sampling_rate: formData.get('sampling_rate')
+            })
+            })
+            .then(response => response.json())
+            .then(data => {
+            // Assuming data is the newly added device object returned by the server
+            console.log('New device added:', data);
+            // Close the modal
+            var modal = document.getElementById('addDeviceModal');
+            modal.style.display = "none";
+            // Refresh the table
+            showDevices(); // Call the function to fetch and display devices
+            })
+            .catch(error => {
+            console.error('Error adding device:', error);
+            });
+        });
+
+        function showDevicesTable() {
+            const tableContainer = document.getElementById('devicesTable');
+            tableContainer.innerHTML = generateDevicesTable(window.devices);
+            tableContainer.classList.remove('hidden');
+        }
+
+        // _______________________________________ End of Devices Table _______________________________________
+
         // _______- Charge Mode Table ______________________________________________________
         function showChargeMode() {
             var projectId = sessionStorage.getItem("projectId");
@@ -455,7 +581,7 @@
             modal.style.display = "none";
         });
 
-        // Function to handle form submission from battery default modal
+        // Event listener to handle form submission
         document.getElementById("addBatteryDefaultForm").addEventListener("submit", function(event) {
             event.preventDefault();
             var formData = new FormData(this);
@@ -479,12 +605,13 @@
             var modal = document.getElementById('addBatteryDefaultModal');
             modal.style.display = "none";
             // Refresh the table
-            showBatteryDefaultTable(); // Call the function to fetch and display battery defaults
+            showBatteryDefault(); // Call the function to fetch and display battery defaults
             })
             .catch(error => {
             console.error('Error adding battery default:', error);
             });
         });
+        
 
         function showBatteryDefaultTable() {
             const tableContainer = document.getElementById('batteryDefaultTable');
@@ -656,6 +783,7 @@
       window.addEventListener('DOMContentLoaded', showComponents);
       window.addEventListener('DOMContentLoaded', showBatteryDefault);
       window.addEventListener('DOMContentLoaded', showChargeMode);
+      window.addEventListener('DOMContentLoaded', showDevices);
 
       // Retrieve the project name from session storage
       var projectName = sessionStorage.getItem("projectName");
