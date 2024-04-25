@@ -1,5 +1,7 @@
 import unittest
-from app import app, db, User, Projects
+from app import *
+from app.models import *
+
 
 class TestFlaskApp(unittest.TestCase):
     # This method will be called before every test method.
