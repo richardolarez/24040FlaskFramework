@@ -10,12 +10,13 @@ from flask_bcrypt import Bcrypt
 from docx import Document
 import os
 from io import BytesIO
+from flask_migrate import Migrate
 
 
 
 ####################### FLASK APP CONFIGURATION ########################
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_URL')
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Set the SECRET_KEY configuration option
 
@@ -38,6 +39,7 @@ class Data(db.Model):
     
 with app.app_context(): 
     db.create_all()
+    migrate = Migrate(app, db)
 
 ####### Generate Test Data #######
 # Only run this once to generate test data or after resetting the database
@@ -96,22 +98,31 @@ def login():
 
 ############################ File Uploads ########################
 UPLOAD_FOLDER = 'uploads'
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/upload', methods=['POST'])
-def upload_file():
+
+@app.route('/upload/<int:project_id>', methods=['POST'])
+def upload_file(project_id):
     if 'file' not in request.files:
         return 'No file part'
     file = request.files['file']
     if file.filename == '':
         return 'No selected file'
     if file:
+        if not os.path.exists(UPLOAD_FOLDER + '/' + str(project_id)):
+            os.makedirs(UPLOAD_FOLDER + '/' + str(project_id))
+        app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER + '/' + str(project_id)
         filename = file.filename
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         decompress_file(filename)
         save_zip_to_db(filename)
+        newProjectID = project_id
+        xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
+        if xml_file_path:
+            output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'output.txt')
+            componentList = parseXML(xml_file_path, output_file_path, newProjectID)
+            for i in componentList: 
+                db.session.add(i)
+                db.session.commit()
         return 'File uploaded successfully'
 
 import zipfile
@@ -138,8 +149,18 @@ def save_zip_to_db(filename):
         data = Data(file_name=filename, file_content=file.read())
         db.session.add(data)
         db.session.commit()
-
     return 'Zip file saved to database successfully'
+
+from parse import parseXML
+
+# Create a new project
+@app.route('/project', methods=['POST'])
+def create_project():
+    data = request.get_json()
+    project = Projects(project=data['name'])
+    db.session.add(project)
+    db.session.commit()
+    return {'id': project.id}
 
 ####################### APIs ########################
 # Test Route
@@ -406,24 +427,7 @@ def get_components(project_id):
     components = Component.query.filter_by(projectId=project_id).all()
     return jsonify([component.json() for component in components])
 
-from parse import parseXML
 
-# Create a new project
-@app.route('/project', methods=['POST'])
-def create_project():
-    data = request.get_json()
-    project = Projects(project=data['name'])
-    db.session.add(project)
-    db.session.commit()
-    newProjectID = project.id
-    xml_file_path = find_xml_file(app.config['UPLOAD_FOLDER']) 
-    if xml_file_path:
-        output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'visioObjects.txt')
-        componentList = parseXML(xml_file_path, output_file_path, newProjectID)
-        for i in componentList: 
-            db.session.add(i)
-            db.session.commit()
-    return {'id': project.id}
 
 
 ####################### Export Project ########################

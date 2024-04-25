@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <style>
+        .instructions {
+            max-width: 800px; /* Set your preferred maximum width */
+            margin: 0 auto; /* Center the container */
+            text-align: justify; /* Justify text */
+			right: 0;
+            overflow-y: auto;
+            position: relative;
+            height: calc(100vh - 100px);   
+        }
+    </style>
 </head>
 
 <!-- Start of Main Body -->
 <body>
-	<!-- Banner -->
-	<div class="banner">
-		<img src=static/images/Engineering.png alt="Engineering">
-		<img src=static/images/NGC.png alt="NGC logo">
-	</div>
-	<!-- Side bar -->
-	<div class="sidebar">
-		<ul>
-			<li><a href="/menu">Main Menu</a></li>
-			<li><a href="/">Logout</a></li>
-		</ul>
-	</div>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="static/images/Engineering.png" alt="Engineering">
+        <img src="static/images/NGC.png" alt="NGC logo">
+    </div>
+    <!-- Side bar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/menu">Main Menu</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+    </div>
 
-	<!-- Start of main body -->
-	<div class="logo" style="background-image: url(static/images/Janusimage.png);">
-		<h3 class="name">J.A.N.U.S.</h3>
-		<p class="name2">Junction Annotation & Network Utility System</p>
-		<h3 class="name2">Model-Based Electric Diagram and TID Generation</h3>
-	</div>
+    <!-- Start of main body -->
+    <div class="logo" style="background-image: url(static/images/Janusimage.png);">
+        <div class="container instructions">
+            <h3 class="name">J.A.N.U.S.</h3>
+            <p class="name2">Junction Annotation & Network Utility System</p>
+            <h3 class="name2">Model-Based Electric Diagram and TID Generation</h3>
+            <p class="name2">Welcome to JANUS
+                <br>
+                <br>
+                If you want to create a new project, click on the "Create Project" option in the menu, Then upload the zip file containing the electrical diagram. It must be the html exported option from Visio
+                <br>
+                <br>
+                If you want to work on an existing project, click on the "Select Project" option in the menu
+                <br>
+                <br>
+                Once complete with the project, click on the "Export" option in the menu and it will generate the TID file and automatically download it as .docx file
+                <br>
+                <br>
+                If you want to logout, click on the "Logout" option in the menu
+                <br>
+                <br>
+                Please select an option from the menu on the left
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
