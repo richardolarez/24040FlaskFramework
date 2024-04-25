@@ -15,6 +15,11 @@ jobs:
         with:
           python-version: 3.x
 
+      - name: Set PYTHONPATH
+        run: |
+          echo "::add-path::/app"
+
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
