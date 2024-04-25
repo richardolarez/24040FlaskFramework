@@ -79,16 +79,16 @@
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.onload = function() {
         if (xhr.status === 200) {
-          uploadFile();  
+           
           var response = JSON.parse(xhr.responseText);
           // Handle response as needed
           console.log(response);
           //   Save the project id from the response in session storage variable
           sessionStorage.setItem("projectId", response.id);
           // Save the project name in session storage variable
-            sessionStorage.setItem("projectName", projectName);
-          // Redirect to /edv after project creation
-          window.location.href = "/edv";
+          sessionStorage.setItem("projectName", projectName);
+          uploadFile(sessionStorage.getItem("projectId")); 
+
         } else {
           // Handle error
           console.error(xhr.statusText);
@@ -97,16 +97,18 @@
       xhr.send(JSON.stringify({ name: projectName }));
     }
 
-    function uploadFile(){
+    function uploadFile(projectId){
         var fileInput = document.getElementById("fileInput").files[0];
         var formData = new FormData();
         formData.append("file", fileInput);
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
+        xhr.open("POST", "/upload/" + projectId);
         xhr.send(formData);
         xhr.onload = function() {
             if (xhr.status === 200) {
-            console.log("File uploaded successfully");
+                // Redirect to /edv after project creation
+                window.location.href = "/edv";
+                console.log("File uploaded successfully");
             } else {
             console.error(xhr.statusText);
             }
